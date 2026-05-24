@@ -7,7 +7,7 @@ import pytest
 
 sklearn = pytest.importorskip("sklearn")
 
-from multiqc_gate import baseline
+from multiqc_gate import baseline  # noqa: E402
 
 
 @pytest.fixture

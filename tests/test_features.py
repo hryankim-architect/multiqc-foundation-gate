@@ -37,7 +37,7 @@ def test_feature_vector_has_named_dimensions():
     assert len(features.FEATURE_NAMES) == features.N_FEATURES
     # Spot-check ordering
     assert features.FEATURE_NAMES[0].startswith("num__")
-    assert any("status__adapter_content" == n for n in features.FEATURE_NAMES)
+    assert any(n == "status__adapter_content" for n in features.FEATURE_NAMES)
     assert features.FEATURE_NAMES[-1].startswith("present__fastqc")
 
 

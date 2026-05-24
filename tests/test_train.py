@@ -7,7 +7,7 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from multiqc_gate import train
+from multiqc_gate import train  # noqa: E402
 
 
 @pytest.fixture

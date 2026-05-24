@@ -52,7 +52,7 @@ def aggregate_folds(
     all_y_true: list[int] = []
     all_y_pred: list[int] = []
 
-    for y_t, y_p in zip(fold_y_true, fold_y_pred):
+    for y_t, y_p in zip(fold_y_true, fold_y_pred, strict=True):
         y_t_arr = np.array(y_t)
         y_p_arr = np.array(y_p)
         if len(y_t_arr) == 0:

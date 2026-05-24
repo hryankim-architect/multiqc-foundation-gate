@@ -6,9 +6,9 @@ import pytest
 
 torch = pytest.importorskip("torch")
 
-from multiqc_gate.features import N_FEATURES
-from multiqc_gate.labels import LABELS
-from multiqc_gate.model import MultiQCGateMLP
+from multiqc_gate.features import N_FEATURES  # noqa: E402
+from multiqc_gate.labels import LABELS  # noqa: E402
+from multiqc_gate.model import MultiQCGateMLP  # noqa: E402
 
 
 def test_mlp_forward_shape():
