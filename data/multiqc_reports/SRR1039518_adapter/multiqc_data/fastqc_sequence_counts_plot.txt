@@ -1,0 +1,3 @@
+Sample	Unique Reads	Duplicate Reads
+SRR1039518_adapter_1	96014.0	3986.0
+SRR1039518_adapter_2	96073.0	3927.0

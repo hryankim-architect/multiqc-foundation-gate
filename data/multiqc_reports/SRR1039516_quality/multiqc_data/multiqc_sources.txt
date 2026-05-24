@@ -1,0 +1,2 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR1039516	/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039516_quality/_fastqc/SRR1039516_quality_1_fastqc.zip

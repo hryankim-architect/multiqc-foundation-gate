@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR1039515_adapter_1	/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039515_adapter/_fastqc/SRR1039515_adapter_1_fastqc.zip
+FastQC	all_sections	SRR1039515_adapter_2	/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039515_adapter/_fastqc/SRR1039515_adapter_2_fastqc.zip

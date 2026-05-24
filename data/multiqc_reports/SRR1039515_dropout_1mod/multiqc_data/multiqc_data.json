@@ -1,0 +1,5666 @@
+{
+  "report_multiqc_command": "/Users/ryan/miniconda3/envs/multiqc/bin/multiqc -f -q -o data/multiqc_reports/SRR1039515/ data/multiqc_reports/SRR1039515/_fastqc/",
+  "report_data_sources": {
+    "FastQC": {
+      "all_sections": {
+        "SRR1039515_1": "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039515/_fastqc/SRR1039515_1_fastqc.zip",
+        "SRR1039515_2": "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039515/_fastqc/SRR1039515_2_fastqc.zip"
+      }
+    }
+  },
+  "report_general_stats_data": {
+    "fastqc": {
+      "SRR1039515_1": {
+        "total_sequences": 100000.0,
+        "percent_gc": 49.0,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "percent_duplicates": 4.795000000000002,
+        "percent_fails": 0.0
+      },
+      "SRR1039515_2": {
+        "total_sequences": 100000.0,
+        "percent_gc": 49.0,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "percent_duplicates": 4.710000000000008,
+        "percent_fails": 0.0
+      }
+    }
+  },
+  "report_general_stats_headers": {
+    "fastqc": {
+      "percent_duplicates": {
+        "title": "Dups",
+        "description": "% duplicate reads",
+        "max": 100,
+        "min": 0,
+        "suffix": "%",
+        "scale": "RdYlGn-rev",
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-percent_duplicates",
+        "rid": "fastqc-percent_duplicates",
+        "placement": 1000
+      },
+      "percent_gc": {
+        "title": "GC",
+        "description": "Average % GC content",
+        "max": 100,
+        "min": 0,
+        "suffix": "%",
+        "scale": "PuRd",
+        "format": "{:,.1f}",
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-percent_gc",
+        "rid": "fastqc-percent_gc",
+        "placement": 1000
+      },
+      "avg_sequence_length": {
+        "title": "Avg len",
+        "description": "Average read length",
+        "min": 0,
+        "suffix": " bp",
+        "scale": "RdYlGn",
+        "format": "{:,.0f}",
+        "hidden": true,
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-avg_sequence_length",
+        "rid": "fastqc-avg_sequence_length",
+        "placement": 1000
+      },
+      "median_sequence_length": {
+        "title": "Median len",
+        "description": "Median read length",
+        "min": 0,
+        "suffix": " bp",
+        "scale": "RdYlGn",
+        "format": "{:,.0f}",
+        "hidden": true,
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-median_sequence_length",
+        "rid": "fastqc-median_sequence_length",
+        "placement": 1000
+      },
+      "percent_fails": {
+        "title": "Failed",
+        "description": "Percentage of modules failed in FastQC report (includes those not plotted here)",
+        "max": 100,
+        "min": 0,
+        "suffix": "%",
+        "scale": "Reds",
+        "format": "{:,.0f}",
+        "hidden": true,
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-percent_fails",
+        "rid": "fastqc-percent_fails",
+        "placement": 1000
+      },
+      "total_sequences": {
+        "title": "Seqs",
+        "shared_key": "read_count",
+        "description": "Total sequences (millions)",
+        "min": 0,
+        "scale": "Blues",
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-total_sequences",
+        "rid": "fastqc-total_sequences",
+        "modify": null,
+        "suffix": " M",
+        "placement": 1000
+      }
+    }
+  },
+  "report_creation_date": "2026-05-24, 09:40 PDT",
+  "report_plot_data": {
+    "fastqc_sequence_counts_plot": {
+      "id": "fastqc_sequence_counts_plot",
+      "anchor": "fastqc_sequence_counts_plot",
+      "plot_type": "bar plot",
+      "layout": {
+        "autosize": true,
+        "height": 300,
+        "hoverlabel": {
+          "namelength": -1,
+          "bgcolor": "white",
+          "font": {
+            "color": "rgba(60,60,60,1)"
+          }
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": true,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Sequence Counts",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true,
+          "showgrid": false,
+          "categoryorder": "trace",
+          "type": "category"
+        },
+        "barmode": "relative",
+        "bargroupgap": 0,
+        "bargap": 0.2,
+        "legend": {
+          "tracegroupgap": 0,
+          "traceorder": "normal"
+        },
+        "hovermode": "y unified"
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_sequence_counts_plot",
+          "label": "1",
+          "uid": "fastqc_sequence_counts_plot",
+          "dconfig": {
+            "title": "FastQC: Sequence Counts",
+            "subtitle": "2 bars"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Sequence Counts<br><sup>2 bars</sup>"
+            },
+            "xaxis": {
+              "title": {
+                "text": "Number of reads"
+              },
+              "hoverformat": ",.2f",
+              "ticksuffix": "",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": 100000.0
+              }
+            },
+            "yaxis": {
+              "title": null,
+              "hoverformat": null,
+              "ticksuffix": "",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            },
+            "showlegend": true
+          },
+          "trace_params": {
+            "hovertemplate": "<b></b>%{meta}: <b>%{x}</b><extra></extra>",
+            "orientation": "h",
+            "marker": {
+              "line": {
+                "width": 0
+              }
+            },
+            "textposition": "inside",
+            "insidetextanchor": "start"
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "cats": [
+            {
+              "name": "Unique Reads",
+              "color": "rgba(124,181,236,1)",
+              "data": [
+                95290.0,
+                95205.0
+              ],
+              "data_pct": [
+                95.28999999999999,
+                95.205
+              ]
+            },
+            {
+              "name": "Duplicate Reads",
+              "color": "rgba(67,67,72,1)",
+              "data": [
+                4710.0,
+                4795.0
+              ],
+              "data_pct": [
+                4.71,
+                4.795
+              ]
+            }
+          ],
+          "samples": [
+            "SRR1039515_2",
+            "SRR1039515_1"
+          ],
+          "cats_clustered": null,
+          "samples_clustered": null,
+          "group_labels": null,
+          "offset_groups": null
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_sequence_counts_plot",
+        "title": "FastQC: Sequence Counts",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Number of reads",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": null,
+        "ylab": "Number of reads",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": null,
+        "xmax": null,
+        "ymin": null,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": null,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "stacking": "relative",
+        "hide_empty": null,
+        "hide_zero_cats": false,
+        "sort_samples": true,
+        "cluster_samples": false,
+        "cluster_method": "complete",
+        "cluster_switch_clustered_active": true,
+        "use_legend": null,
+        "suffix": null,
+        "lab_format": null,
+        "sample_groups": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": true,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "xaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sort_switch_sorted_active": false,
+      "cluster_switch_clustered_active": true
+    },
+    "fastqc_per_base_sequence_quality_plot": {
+      "id": "fastqc_per_base_sequence_quality_plot",
+      "anchor": "fastqc_per_base_sequence_quality_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Mean Quality Scores",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_per_base_sequence_quality_plot",
+          "label": "1",
+          "uid": "fastqc_per_base_sequence_quality_plot",
+          "dconfig": {
+            "title": "FastQC: Mean Quality Scores",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Mean Quality Scores<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": ",.0f",
+              "ticksuffix": " bp",
+              "title": {
+                "text": "Position (bp)"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": "Phred Score"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              },
+              "range": [
+                0,
+                42.1661205
+              ]
+            },
+            "shapes": [
+              {
+                "type": "rect",
+                "y0": 28,
+                "y1": 100,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#009500",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 20,
+                "y1": 28,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#a07300",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 0,
+                "y1": 20,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#990101",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              }
+            ]
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>Base %{x}</b>: %{y:.2f}<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039515_1",
+              "pairs": [
+                [
+                  1,
+                  38.46981
+                ],
+                [
+                  2,
+                  40.15821
+                ],
+                [
+                  3,
+                  40.1459
+                ],
+                [
+                  4,
+                  40.07377
+                ],
+                [
+                  5,
+                  40.07913
+                ],
+                [
+                  6,
+                  40.04586
+                ],
+                [
+                  7,
+                  39.94562
+                ],
+                [
+                  8,
+                  39.96624
+                ],
+                [
+                  9,
+                  39.8898
+                ],
+                [
+                  10,
+                  39.78649
+                ],
+                [
+                  11,
+                  39.79443
+                ],
+                [
+                  12,
+                  39.8754
+                ],
+                [
+                  13,
+                  39.83209
+                ],
+                [
+                  14,
+                  39.79175
+                ],
+                [
+                  15,
+                  39.69775
+                ],
+                [
+                  16,
+                  39.67576
+                ],
+                [
+                  17,
+                  39.59224
+                ],
+                [
+                  18,
+                  39.58097
+                ],
+                [
+                  19,
+                  39.45975
+                ],
+                [
+                  20,
+                  39.62787
+                ],
+                [
+                  21,
+                  39.60037
+                ],
+                [
+                  22,
+                  39.58531
+                ],
+                [
+                  23,
+                  39.63134
+                ],
+                [
+                  24,
+                  39.56406
+                ],
+                [
+                  25,
+                  39.55776
+                ],
+                [
+                  26,
+                  39.49735
+                ],
+                [
+                  27,
+                  39.42936
+                ],
+                [
+                  28,
+                  39.39061
+                ],
+                [
+                  29,
+                  39.22613
+                ],
+                [
+                  30,
+                  39.13307
+                ],
+                [
+                  31,
+                  39.08607
+                ],
+                [
+                  32,
+                  39.06109
+                ],
+                [
+                  33,
+                  38.84333
+                ],
+                [
+                  34,
+                  38.76904
+                ],
+                [
+                  35,
+                  38.82291
+                ],
+                [
+                  36,
+                  38.73529
+                ],
+                [
+                  37,
+                  38.6625
+                ],
+                [
+                  38,
+                  38.46698
+                ],
+                [
+                  39,
+                  38.4048
+                ],
+                [
+                  40,
+                  38.23369
+                ],
+                [
+                  41,
+                  38.09333
+                ],
+                [
+                  42,
+                  38.00673
+                ],
+                [
+                  43,
+                  37.98475
+                ],
+                [
+                  44,
+                  37.82476
+                ],
+                [
+                  45,
+                  37.76622
+                ],
+                [
+                  46,
+                  37.59178
+                ],
+                [
+                  47,
+                  37.46693
+                ],
+                [
+                  48,
+                  37.32584
+                ],
+                [
+                  49,
+                  37.11548
+                ],
+                [
+                  50,
+                  36.87613
+                ],
+                [
+                  51,
+                  36.69763
+                ],
+                [
+                  52,
+                  36.52896
+                ],
+                [
+                  53,
+                  36.36409
+                ],
+                [
+                  54,
+                  36.15867
+                ],
+                [
+                  55,
+                  35.95077
+                ],
+                [
+                  56,
+                  35.74922
+                ],
+                [
+                  57,
+                  35.38182
+                ],
+                [
+                  58,
+                  35.19572
+                ],
+                [
+                  59,
+                  35.06821
+                ],
+                [
+                  60,
+                  34.83266
+                ],
+                [
+                  61,
+                  34.54328
+                ],
+                [
+                  62,
+                  34.2753
+                ],
+                [
+                  63,
+                  32.6994
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039515_2",
+              "pairs": [
+                [
+                  1,
+                  38.11017
+                ],
+                [
+                  2,
+                  39.65936
+                ],
+                [
+                  3,
+                  39.62162
+                ],
+                [
+                  4,
+                  39.72289
+                ],
+                [
+                  5,
+                  39.62347
+                ],
+                [
+                  6,
+                  39.50038
+                ],
+                [
+                  7,
+                  39.52188
+                ],
+                [
+                  8,
+                  39.43827
+                ],
+                [
+                  9,
+                  39.51312
+                ],
+                [
+                  10,
+                  39.45122
+                ],
+                [
+                  11,
+                  39.32944
+                ],
+                [
+                  12,
+                  39.36284
+                ],
+                [
+                  13,
+                  39.27199
+                ],
+                [
+                  14,
+                  39.03129
+                ],
+                [
+                  15,
+                  39.00768
+                ],
+                [
+                  16,
+                  38.96213
+                ],
+                [
+                  17,
+                  39.01665
+                ],
+                [
+                  18,
+                  38.98594
+                ],
+                [
+                  19,
+                  38.98431
+                ],
+                [
+                  20,
+                  38.98306
+                ],
+                [
+                  21,
+                  39.13052
+                ],
+                [
+                  22,
+                  39.1122
+                ],
+                [
+                  23,
+                  39.14672
+                ],
+                [
+                  24,
+                  39.15892
+                ],
+                [
+                  25,
+                  39.15689
+                ],
+                [
+                  26,
+                  39.03282
+                ],
+                [
+                  27,
+                  38.91956
+                ],
+                [
+                  28,
+                  38.87842
+                ],
+                [
+                  29,
+                  38.82791
+                ],
+                [
+                  30,
+                  38.77537
+                ],
+                [
+                  31,
+                  38.63627
+                ],
+                [
+                  32,
+                  38.6136
+                ],
+                [
+                  33,
+                  38.55114
+                ],
+                [
+                  34,
+                  38.3326
+                ],
+                [
+                  35,
+                  38.18364
+                ],
+                [
+                  36,
+                  38.10446
+                ],
+                [
+                  37,
+                  37.79016
+                ],
+                [
+                  38,
+                  37.78568
+                ],
+                [
+                  39,
+                  35.85975
+                ],
+                [
+                  40,
+                  36.63209
+                ],
+                [
+                  41,
+                  37.14796
+                ],
+                [
+                  42,
+                  37.40517
+                ],
+                [
+                  43,
+                  37.27969
+                ],
+                [
+                  44,
+                  37.26858
+                ],
+                [
+                  45,
+                  37.05069
+                ],
+                [
+                  46,
+                  37.00819
+                ],
+                [
+                  47,
+                  36.94037
+                ],
+                [
+                  48,
+                  36.74264
+                ],
+                [
+                  49,
+                  36.44776
+                ],
+                [
+                  50,
+                  36.23091
+                ],
+                [
+                  51,
+                  35.80647
+                ],
+                [
+                  52,
+                  35.83916
+                ],
+                [
+                  53,
+                  35.59504
+                ],
+                [
+                  54,
+                  35.14
+                ],
+                [
+                  55,
+                  35.17655
+                ],
+                [
+                  56,
+                  35.00389
+                ],
+                [
+                  57,
+                  34.83956
+                ],
+                [
+                  58,
+                  34.51782
+                ],
+                [
+                  59,
+                  34.33717
+                ],
+                [
+                  60,
+                  34.16355
+                ],
+                [
+                  61,
+                  33.99672
+                ],
+                [
+                  62,
+                  33.66989
+                ],
+                [
+                  63,
+                  32.50431
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_per_base_sequence_quality_plot",
+        "title": "FastQC: Mean Quality Scores",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Position (bp)",
+        "ylab": "Phred Score",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": 0,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": 0,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": [
+          {
+            "from_": 28,
+            "to": 100,
+            "color": "#009500",
+            "opacity": 0.13
+          },
+          {
+            "from_": 20,
+            "to": 28,
+            "color": "#a07300",
+            "opacity": 0.13
+          },
+          {
+            "from_": 0,
+            "to": 20,
+            "color": "#990101",
+            "opacity": 0.13
+          }
+        ],
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039515_1": "#5cb85c",
+          "SRR1039515_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039515_1",
+        "SRR1039515_2"
+      ]
+    },
+    "fastqc_per_sequence_quality_scores_plot": {
+      "id": "fastqc_per_sequence_quality_scores_plot",
+      "anchor": "fastqc_per_sequence_quality_scores_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Per Sequence Quality Scores",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_per_sequence_quality_scores_plot",
+          "label": "1",
+          "uid": "fastqc_per_sequence_quality_scores_plot",
+          "dconfig": {
+            "title": "FastQC: Per Sequence Quality Scores",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Per Sequence Quality Scores<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": ",.0f",
+              "ticksuffix": "",
+              "title": {
+                "text": "Mean Sequence Quality (Phred Score)"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              },
+              "range": [
+                0,
+                40.0
+              ]
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": "Count"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            },
+            "shapes": [
+              {
+                "type": "rect",
+                "x0": 28,
+                "x1": 100,
+                "y0": 0,
+                "y1": 1,
+                "yref": "paper",
+                "fillcolor": "#009500",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "x0": 20,
+                "x1": 28,
+                "y0": 0,
+                "y1": 1,
+                "yref": "paper",
+                "fillcolor": "#a07300",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "x0": 0,
+                "x1": 20,
+                "y0": 0,
+                "y1": 1,
+                "yref": "paper",
+                "fillcolor": "#990101",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              }
+            ]
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>Phred %{x}</b>: %{y} reads<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039515_1",
+              "pairs": [
+                [
+                  2.0,
+                  7.0
+                ],
+                [
+                  3.0,
+                  4.0
+                ],
+                [
+                  4.0,
+                  3.0
+                ],
+                [
+                  5.0,
+                  9.0
+                ],
+                [
+                  6.0,
+                  18.0
+                ],
+                [
+                  7.0,
+                  24.0
+                ],
+                [
+                  8.0,
+                  25.0
+                ],
+                [
+                  9.0,
+                  52.0
+                ],
+                [
+                  10.0,
+                  48.0
+                ],
+                [
+                  11.0,
+                  54.0
+                ],
+                [
+                  12.0,
+                  54.0
+                ],
+                [
+                  13.0,
+                  63.0
+                ],
+                [
+                  14.0,
+                  93.0
+                ],
+                [
+                  15.0,
+                  82.0
+                ],
+                [
+                  16.0,
+                  81.0
+                ],
+                [
+                  17.0,
+                  93.0
+                ],
+                [
+                  18.0,
+                  126.0
+                ],
+                [
+                  19.0,
+                  112.0
+                ],
+                [
+                  20.0,
+                  118.0
+                ],
+                [
+                  21.0,
+                  136.0
+                ],
+                [
+                  22.0,
+                  149.0
+                ],
+                [
+                  23.0,
+                  160.0
+                ],
+                [
+                  24.0,
+                  197.0
+                ],
+                [
+                  25.0,
+                  227.0
+                ],
+                [
+                  26.0,
+                  280.0
+                ],
+                [
+                  27.0,
+                  327.0
+                ],
+                [
+                  28.0,
+                  393.0
+                ],
+                [
+                  29.0,
+                  516.0
+                ],
+                [
+                  30.0,
+                  665.0
+                ],
+                [
+                  31.0,
+                  797.0
+                ],
+                [
+                  32.0,
+                  1045.0
+                ],
+                [
+                  33.0,
+                  1324.0
+                ],
+                [
+                  34.0,
+                  1962.0
+                ],
+                [
+                  35.0,
+                  2976.0
+                ],
+                [
+                  36.0,
+                  4898.0
+                ],
+                [
+                  37.0,
+                  8703.0
+                ],
+                [
+                  38.0,
+                  15504.0
+                ],
+                [
+                  39.0,
+                  25178.0
+                ],
+                [
+                  40.0,
+                  33497.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039515_2",
+              "pairs": [
+                [
+                  2.0,
+                  450.0
+                ],
+                [
+                  3.0,
+                  61.0
+                ],
+                [
+                  4.0,
+                  64.0
+                ],
+                [
+                  5.0,
+                  70.0
+                ],
+                [
+                  6.0,
+                  81.0
+                ],
+                [
+                  7.0,
+                  81.0
+                ],
+                [
+                  8.0,
+                  99.0
+                ],
+                [
+                  9.0,
+                  96.0
+                ],
+                [
+                  10.0,
+                  88.0
+                ],
+                [
+                  11.0,
+                  102.0
+                ],
+                [
+                  12.0,
+                  127.0
+                ],
+                [
+                  13.0,
+                  124.0
+                ],
+                [
+                  14.0,
+                  121.0
+                ],
+                [
+                  15.0,
+                  141.0
+                ],
+                [
+                  16.0,
+                  172.0
+                ],
+                [
+                  17.0,
+                  135.0
+                ],
+                [
+                  18.0,
+                  152.0
+                ],
+                [
+                  19.0,
+                  180.0
+                ],
+                [
+                  20.0,
+                  203.0
+                ],
+                [
+                  21.0,
+                  193.0
+                ],
+                [
+                  22.0,
+                  237.0
+                ],
+                [
+                  23.0,
+                  264.0
+                ],
+                [
+                  24.0,
+                  282.0
+                ],
+                [
+                  25.0,
+                  341.0
+                ],
+                [
+                  26.0,
+                  357.0
+                ],
+                [
+                  27.0,
+                  444.0
+                ],
+                [
+                  28.0,
+                  489.0
+                ],
+                [
+                  29.0,
+                  589.0
+                ],
+                [
+                  30.0,
+                  701.0
+                ],
+                [
+                  31.0,
+                  940.0
+                ],
+                [
+                  32.0,
+                  1118.0
+                ],
+                [
+                  33.0,
+                  1497.0
+                ],
+                [
+                  34.0,
+                  2171.0
+                ],
+                [
+                  35.0,
+                  3031.0
+                ],
+                [
+                  36.0,
+                  4918.0
+                ],
+                [
+                  37.0,
+                  8754.0
+                ],
+                [
+                  38.0,
+                  15300.0
+                ],
+                [
+                  39.0,
+                  23826.0
+                ],
+                [
+                  40.0,
+                  32001.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_per_sequence_quality_scores_plot",
+        "title": "FastQC: Per Sequence Quality Scores",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Mean Sequence Quality (Phred Score)",
+        "ylab": "Count",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>Phred {point.x}</b>: {point.y} reads",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": 0,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": 0,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": [
+          {
+            "from_": 28,
+            "to": 100,
+            "color": "#009500",
+            "opacity": 0.13
+          },
+          {
+            "from_": 20,
+            "to": 28,
+            "color": "#a07300",
+            "opacity": 0.13
+          },
+          {
+            "from_": 0,
+            "to": 20,
+            "color": "#990101",
+            "opacity": 0.13
+          }
+        ],
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039515_1": "#5cb85c",
+          "SRR1039515_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039515_1",
+        "SRR1039515_2"
+      ]
+    },
+    "fastqc_per_base_n_content_plot": {
+      "id": "fastqc_per_base_n_content_plot",
+      "anchor": "fastqc_per_base_n_content_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Per Base N Content",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_per_base_n_content_plot",
+          "label": "1",
+          "uid": "fastqc_per_base_n_content_plot",
+          "dconfig": {
+            "title": "FastQC: Per Base N Content",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Per Base N Content<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": " bp",
+              "title": {
+                "text": "Position in Read (bp)"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "%",
+              "title": {
+                "text": "Percentage N-Count"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": 100,
+                "minallowed": 0,
+                "maxallowed": null
+              },
+              "range": [
+                0,
+                5
+              ]
+            },
+            "shapes": [
+              {
+                "type": "rect",
+                "y0": 20,
+                "y1": 100,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#990101",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 5,
+                "y1": 20,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#a07300",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 0,
+                "y1": 5,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#009500",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              }
+            ]
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>Base %{x}</b>: %{y:.2f}%<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039515_1",
+              "pairs": [
+                [
+                  1,
+                  0.006
+                ],
+                [
+                  2,
+                  0.0
+                ],
+                [
+                  3,
+                  0.0
+                ],
+                [
+                  4,
+                  0.0
+                ],
+                [
+                  5,
+                  0.0
+                ],
+                [
+                  6,
+                  0.0
+                ],
+                [
+                  7,
+                  0.0
+                ],
+                [
+                  8,
+                  0.0
+                ],
+                [
+                  9,
+                  0.0
+                ],
+                [
+                  10,
+                  0.0
+                ],
+                [
+                  11,
+                  0.0
+                ],
+                [
+                  12,
+                  0.0
+                ],
+                [
+                  13,
+                  0.0
+                ],
+                [
+                  14,
+                  0.0
+                ],
+                [
+                  15,
+                  0.0
+                ],
+                [
+                  16,
+                  0.0
+                ],
+                [
+                  17,
+                  0.0
+                ],
+                [
+                  18,
+                  0.0
+                ],
+                [
+                  19,
+                  0.0
+                ],
+                [
+                  20,
+                  0.0
+                ],
+                [
+                  21,
+                  0.0
+                ],
+                [
+                  22,
+                  0.0
+                ],
+                [
+                  23,
+                  0.0
+                ],
+                [
+                  24,
+                  0.0
+                ],
+                [
+                  25,
+                  0.003
+                ],
+                [
+                  26,
+                  0.0
+                ],
+                [
+                  27,
+                  0.0
+                ],
+                [
+                  28,
+                  0.0
+                ],
+                [
+                  29,
+                  0.0
+                ],
+                [
+                  30,
+                  0.0
+                ],
+                [
+                  31,
+                  0.001
+                ],
+                [
+                  32,
+                  0.0
+                ],
+                [
+                  33,
+                  0.0
+                ],
+                [
+                  34,
+                  0.0
+                ],
+                [
+                  35,
+                  0.0
+                ],
+                [
+                  36,
+                  0.0
+                ],
+                [
+                  37,
+                  0.0
+                ],
+                [
+                  38,
+                  0.0
+                ],
+                [
+                  39,
+                  0.0
+                ],
+                [
+                  40,
+                  0.0
+                ],
+                [
+                  41,
+                  0.0
+                ],
+                [
+                  42,
+                  0.0
+                ],
+                [
+                  43,
+                  0.0
+                ],
+                [
+                  44,
+                  0.0
+                ],
+                [
+                  45,
+                  0.0
+                ],
+                [
+                  46,
+                  0.0
+                ],
+                [
+                  47,
+                  0.0
+                ],
+                [
+                  48,
+                  0.0
+                ],
+                [
+                  49,
+                  0.0
+                ],
+                [
+                  50,
+                  0.0
+                ],
+                [
+                  51,
+                  0.0
+                ],
+                [
+                  52,
+                  0.0
+                ],
+                [
+                  53,
+                  0.0
+                ],
+                [
+                  54,
+                  0.0
+                ],
+                [
+                  55,
+                  0.0
+                ],
+                [
+                  56,
+                  0.0
+                ],
+                [
+                  57,
+                  0.0
+                ],
+                [
+                  58,
+                  0.0
+                ],
+                [
+                  59,
+                  0.0
+                ],
+                [
+                  60,
+                  0.0
+                ],
+                [
+                  61,
+                  0.0
+                ],
+                [
+                  62,
+                  0.0
+                ],
+                [
+                  63,
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039515_2",
+              "pairs": [
+                [
+                  1,
+                  0.0
+                ],
+                [
+                  2,
+                  0.0
+                ],
+                [
+                  3,
+                  0.0
+                ],
+                [
+                  4,
+                  0.0
+                ],
+                [
+                  5,
+                  0.0
+                ],
+                [
+                  6,
+                  0.0
+                ],
+                [
+                  7,
+                  0.0
+                ],
+                [
+                  8,
+                  0.0
+                ],
+                [
+                  9,
+                  0.0
+                ],
+                [
+                  10,
+                  0.0
+                ],
+                [
+                  11,
+                  0.0
+                ],
+                [
+                  12,
+                  0.0
+                ],
+                [
+                  13,
+                  0.0
+                ],
+                [
+                  14,
+                  0.0
+                ],
+                [
+                  15,
+                  0.0
+                ],
+                [
+                  16,
+                  0.0
+                ],
+                [
+                  17,
+                  0.0
+                ],
+                [
+                  18,
+                  0.0
+                ],
+                [
+                  19,
+                  0.0
+                ],
+                [
+                  20,
+                  0.0
+                ],
+                [
+                  21,
+                  0.0
+                ],
+                [
+                  22,
+                  0.0
+                ],
+                [
+                  23,
+                  0.0
+                ],
+                [
+                  24,
+                  0.0
+                ],
+                [
+                  25,
+                  0.0
+                ],
+                [
+                  26,
+                  0.0
+                ],
+                [
+                  27,
+                  0.0
+                ],
+                [
+                  28,
+                  0.0
+                ],
+                [
+                  29,
+                  0.0
+                ],
+                [
+                  30,
+                  0.0
+                ],
+                [
+                  31,
+                  0.0
+                ],
+                [
+                  32,
+                  0.0
+                ],
+                [
+                  33,
+                  0.0
+                ],
+                [
+                  34,
+                  0.0
+                ],
+                [
+                  35,
+                  0.0
+                ],
+                [
+                  36,
+                  0.0
+                ],
+                [
+                  37,
+                  0.0
+                ],
+                [
+                  38,
+                  0.0
+                ],
+                [
+                  39,
+                  0.0
+                ],
+                [
+                  40,
+                  0.0
+                ],
+                [
+                  41,
+                  0.0
+                ],
+                [
+                  42,
+                  0.0
+                ],
+                [
+                  43,
+                  0.0
+                ],
+                [
+                  44,
+                  0.0
+                ],
+                [
+                  45,
+                  0.0
+                ],
+                [
+                  46,
+                  0.0
+                ],
+                [
+                  47,
+                  0.0
+                ],
+                [
+                  48,
+                  0.0
+                ],
+                [
+                  49,
+                  0.0
+                ],
+                [
+                  50,
+                  0.0
+                ],
+                [
+                  51,
+                  0.0
+                ],
+                [
+                  52,
+                  0.0
+                ],
+                [
+                  53,
+                  0.0
+                ],
+                [
+                  54,
+                  0.0
+                ],
+                [
+                  55,
+                  0.0
+                ],
+                [
+                  56,
+                  0.0
+                ],
+                [
+                  57,
+                  0.0
+                ],
+                [
+                  58,
+                  0.0
+                ],
+                [
+                  59,
+                  0.0
+                ],
+                [
+                  60,
+                  0.0
+                ],
+                [
+                  61,
+                  0.0
+                ],
+                [
+                  62,
+                  0.0
+                ],
+                [
+                  63,
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_per_base_n_content_plot",
+        "title": "FastQC: Per Base N Content",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Position in Read (bp)",
+        "ylab": "Percentage N-Count",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}%",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": 0,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": 100,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": 5,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": [
+          {
+            "from_": 20,
+            "to": 100,
+            "color": "#990101",
+            "opacity": 0.13
+          },
+          {
+            "from_": 5,
+            "to": 20,
+            "color": "#a07300",
+            "opacity": 0.13
+          },
+          {
+            "from_": 0,
+            "to": 5,
+            "color": "#009500",
+            "opacity": 0.13
+          }
+        ],
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039515_1": "#5cb85c",
+          "SRR1039515_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039515_1",
+        "SRR1039515_2"
+      ]
+    },
+    "fastqc_sequence_duplication_levels_plot": {
+      "id": "fastqc_sequence_duplication_levels_plot",
+      "anchor": "fastqc_sequence_duplication_levels_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Sequence Duplication Levels",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_sequence_duplication_levels_plot",
+          "label": "1",
+          "uid": "fastqc_sequence_duplication_levels_plot",
+          "dconfig": {
+            "title": "FastQC: Sequence Duplication Levels",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Sequence Duplication Levels<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": "Sequence Duplication Level"
+              },
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              },
+              "type": "category"
+            },
+            "yaxis": {
+              "hoverformat": ",.2f",
+              "ticksuffix": "%",
+              "title": {
+                "text": "% of Library"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": 100
+              }
+            }
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br>%{x}: %{y}<extra></extra>",
+            "mode": "lines+markers",
+            "line": {
+              "width": 0.6
+            },
+            "marker": {
+              "size": 5
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039515_1",
+              "pairs": [
+                [
+                  1.0,
+                  91.691
+                ],
+                [
+                  2.0,
+                  5.53
+                ],
+                [
+                  3.0,
+                  1.44
+                ],
+                [
+                  4.0,
+                  0.608
+                ],
+                [
+                  5.0,
+                  0.35500000000000004
+                ],
+                [
+                  6.0,
+                  0.126
+                ],
+                [
+                  7.0,
+                  0.077
+                ],
+                [
+                  8.0,
+                  0.032
+                ],
+                [
+                  9.0,
+                  0.045
+                ],
+                [
+                  ">10",
+                  0.096
+                ],
+                [
+                  ">50",
+                  0.0
+                ],
+                [
+                  ">100",
+                  0.0
+                ],
+                [
+                  ">500",
+                  0.0
+                ],
+                [
+                  ">1k",
+                  0.0
+                ],
+                [
+                  ">5k",
+                  0.0
+                ],
+                [
+                  ">10k+",
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039515_2",
+              "pairs": [
+                [
+                  1.0,
+                  91.834
+                ],
+                [
+                  2.0,
+                  5.442
+                ],
+                [
+                  3.0,
+                  1.461
+                ],
+                [
+                  4.0,
+                  0.54
+                ],
+                [
+                  5.0,
+                  0.31
+                ],
+                [
+                  6.0,
+                  0.11399999999999999
+                ],
+                [
+                  7.0,
+                  0.11199999999999999
+                ],
+                [
+                  8.0,
+                  0.024
+                ],
+                [
+                  9.0,
+                  0.045
+                ],
+                [
+                  ">10",
+                  0.11800000000000001
+                ],
+                [
+                  ">50",
+                  0.0
+                ],
+                [
+                  ">100",
+                  0.0
+                ],
+                [
+                  ">500",
+                  0.0
+                ],
+                [
+                  ">1k",
+                  0.0
+                ],
+                [
+                  ">5k",
+                  0.0
+                ],
+                [
+                  ">10k+",
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_sequence_duplication_levels_plot",
+        "title": "FastQC: Sequence Duplication Levels",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Sequence Duplication Level",
+        "ylab": "% of Library",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": "%",
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": 2,
+        "xmin": null,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": 100,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": true,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039515_1": "#5cb85c",
+          "SRR1039515_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039515_1",
+        "SRR1039515_2"
+      ]
+    },
+    "fastqc_adapter_content_plot": {
+      "id": "fastqc_adapter_content_plot",
+      "anchor": "fastqc_adapter_content_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Adapter Content",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_adapter_content_plot",
+          "label": "1",
+          "uid": "fastqc_adapter_content_plot",
+          "dconfig": {
+            "title": "FastQC: Adapter Content",
+            "subtitle": "3 sample-adapter combinations"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Adapter Content<br><sup>3 sample-adapter combinations</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": " bp",
+              "title": {
+                "text": "Position (bp)"
+              },
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "%",
+              "title": {
+                "text": "% of Sequences"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": 100,
+                "minallowed": 0,
+                "maxallowed": null
+              },
+              "range": [
+                0,
+                5
+              ]
+            },
+            "shapes": [
+              {
+                "type": "rect",
+                "y0": 20,
+                "y1": 100,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#990101",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 5,
+                "y1": 20,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#a07300",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 0,
+                "y1": 5,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#009500",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              }
+            ]
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>Base %{x}</b>: %{y:.2f}%<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 3,
+          "lines": [
+            {
+              "name": "SRR1039515_1 - polya",
+              "pairs": [
+                [
+                  1,
+                  0.022
+                ],
+                [
+                  2,
+                  0.026
+                ],
+                [
+                  3,
+                  0.031
+                ],
+                [
+                  4,
+                  0.036
+                ],
+                [
+                  5,
+                  0.038
+                ],
+                [
+                  6,
+                  0.039
+                ],
+                [
+                  7,
+                  0.04
+                ],
+                [
+                  8,
+                  0.044
+                ],
+                [
+                  9,
+                  0.049
+                ],
+                [
+                  10,
+                  0.056
+                ],
+                [
+                  11,
+                  0.059
+                ],
+                [
+                  12,
+                  0.062
+                ],
+                [
+                  13,
+                  0.066
+                ],
+                [
+                  14,
+                  0.072
+                ],
+                [
+                  15,
+                  0.075
+                ],
+                [
+                  16,
+                  0.083
+                ],
+                [
+                  17,
+                  0.086
+                ],
+                [
+                  18,
+                  0.089
+                ],
+                [
+                  19,
+                  0.089
+                ],
+                [
+                  20,
+                  0.093
+                ],
+                [
+                  21,
+                  0.096
+                ],
+                [
+                  22,
+                  0.101
+                ],
+                [
+                  23,
+                  0.108
+                ],
+                [
+                  24,
+                  0.11
+                ],
+                [
+                  25,
+                  0.113
+                ],
+                [
+                  26,
+                  0.118
+                ],
+                [
+                  27,
+                  0.127
+                ],
+                [
+                  28,
+                  0.128
+                ],
+                [
+                  29,
+                  0.132
+                ],
+                [
+                  30,
+                  0.135
+                ],
+                [
+                  31,
+                  0.137
+                ],
+                [
+                  32,
+                  0.141
+                ],
+                [
+                  33,
+                  0.146
+                ],
+                [
+                  34,
+                  0.148
+                ],
+                [
+                  35,
+                  0.15
+                ],
+                [
+                  36,
+                  0.156
+                ],
+                [
+                  37,
+                  0.161
+                ],
+                [
+                  38,
+                  0.163
+                ],
+                [
+                  39,
+                  0.164
+                ],
+                [
+                  40,
+                  0.169
+                ],
+                [
+                  41,
+                  0.17
+                ],
+                [
+                  42,
+                  0.174
+                ],
+                [
+                  43,
+                  0.177
+                ],
+                [
+                  44,
+                  0.181
+                ],
+                [
+                  45,
+                  0.183
+                ],
+                [
+                  46,
+                  0.185
+                ],
+                [
+                  47,
+                  0.191
+                ],
+                [
+                  48,
+                  0.194
+                ],
+                [
+                  49,
+                  0.196
+                ],
+                [
+                  50,
+                  0.202
+                ],
+                [
+                  51,
+                  0.204
+                ],
+                [
+                  52,
+                  0.21
+                ]
+              ],
+              "color": "rgba(124,181,236,1)",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039515_2 - polya",
+              "pairs": [
+                [
+                  1,
+                  0.034
+                ],
+                [
+                  2,
+                  0.04
+                ],
+                [
+                  3,
+                  0.054
+                ],
+                [
+                  4,
+                  0.057
+                ],
+                [
+                  5,
+                  0.064
+                ],
+                [
+                  6,
+                  0.074
+                ],
+                [
+                  7,
+                  0.078
+                ],
+                [
+                  8,
+                  0.082
+                ],
+                [
+                  9,
+                  0.087
+                ],
+                [
+                  10,
+                  0.096
+                ],
+                [
+                  11,
+                  0.098
+                ],
+                [
+                  12,
+                  0.104
+                ],
+                [
+                  13,
+                  0.107
+                ],
+                [
+                  14,
+                  0.109
+                ],
+                [
+                  15,
+                  0.118
+                ],
+                [
+                  16,
+                  0.12
+                ],
+                [
+                  17,
+                  0.126
+                ],
+                [
+                  18,
+                  0.128
+                ],
+                [
+                  19,
+                  0.132
+                ],
+                [
+                  20,
+                  0.137
+                ],
+                [
+                  21,
+                  0.14
+                ],
+                [
+                  22,
+                  0.146
+                ],
+                [
+                  23,
+                  0.15
+                ],
+                [
+                  24,
+                  0.161
+                ],
+                [
+                  25,
+                  0.163
+                ],
+                [
+                  26,
+                  0.171
+                ],
+                [
+                  27,
+                  0.178
+                ],
+                [
+                  28,
+                  0.184
+                ],
+                [
+                  29,
+                  0.189
+                ],
+                [
+                  30,
+                  0.193
+                ],
+                [
+                  31,
+                  0.199
+                ],
+                [
+                  32,
+                  0.204
+                ],
+                [
+                  33,
+                  0.209
+                ],
+                [
+                  34,
+                  0.212
+                ],
+                [
+                  35,
+                  0.219
+                ],
+                [
+                  36,
+                  0.222
+                ],
+                [
+                  37,
+                  0.231
+                ],
+                [
+                  38,
+                  0.238
+                ],
+                [
+                  39,
+                  0.241
+                ],
+                [
+                  40,
+                  0.246
+                ],
+                [
+                  41,
+                  0.252
+                ],
+                [
+                  42,
+                  0.261
+                ],
+                [
+                  43,
+                  0.267
+                ],
+                [
+                  44,
+                  0.271
+                ],
+                [
+                  45,
+                  0.278
+                ],
+                [
+                  46,
+                  0.283
+                ],
+                [
+                  47,
+                  0.305
+                ],
+                [
+                  48,
+                  0.313
+                ],
+                [
+                  49,
+                  0.321
+                ],
+                [
+                  50,
+                  0.323
+                ],
+                [
+                  51,
+                  0.328
+                ],
+                [
+                  52,
+                  0.336
+                ]
+              ],
+              "color": "rgba(67,67,72,1)",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039515_2 - polyg",
+              "pairs": [
+                [
+                  1,
+                  0.013
+                ],
+                [
+                  2,
+                  0.015
+                ],
+                [
+                  3,
+                  0.02
+                ],
+                [
+                  4,
+                  0.023
+                ],
+                [
+                  5,
+                  0.026
+                ],
+                [
+                  6,
+                  0.028
+                ],
+                [
+                  7,
+                  0.031
+                ],
+                [
+                  8,
+                  0.035
+                ],
+                [
+                  9,
+                  0.04
+                ],
+                [
+                  10,
+                  0.041
+                ],
+                [
+                  11,
+                  0.042
+                ],
+                [
+                  12,
+                  0.043
+                ],
+                [
+                  13,
+                  0.046
+                ],
+                [
+                  14,
+                  0.048
+                ],
+                [
+                  15,
+                  0.048
+                ],
+                [
+                  16,
+                  0.048
+                ],
+                [
+                  17,
+                  0.053
+                ],
+                [
+                  18,
+                  0.055
+                ],
+                [
+                  19,
+                  0.056
+                ],
+                [
+                  20,
+                  0.059
+                ],
+                [
+                  21,
+                  0.06
+                ],
+                [
+                  22,
+                  0.062
+                ],
+                [
+                  23,
+                  0.064
+                ],
+                [
+                  24,
+                  0.066
+                ],
+                [
+                  25,
+                  0.068
+                ],
+                [
+                  26,
+                  0.07
+                ],
+                [
+                  27,
+                  0.07
+                ],
+                [
+                  28,
+                  0.076
+                ],
+                [
+                  29,
+                  0.081
+                ],
+                [
+                  30,
+                  0.083
+                ],
+                [
+                  31,
+                  0.085
+                ],
+                [
+                  32,
+                  0.088
+                ],
+                [
+                  33,
+                  0.089
+                ],
+                [
+                  34,
+                  0.094
+                ],
+                [
+                  35,
+                  0.095
+                ],
+                [
+                  36,
+                  0.097
+                ],
+                [
+                  37,
+                  0.099
+                ],
+                [
+                  38,
+                  0.101
+                ],
+                [
+                  39,
+                  0.103
+                ],
+                [
+                  40,
+                  0.107
+                ],
+                [
+                  41,
+                  0.114
+                ],
+                [
+                  42,
+                  0.114
+                ],
+                [
+                  43,
+                  0.115
+                ],
+                [
+                  44,
+                  0.12
+                ],
+                [
+                  45,
+                  0.125
+                ],
+                [
+                  46,
+                  0.126
+                ],
+                [
+                  47,
+                  0.129
+                ],
+                [
+                  48,
+                  0.132
+                ],
+                [
+                  49,
+                  0.134
+                ],
+                [
+                  50,
+                  0.135
+                ],
+                [
+                  51,
+                  0.136
+                ],
+                [
+                  52,
+                  0.137
+                ]
+              ],
+              "color": "rgba(144,237,125,1)",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_adapter_content_plot",
+        "title": "FastQC: Adapter Content",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Position (bp)",
+        "ylab": "% of Sequences",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}%",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": null,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": 100,
+        "save_data_file": true,
+        "showlegend": null,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": 5,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": [
+          {
+            "from_": 20,
+            "to": 100,
+            "color": "#990101",
+            "opacity": 0.13
+          },
+          {
+            "from_": 5,
+            "to": 20,
+            "color": "#a07300",
+            "opacity": 0.13
+          },
+          {
+            "from_": 0,
+            "to": 5,
+            "color": "#009500",
+            "opacity": 0.13
+          }
+        ],
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "sample-adapter combinations",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {},
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039515_1 - polya",
+        "SRR1039515_2 - polya",
+        "SRR1039515_2 - polyg"
+      ]
+    },
+    "fastqc-status-check-heatmap": {
+      "id": "fastqc-status-check-heatmap",
+      "anchor": "fastqc-status-check-heatmap",
+      "plot_type": "heatmap",
+      "layout": {
+        "autosize": true,
+        "height": 360,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Status Checks",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true,
+          "type": "category",
+          "tickmode": "array",
+          "tickvals": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "ticktext": [
+            "Basic <br>Statistics",
+            "Per Base <br>Sequence <br>Quality",
+            "Per <br>Sequence <br>Quality <br>Scores",
+            "Per Base <br>Sequence <br>Content",
+            "Per <br>Sequence <br>GC Content",
+            "Per Base N<br> Content",
+            "Sequence <br>Length <br>Distribution",
+            "Sequence <br>Duplication<br> Levels",
+            "Overrepresented<br> Sequences",
+            "Adapter <br>Content"
+          ],
+          "tickangle": 0,
+          "showgrid": false
+        },
+        "yaxis": {
+          "automargin": true,
+          "type": "category",
+          "tickmode": "array",
+          "tickvals": [
+            0,
+            1
+          ],
+          "ticktext": [
+            "SRR1039515_1",
+            "SRR1039515_2"
+          ],
+          "showgrid": false,
+          "autorange": "reversed",
+          "ticklabelposition": "outside right"
+        }
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc-status-check-heatmap",
+          "label": "1",
+          "uid": "fastqc-status-check-heatmap",
+          "dconfig": {
+            "title": "FastQC: Status Checks",
+            "subtitle": "2 samples"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Status Checks<br><sup>2 samples</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": null,
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": ",.1f",
+              "ticksuffix": "",
+              "title": null,
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            }
+          },
+          "trace_params": {
+            "colorscale": [
+              [
+                0.0,
+                "rgba(255, 255, 255, 0.0)"
+              ],
+              [
+                0.25,
+                "#d9534f"
+              ],
+              [
+                0.5,
+                "#fee391"
+              ],
+              [
+                1.0,
+                "#5cb85c"
+              ]
+            ],
+            "reversescale": false,
+            "showscale": false,
+            "zmin": 0,
+            "zmax": 1,
+            "hovertemplate": "Section Name: %{x}<br>Sample: %{y}<br>z: %{z}<extra></extra>"
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "rows": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "rows_clustered": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "xcats": [
+            "Basic Statistics",
+            "Per Base Sequence Quality",
+            "Per Sequence Quality Scores",
+            "Per Base Sequence Content",
+            "Per Sequence GC Content",
+            "Per Base N Content",
+            "Sequence Length Distribution",
+            "Sequence Duplication Levels",
+            "Overrepresented Sequences",
+            "Adapter Content"
+          ],
+          "ycats": [
+            "SRR1039515_1",
+            "SRR1039515_2"
+          ],
+          "xcats_clustered": [
+            "Per Sequence GC Content",
+            "Per Base N Content",
+            "Sequence Length Distribution",
+            "Sequence Duplication Levels",
+            "Overrepresented Sequences",
+            "Adapter Content",
+            "Basic Statistics",
+            "Per Base Sequence Quality",
+            "Per Sequence Quality Scores",
+            "Per Base Sequence Content"
+          ],
+          "ycats_clustered": [
+            "SRR1039515_1",
+            "SRR1039515_2"
+          ],
+          "xcats_samples": false,
+          "ycats_samples": true
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc-status-check-heatmap",
+        "title": "FastQC: Status Checks",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Section Name",
+        "ylab": "Sample",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": 2,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": 1,
+        "xmin": null,
+        "xmax": null,
+        "ymin": null,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": null,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "zlab": "z",
+        "min": 0,
+        "max": 1,
+        "xcats_samples": false,
+        "ycats_samples": true,
+        "colstops": [
+          [
+            0,
+            "#ffffff00"
+          ],
+          [
+            0.25,
+            "#d9534f"
+          ],
+          [
+            0.5,
+            "#fee391"
+          ],
+          [
+            1,
+            "#5cb85c"
+          ]
+        ],
+        "reverseColors": false,
+        "reverse_colors": false,
+        "legend": false,
+        "datalabels": null,
+        "display_values": false,
+        "angled_xticks": false,
+        "cluster_rows": true,
+        "cluster_cols": true,
+        "cluster_method": "complete",
+        "cluster_switch_clustered_active": false
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "xcats_samples": false,
+      "ycats_samples": true,
+      "min": 0.0,
+      "max": 1.0,
+      "cluster_switch_clustered_active": false
+    },
+    "general_stats_table": {
+      "id": "general_stats_table",
+      "anchor": "general_stats_table",
+      "plot_type": "violin plot",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 40,
+          "l": 60,
+          "pad": 0,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "General Statistics",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": false,
+          "tickfont": {
+            "size": 9,
+            "color": "rgba(0,0,0,0.5)"
+          },
+          "gridcolor": "rgba(0,0,0,0.1)",
+          "zerolinecolor": "rgba(0,0,0,0.1)"
+        },
+        "yaxis": {
+          "automargin": true,
+          "tickfont": {
+            "size": 9,
+            "color": "rgba(0,0,0,0.5)"
+          },
+          "gridcolor": "rgba(0,0,0,0.1)",
+          "zerolinecolor": "rgba(0,0,0,0.1)"
+        },
+        "violingap": 0,
+        "grid": {
+          "columns": 1,
+          "roworder": "top to bottom",
+          "ygap": 0.4
+        }
+      },
+      "datasets": [
+        {
+          "plot_id": "general_stats_table",
+          "label": "1",
+          "uid": "general_stats_table",
+          "dconfig": {
+            "ylab": "",
+            "title": "General Statistics",
+            "subtitle": "2 samples"
+          },
+          "layout": {
+            "title": {
+              "text": "General Statistics<br><sup>2 samples</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": null
+              },
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": ""
+              },
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            }
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b>: %{x}<extra></extra>",
+            "orientation": "h",
+            "box": {
+              "visible": true
+            },
+            "meanline": {
+              "visible": true
+            },
+            "fillcolor": "#999999",
+            "line": {
+              "width": 0
+            },
+            "opacity": 1,
+            "points": false,
+            "hoveron": "points"
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "metrics": [
+            "fastqc-percent_duplicates",
+            "fastqc-percent_gc",
+            "fastqc-avg_sequence_length",
+            "fastqc-median_sequence_length",
+            "fastqc-percent_fails",
+            "fastqc-total_sequences"
+          ],
+          "header_by_metric": {
+            "fastqc-percent_duplicates": {
+              "title": "Dups",
+              "description": "% duplicate reads",
+              "suffix": "%",
+              "dmin": 0.0,
+              "dmax": 100.0,
+              "hidden": false,
+              "xaxis": {
+                "ticksuffix": "%",
+                "tickvals": null,
+                "range": [
+                  -0.5,
+                  100.5025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-percent_gc": {
+              "title": "GC",
+              "description": "Average % GC content",
+              "suffix": "%",
+              "dmin": 0.0,
+              "dmax": 100.0,
+              "hidden": false,
+              "xaxis": {
+                "ticksuffix": "%",
+                "tickvals": null,
+                "range": [
+                  -0.5,
+                  100.5025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-avg_sequence_length": {
+              "title": "Avg len",
+              "description": "Average read length",
+              "suffix": " bp",
+              "dmin": 0.0,
+              "dmax": 63.0,
+              "hidden": true,
+              "xaxis": {
+                "ticksuffix": " bp",
+                "tickvals": null,
+                "range": [
+                  -0.315,
+                  63.316575
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-median_sequence_length": {
+              "title": "Median len",
+              "description": "Median read length",
+              "suffix": " bp",
+              "dmin": 0.0,
+              "dmax": 63,
+              "hidden": true,
+              "xaxis": {
+                "ticksuffix": " bp",
+                "tickvals": null,
+                "range": [
+                  -0.315,
+                  63.316575
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": null
+            },
+            "fastqc-percent_fails": {
+              "title": "Failed",
+              "description": "Percentage of modules failed in FastQC report (includes those not plotted here)",
+              "suffix": "%",
+              "dmin": 0.0,
+              "dmax": 100.0,
+              "hidden": true,
+              "xaxis": {
+                "ticksuffix": "%",
+                "tickvals": null,
+                "range": [
+                  -0.5,
+                  100.5025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-total_sequences": {
+              "title": "Seqs",
+              "description": "Total sequences (millions)",
+              "suffix": " M",
+              "dmin": 0.0,
+              "dmax": 0.09999999999999999,
+              "hidden": false,
+              "xaxis": {
+                "ticksuffix": " M",
+                "tickvals": null,
+                "range": [
+                  -0.0005,
+                  0.1005025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            }
+          },
+          "violin_value_by_sample_by_metric": {
+            "fastqc-percent_duplicates": {
+              "SRR1039515_1": 4.795000000000002,
+              "SRR1039515_2": 4.710000000000008
+            },
+            "fastqc-percent_gc": {
+              "SRR1039515_1": 49.0,
+              "SRR1039515_2": 49.0
+            },
+            "fastqc-avg_sequence_length": {
+              "SRR1039515_1": 63.0,
+              "SRR1039515_2": 63.0
+            },
+            "fastqc-median_sequence_length": {
+              "SRR1039515_1": 63,
+              "SRR1039515_2": 63
+            },
+            "fastqc-percent_fails": {
+              "SRR1039515_1": 0.0,
+              "SRR1039515_2": 0.0
+            },
+            "fastqc-total_sequences": {
+              "SRR1039515_1": 0.09999999999999999,
+              "SRR1039515_2": 0.09999999999999999
+            }
+          },
+          "scatter_value_by_sample_by_metric": {
+            "fastqc-percent_duplicates": {},
+            "fastqc-percent_gc": {},
+            "fastqc-avg_sequence_length": {},
+            "fastqc-median_sequence_length": {},
+            "fastqc-percent_fails": {},
+            "fastqc-total_sequences": {}
+          },
+          "all_samples": [
+            "SRR1039515_1",
+            "SRR1039515_2"
+          ],
+          "scatter_trace_params": {
+            "mode": "markers",
+            "marker": {
+              "size": 4,
+              "color": "#0b79e6",
+              "opacity": 1
+            },
+            "showlegend": false,
+            "hovertemplate": "<b>%{text}</b>: %{x}<extra></extra>",
+            "hoverlabel": {
+              "bgcolor": "white",
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            }
+          },
+          "dt": {
+            "id": "general_stats_table",
+            "anchor": "general_stats_table_table",
+            "pconfig": {
+              "id": "general_stats_table",
+              "title": "General Statistics",
+              "subtitle": null,
+              "anchor": null,
+              "table_title": null,
+              "height": null,
+              "width": null,
+              "square": false,
+              "logswitch": false,
+              "logswitch_active": false,
+              "logswitch_label": "Log10",
+              "cpswitch": true,
+              "cpswitch_c_active": true,
+              "cpswitch_counts_label": "Counts",
+              "cpswitch_percent_label": "Percentages",
+              "xLog": null,
+              "yLog": null,
+              "xlog": false,
+              "ylog": false,
+              "data_labels": [],
+              "xTitle": null,
+              "yTitle": null,
+              "xlab": null,
+              "ylab": null,
+              "xsuffix": null,
+              "ysuffix": null,
+              "tt_suffix": null,
+              "xLabFormat": null,
+              "yLabFormat": null,
+              "xLabelFormat": null,
+              "yLabelFormat": null,
+              "xlab_format": null,
+              "ylab_format": null,
+              "tt_label": null,
+              "xDecimals": null,
+              "yDecimals": null,
+              "decimalPlaces": null,
+              "x_decimals": null,
+              "y_decimals": null,
+              "tt_decimals": null,
+              "xmin": null,
+              "xmax": null,
+              "ymin": null,
+              "ymax": null,
+              "xFloor": null,
+              "xCeiling": null,
+              "yFloor": null,
+              "yCeiling": null,
+              "x_clipmin": null,
+              "x_clipmax": null,
+              "y_clipmin": null,
+              "y_clipmax": null,
+              "save_data_file": true,
+              "showlegend": null,
+              "xMinRange": null,
+              "yMinRange": null,
+              "x_minrange": null,
+              "y_minrange": null,
+              "xPlotBands": null,
+              "yPlotBands": null,
+              "xPlotLines": null,
+              "yPlotLines": null,
+              "x_bands": null,
+              "y_bands": null,
+              "x_lines": null,
+              "y_lines": null,
+              "series_label": "samples",
+              "flat_if_very_large": false,
+              "namespace": "",
+              "save_file": true,
+              "raw_data_fn": "multiqc_general_stats",
+              "defaultsort": null,
+              "sortRows": true,
+              "sort_rows": true,
+              "only_defined_headers": true,
+              "col1_header": "Sample Name",
+              "no_beeswarm": false,
+              "no_violin": false,
+              "scale": "GnBu",
+              "min": null,
+              "parse_numeric": true,
+              "rows_are_samples": true
+            },
+            "section_by_id": {
+              "fastqc": {
+                "column_by_key": {
+                  "percent_duplicates": {
+                    "rid": "fastqc-percent_duplicates",
+                    "clean_rid": "fastqc-percent_duplicates",
+                    "title": "Dups",
+                    "description": "% duplicate reads",
+                    "scale": "RdYlGn-rev",
+                    "hidden": false,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": 100.0,
+                    "dmax": 100.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": "%",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": null
+                  },
+                  "percent_gc": {
+                    "rid": "fastqc-percent_gc",
+                    "clean_rid": "fastqc-percent_gc",
+                    "title": "GC",
+                    "description": "Average % GC content",
+                    "scale": "PuRd",
+                    "hidden": false,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": 100.0,
+                    "dmax": 100.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": "%",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.1f}"
+                  },
+                  "avg_sequence_length": {
+                    "rid": "fastqc-avg_sequence_length",
+                    "clean_rid": "fastqc-avg_sequence_length",
+                    "title": "Avg len",
+                    "description": "Average read length",
+                    "scale": "RdYlGn",
+                    "hidden": true,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": null,
+                    "dmax": 63.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": " bp",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.0f}"
+                  },
+                  "median_sequence_length": {
+                    "rid": "fastqc-median_sequence_length",
+                    "clean_rid": "fastqc-median_sequence_length",
+                    "title": "Median len",
+                    "description": "Median read length",
+                    "scale": "RdYlGn",
+                    "hidden": true,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": null,
+                    "dmax": 63,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": " bp",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.0f}"
+                  },
+                  "percent_fails": {
+                    "rid": "fastqc-percent_fails",
+                    "clean_rid": "fastqc-percent_fails",
+                    "title": "Failed",
+                    "description": "Percentage of modules failed in FastQC report (includes those not plotted here)",
+                    "scale": "Reds",
+                    "hidden": true,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": 100.0,
+                    "dmax": 100.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": "%",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.0f}"
+                  },
+                  "total_sequences": {
+                    "rid": "fastqc-total_sequences",
+                    "clean_rid": "fastqc-total_sequences",
+                    "title": "Seqs",
+                    "description": "Total sequences (millions)",
+                    "scale": "Blues",
+                    "hidden": false,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": null,
+                    "dmax": 0.09999999999999999,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": "read_count",
+                    "tt_decimals": null,
+                    "suffix": " M",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": null
+                  }
+                },
+                "rows_by_sgroup": {
+                  "SRR1039515_1": [
+                    {
+                      "sample": "SRR1039515_1",
+                      "data": {
+                        "total_sequences": {
+                          "raw": 100000.0,
+                          "mod": 0.09999999999999999,
+                          "fmt": "0.1"
+                        },
+                        "percent_gc": {
+                          "raw": 49.0,
+                          "mod": 49.0,
+                          "fmt": "49.0"
+                        },
+                        "avg_sequence_length": {
+                          "raw": 63.0,
+                          "mod": 63.0,
+                          "fmt": "63"
+                        },
+                        "median_sequence_length": {
+                          "raw": 63,
+                          "mod": 63,
+                          "fmt": "63"
+                        },
+                        "percent_duplicates": {
+                          "raw": 4.795000000000002,
+                          "mod": 4.795000000000002,
+                          "fmt": "4.8"
+                        },
+                        "percent_fails": {
+                          "raw": 0.0,
+                          "mod": 0.0,
+                          "fmt": "0"
+                        }
+                      }
+                    }
+                  ],
+                  "SRR1039515_2": [
+                    {
+                      "sample": "SRR1039515_2",
+                      "data": {
+                        "total_sequences": {
+                          "raw": 100000.0,
+                          "mod": 0.09999999999999999,
+                          "fmt": "0.1"
+                        },
+                        "percent_gc": {
+                          "raw": 49.0,
+                          "mod": 49.0,
+                          "fmt": "49.0"
+                        },
+                        "avg_sequence_length": {
+                          "raw": 63.0,
+                          "mod": 63.0,
+                          "fmt": "63"
+                        },
+                        "median_sequence_length": {
+                          "raw": 63,
+                          "mod": 63,
+                          "fmt": "63"
+                        },
+                        "percent_duplicates": {
+                          "raw": 4.710000000000008,
+                          "mod": 4.710000000000008,
+                          "fmt": "4.7"
+                        },
+                        "percent_fails": {
+                          "raw": 0.0,
+                          "mod": 0.0,
+                          "fmt": "0"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "headers_in_order": {
+              "1000.0": [
+                [
+                  0,
+                  "percent_duplicates"
+                ],
+                [
+                  0,
+                  "percent_gc"
+                ],
+                [
+                  0,
+                  "avg_sequence_length"
+                ],
+                [
+                  0,
+                  "median_sequence_length"
+                ],
+                [
+                  0,
+                  "percent_fails"
+                ],
+                [
+                  0,
+                  "total_sequences"
+                ]
+              ]
+            }
+          },
+          "show_table_by_default": true,
+          "is_downsampled": false
+        }
+      ],
+      "pconfig": {
+        "id": "general_stats_table",
+        "title": "General Statistics",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": null,
+        "ylab": null,
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": null,
+        "xmax": null,
+        "ymin": null,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": null,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": false,
+        "namespace": "",
+        "save_file": true,
+        "raw_data_fn": "multiqc_general_stats",
+        "defaultsort": null,
+        "sortRows": true,
+        "sort_rows": true,
+        "only_defined_headers": true,
+        "col1_header": "Sample Name",
+        "no_beeswarm": false,
+        "no_violin": false,
+        "scale": "GnBu",
+        "min": null,
+        "parse_numeric": true,
+        "rows_are_samples": true
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "violin_height": 70,
+      "extra_height": 63,
+      "no_violin": false,
+      "show_table": true,
+      "show_table_by_default": true,
+      "n_samples": 2,
+      "table_anchor": "general_stats_table_table"
+    }
+  },
+  "config_analysis_dir": [
+    "data/multiqc_reports/SRR1039515/_fastqc/"
+  ],
+  "config_git_hash": null,
+  "config_intro_text": null,
+  "config_report_comment": null,
+  "config_report_header_info": null,
+  "config_script_path": "/Users/ryan/miniconda3/envs/multiqc/lib/python3.14/site-packages/multiqc",
+  "config_short_version": "1.35",
+  "config_subtitle": null,
+  "config_title": null,
+  "config_version": "1.35",
+  "config_output_dir": "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039515",
+  "config_sample_names_rename": [],
+  "config_sample_names_rename_buttons": [],
+  "config_analysis_dir_abs": [
+    "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039515/_fastqc"
+  ],
+  "report_saved_raw_data": {
+    "multiqc_fastqc": {
+      "SRR1039515_1": {
+        "Filename": "SRR1039515_1.fastq.gz",
+        "File type": "Conventional base calls",
+        "Encoding": "Sanger / Illumina 1.9",
+        "Total Sequences": 100000.0,
+        "Total Bases": "6.3 Mbp",
+        "Sequences flagged as poor quality": 0.0,
+        "Sequence length": 63.0,
+        "%GC": 49.0,
+        "total_deduplicated_percentage": 95.205,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "basic_statistics": "pass",
+        "per_base_sequence_quality": "pass",
+        "per_sequence_quality_scores": "pass",
+        "per_base_sequence_content": "pass",
+        "per_sequence_gc_content": "pass",
+        "per_base_n_content": "pass",
+        "sequence_length_distribution": "pass",
+        "sequence_duplication_levels": "pass",
+        "overrepresented_sequences": "pass",
+        "adapter_content": "pass"
+      },
+      "SRR1039515_2": {
+        "Filename": "SRR1039515_2.fastq.gz",
+        "File type": "Conventional base calls",
+        "Encoding": "Sanger / Illumina 1.9",
+        "Total Sequences": 100000.0,
+        "Total Bases": "6.3 Mbp",
+        "Sequences flagged as poor quality": 0.0,
+        "Sequence length": 63.0,
+        "%GC": 49.0,
+        "total_deduplicated_percentage": 95.28999999999999,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "basic_statistics": "pass",
+        "per_base_sequence_quality": "pass",
+        "per_sequence_quality_scores": "pass",
+        "per_base_sequence_content": "pass",
+        "per_sequence_gc_content": "pass",
+        "per_base_n_content": "pass",
+        "sequence_length_distribution": "pass",
+        "sequence_duplication_levels": "pass",
+        "overrepresented_sequences": "pass",
+        "adapter_content": "pass"
+      }
+    },
+    "multiqc_general_stats": {
+      "SRR1039515_1": {
+        "fastqc-percent_duplicates": 4.795000000000002,
+        "fastqc-percent_gc": 49.0,
+        "fastqc-avg_sequence_length": 63.0,
+        "fastqc-median_sequence_length": 63,
+        "fastqc-percent_fails": 0.0,
+        "fastqc-total_sequences": 0.09999999999999999
+      },
+      "SRR1039515_2": {
+        "fastqc-percent_duplicates": 4.710000000000008,
+        "fastqc-percent_gc": 49.0,
+        "fastqc-avg_sequence_length": 63.0,
+        "fastqc-median_sequence_length": 63,
+        "fastqc-percent_fails": 0.0,
+        "fastqc-total_sequences": 0.09999999999999999
+      }
+    }
+  }
+}

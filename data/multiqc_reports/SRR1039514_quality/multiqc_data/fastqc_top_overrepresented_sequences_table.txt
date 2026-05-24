@@ -1,0 +1,2 @@
+Sample	Reports	Occurrences	% of all reads
+CGTCGTGTAGGGAAAGAGTGTAGATCTCGGNNNNNNNNNN	1	134	0.134

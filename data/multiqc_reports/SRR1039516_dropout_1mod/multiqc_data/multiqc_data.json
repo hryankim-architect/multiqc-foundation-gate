@@ -1,0 +1,6687 @@
+{
+  "report_multiqc_command": "/Users/ryan/miniconda3/envs/multiqc/bin/multiqc -f -q -o data/multiqc_reports/SRR1039516/ data/multiqc_reports/SRR1039516/_fastqc/",
+  "report_data_sources": {
+    "FastQC": {
+      "all_sections": {
+        "SRR1039516_1": "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039516/_fastqc/SRR1039516_1_fastqc.zip",
+        "SRR1039516_2": "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039516/_fastqc/SRR1039516_2_fastqc.zip"
+      }
+    }
+  },
+  "report_general_stats_data": {
+    "fastqc": {
+      "SRR1039516_1": {
+        "total_sequences": 100000.0,
+        "percent_gc": 49.0,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "percent_duplicates": 6.378,
+        "percent_fails": 0.0
+      },
+      "SRR1039516_2": {
+        "total_sequences": 100000.0,
+        "percent_gc": 49.0,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "percent_duplicates": 5.971999999999994,
+        "percent_fails": 0.0
+      }
+    }
+  },
+  "report_general_stats_headers": {
+    "fastqc": {
+      "percent_duplicates": {
+        "title": "Dups",
+        "description": "% duplicate reads",
+        "max": 100,
+        "min": 0,
+        "suffix": "%",
+        "scale": "RdYlGn-rev",
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-percent_duplicates",
+        "rid": "fastqc-percent_duplicates",
+        "placement": 1000
+      },
+      "percent_gc": {
+        "title": "GC",
+        "description": "Average % GC content",
+        "max": 100,
+        "min": 0,
+        "suffix": "%",
+        "scale": "PuRd",
+        "format": "{:,.1f}",
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-percent_gc",
+        "rid": "fastqc-percent_gc",
+        "placement": 1000
+      },
+      "avg_sequence_length": {
+        "title": "Avg len",
+        "description": "Average read length",
+        "min": 0,
+        "suffix": " bp",
+        "scale": "RdYlGn",
+        "format": "{:,.0f}",
+        "hidden": true,
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-avg_sequence_length",
+        "rid": "fastqc-avg_sequence_length",
+        "placement": 1000
+      },
+      "median_sequence_length": {
+        "title": "Median len",
+        "description": "Median read length",
+        "min": 0,
+        "suffix": " bp",
+        "scale": "RdYlGn",
+        "format": "{:,.0f}",
+        "hidden": true,
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-median_sequence_length",
+        "rid": "fastqc-median_sequence_length",
+        "placement": 1000
+      },
+      "percent_fails": {
+        "title": "Failed",
+        "description": "Percentage of modules failed in FastQC report (includes those not plotted here)",
+        "max": 100,
+        "min": 0,
+        "suffix": "%",
+        "scale": "Reds",
+        "format": "{:,.0f}",
+        "hidden": true,
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-percent_fails",
+        "rid": "fastqc-percent_fails",
+        "placement": 1000
+      },
+      "total_sequences": {
+        "title": "Seqs",
+        "shared_key": "read_count",
+        "description": "Total sequences (millions)",
+        "min": 0,
+        "scale": "Blues",
+        "namespace": "FastQC",
+        "clean_rid": "fastqc-total_sequences",
+        "rid": "fastqc-total_sequences",
+        "modify": null,
+        "suffix": " M",
+        "placement": 1000
+      }
+    }
+  },
+  "report_creation_date": "2026-05-24, 09:40 PDT",
+  "report_plot_data": {
+    "fastqc_sequence_counts_plot": {
+      "id": "fastqc_sequence_counts_plot",
+      "anchor": "fastqc_sequence_counts_plot",
+      "plot_type": "bar plot",
+      "layout": {
+        "autosize": true,
+        "height": 300,
+        "hoverlabel": {
+          "namelength": -1,
+          "bgcolor": "white",
+          "font": {
+            "color": "rgba(60,60,60,1)"
+          }
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": true,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Sequence Counts",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true,
+          "showgrid": false,
+          "categoryorder": "trace",
+          "type": "category"
+        },
+        "barmode": "relative",
+        "bargroupgap": 0,
+        "bargap": 0.2,
+        "legend": {
+          "tracegroupgap": 0,
+          "traceorder": "normal"
+        },
+        "hovermode": "y unified"
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_sequence_counts_plot",
+          "label": "1",
+          "uid": "fastqc_sequence_counts_plot",
+          "dconfig": {
+            "title": "FastQC: Sequence Counts",
+            "subtitle": "2 bars"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Sequence Counts<br><sup>2 bars</sup>"
+            },
+            "xaxis": {
+              "title": {
+                "text": "Number of reads"
+              },
+              "hoverformat": ",.2f",
+              "ticksuffix": "",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": 100000.0
+              }
+            },
+            "yaxis": {
+              "title": null,
+              "hoverformat": null,
+              "ticksuffix": "",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            },
+            "showlegend": true
+          },
+          "trace_params": {
+            "hovertemplate": "<b></b>%{meta}: <b>%{x}</b><extra></extra>",
+            "orientation": "h",
+            "marker": {
+              "line": {
+                "width": 0
+              }
+            },
+            "textposition": "inside",
+            "insidetextanchor": "start"
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "cats": [
+            {
+              "name": "Unique Reads",
+              "color": "rgba(124,181,236,1)",
+              "data": [
+                94029.0,
+                93622.0
+              ],
+              "data_pct": [
+                94.029,
+                93.622
+              ]
+            },
+            {
+              "name": "Duplicate Reads",
+              "color": "rgba(67,67,72,1)",
+              "data": [
+                5971.0,
+                6378.0
+              ],
+              "data_pct": [
+                5.971,
+                6.378
+              ]
+            }
+          ],
+          "samples": [
+            "SRR1039516_2",
+            "SRR1039516_1"
+          ],
+          "cats_clustered": null,
+          "samples_clustered": null,
+          "group_labels": null,
+          "offset_groups": null
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_sequence_counts_plot",
+        "title": "FastQC: Sequence Counts",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Number of reads",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": null,
+        "ylab": "Number of reads",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": null,
+        "xmax": null,
+        "ymin": null,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": null,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "stacking": "relative",
+        "hide_empty": null,
+        "hide_zero_cats": false,
+        "sort_samples": true,
+        "cluster_samples": false,
+        "cluster_method": "complete",
+        "cluster_switch_clustered_active": true,
+        "use_legend": null,
+        "suffix": null,
+        "lab_format": null,
+        "sample_groups": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": true,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "xaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sort_switch_sorted_active": false,
+      "cluster_switch_clustered_active": true
+    },
+    "fastqc_per_base_sequence_quality_plot": {
+      "id": "fastqc_per_base_sequence_quality_plot",
+      "anchor": "fastqc_per_base_sequence_quality_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Mean Quality Scores",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_per_base_sequence_quality_plot",
+          "label": "1",
+          "uid": "fastqc_per_base_sequence_quality_plot",
+          "dconfig": {
+            "title": "FastQC: Mean Quality Scores",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Mean Quality Scores<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": ",.0f",
+              "ticksuffix": " bp",
+              "title": {
+                "text": "Position (bp)"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": "Phred Score"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              },
+              "range": [
+                0,
+                41.7773685
+              ]
+            },
+            "shapes": [
+              {
+                "type": "rect",
+                "y0": 28,
+                "y1": 100,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#009500",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 20,
+                "y1": 28,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#a07300",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 0,
+                "y1": 20,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#990101",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              }
+            ]
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>Base %{x}</b>: %{y:.2f}<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039516_1",
+              "pairs": [
+                [
+                  1,
+                  38.18519
+                ],
+                [
+                  2,
+                  39.78797
+                ],
+                [
+                  3,
+                  39.74028
+                ],
+                [
+                  4,
+                  39.74439
+                ],
+                [
+                  5,
+                  39.60298
+                ],
+                [
+                  6,
+                  39.5794
+                ],
+                [
+                  7,
+                  39.60249
+                ],
+                [
+                  8,
+                  39.59154
+                ],
+                [
+                  9,
+                  39.55165
+                ],
+                [
+                  10,
+                  39.45257
+                ],
+                [
+                  11,
+                  39.40364
+                ],
+                [
+                  12,
+                  39.44768
+                ],
+                [
+                  13,
+                  39.45689
+                ],
+                [
+                  14,
+                  39.2655
+                ],
+                [
+                  15,
+                  39.19222
+                ],
+                [
+                  16,
+                  39.18718
+                ],
+                [
+                  17,
+                  39.09836
+                ],
+                [
+                  18,
+                  39.05957
+                ],
+                [
+                  19,
+                  38.95311
+                ],
+                [
+                  20,
+                  39.16085
+                ],
+                [
+                  21,
+                  39.23093
+                ],
+                [
+                  22,
+                  39.19099
+                ],
+                [
+                  23,
+                  39.00438
+                ],
+                [
+                  24,
+                  39.01713
+                ],
+                [
+                  25,
+                  38.99272
+                ],
+                [
+                  26,
+                  38.95902
+                ],
+                [
+                  27,
+                  38.82195
+                ],
+                [
+                  28,
+                  38.82716
+                ],
+                [
+                  29,
+                  38.77558
+                ],
+                [
+                  30,
+                  38.72096
+                ],
+                [
+                  31,
+                  38.53053
+                ],
+                [
+                  32,
+                  38.4567
+                ],
+                [
+                  33,
+                  38.44574
+                ],
+                [
+                  34,
+                  38.40951
+                ],
+                [
+                  35,
+                  38.34177
+                ],
+                [
+                  36,
+                  38.2114
+                ],
+                [
+                  37,
+                  38.03674
+                ],
+                [
+                  38,
+                  37.94656
+                ],
+                [
+                  39,
+                  37.81983
+                ],
+                [
+                  40,
+                  37.70107
+                ],
+                [
+                  41,
+                  37.5365
+                ],
+                [
+                  42,
+                  37.40398
+                ],
+                [
+                  43,
+                  37.33899
+                ],
+                [
+                  44,
+                  37.15899
+                ],
+                [
+                  45,
+                  36.99406
+                ],
+                [
+                  46,
+                  36.85205
+                ],
+                [
+                  47,
+                  36.74098
+                ],
+                [
+                  48,
+                  36.57781
+                ],
+                [
+                  49,
+                  36.29928
+                ],
+                [
+                  50,
+                  36.13657
+                ],
+                [
+                  51,
+                  35.7968
+                ],
+                [
+                  52,
+                  35.78647
+                ],
+                [
+                  53,
+                  35.6643
+                ],
+                [
+                  54,
+                  35.5174
+                ],
+                [
+                  55,
+                  35.27927
+                ],
+                [
+                  56,
+                  34.91868
+                ],
+                [
+                  57,
+                  34.69387
+                ],
+                [
+                  58,
+                  34.45864
+                ],
+                [
+                  59,
+                  34.20397
+                ],
+                [
+                  60,
+                  33.88879
+                ],
+                [
+                  61,
+                  33.67955
+                ],
+                [
+                  62,
+                  33.44548
+                ],
+                [
+                  63,
+                  32.01516
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039516_2",
+              "pairs": [
+                [
+                  1,
+                  37.91396
+                ],
+                [
+                  2,
+                  39.37279
+                ],
+                [
+                  3,
+                  39.31657
+                ],
+                [
+                  4,
+                  39.28302
+                ],
+                [
+                  5,
+                  39.29081
+                ],
+                [
+                  6,
+                  38.9239
+                ],
+                [
+                  7,
+                  39.07298
+                ],
+                [
+                  8,
+                  39.01165
+                ],
+                [
+                  9,
+                  38.98499
+                ],
+                [
+                  10,
+                  38.98834
+                ],
+                [
+                  11,
+                  38.94063
+                ],
+                [
+                  12,
+                  38.83887
+                ],
+                [
+                  13,
+                  38.77752
+                ],
+                [
+                  14,
+                  38.69261
+                ],
+                [
+                  15,
+                  38.53231
+                ],
+                [
+                  16,
+                  38.56121
+                ],
+                [
+                  17,
+                  38.44656
+                ],
+                [
+                  18,
+                  38.46184
+                ],
+                [
+                  19,
+                  38.46962
+                ],
+                [
+                  20,
+                  38.34922
+                ],
+                [
+                  21,
+                  38.49247
+                ],
+                [
+                  22,
+                  38.59958
+                ],
+                [
+                  23,
+                  38.57184
+                ],
+                [
+                  24,
+                  38.59221
+                ],
+                [
+                  25,
+                  38.52795
+                ],
+                [
+                  26,
+                  38.46343
+                ],
+                [
+                  27,
+                  38.40956
+                ],
+                [
+                  28,
+                  38.3177
+                ],
+                [
+                  29,
+                  38.14501
+                ],
+                [
+                  30,
+                  38.07996
+                ],
+                [
+                  31,
+                  37.98874
+                ],
+                [
+                  32,
+                  37.80871
+                ],
+                [
+                  33,
+                  37.82098
+                ],
+                [
+                  34,
+                  37.71795
+                ],
+                [
+                  35,
+                  37.64485
+                ],
+                [
+                  36,
+                  37.29826
+                ],
+                [
+                  37,
+                  37.2999
+                ],
+                [
+                  38,
+                  37.18802
+                ],
+                [
+                  39,
+                  34.97415
+                ],
+                [
+                  40,
+                  35.92505
+                ],
+                [
+                  41,
+                  36.17296
+                ],
+                [
+                  42,
+                  36.4282
+                ],
+                [
+                  43,
+                  36.47795
+                ],
+                [
+                  44,
+                  36.4357
+                ],
+                [
+                  45,
+                  36.44134
+                ],
+                [
+                  46,
+                  36.3266
+                ],
+                [
+                  47,
+                  36.125
+                ],
+                [
+                  48,
+                  35.80782
+                ],
+                [
+                  49,
+                  35.7941
+                ],
+                [
+                  50,
+                  35.48456
+                ],
+                [
+                  51,
+                  35.38468
+                ],
+                [
+                  52,
+                  35.21318
+                ],
+                [
+                  53,
+                  34.9463
+                ],
+                [
+                  54,
+                  34.51089
+                ],
+                [
+                  55,
+                  34.34048
+                ],
+                [
+                  56,
+                  34.01255
+                ],
+                [
+                  57,
+                  33.95577
+                ],
+                [
+                  58,
+                  33.74948
+                ],
+                [
+                  59,
+                  33.58652
+                ],
+                [
+                  60,
+                  33.23363
+                ],
+                [
+                  61,
+                  32.99547
+                ],
+                [
+                  62,
+                  32.68694
+                ],
+                [
+                  63,
+                  31.48952
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_per_base_sequence_quality_plot",
+        "title": "FastQC: Mean Quality Scores",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Position (bp)",
+        "ylab": "Phred Score",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": 0,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": 0,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": [
+          {
+            "from_": 28,
+            "to": 100,
+            "color": "#009500",
+            "opacity": 0.13
+          },
+          {
+            "from_": 20,
+            "to": 28,
+            "color": "#a07300",
+            "opacity": 0.13
+          },
+          {
+            "from_": 0,
+            "to": 20,
+            "color": "#990101",
+            "opacity": 0.13
+          }
+        ],
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039516_1": "#5cb85c",
+          "SRR1039516_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039516_1",
+        "SRR1039516_2"
+      ]
+    },
+    "fastqc_per_sequence_quality_scores_plot": {
+      "id": "fastqc_per_sequence_quality_scores_plot",
+      "anchor": "fastqc_per_sequence_quality_scores_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Per Sequence Quality Scores",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_per_sequence_quality_scores_plot",
+          "label": "1",
+          "uid": "fastqc_per_sequence_quality_scores_plot",
+          "dconfig": {
+            "title": "FastQC: Per Sequence Quality Scores",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Per Sequence Quality Scores<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": ",.0f",
+              "ticksuffix": "",
+              "title": {
+                "text": "Mean Sequence Quality (Phred Score)"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              },
+              "range": [
+                0,
+                40.0
+              ]
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": "Count"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            },
+            "shapes": [
+              {
+                "type": "rect",
+                "x0": 28,
+                "x1": 100,
+                "y0": 0,
+                "y1": 1,
+                "yref": "paper",
+                "fillcolor": "#009500",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "x0": 20,
+                "x1": 28,
+                "y0": 0,
+                "y1": 1,
+                "yref": "paper",
+                "fillcolor": "#a07300",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "x0": 0,
+                "x1": 20,
+                "y0": 0,
+                "y1": 1,
+                "yref": "paper",
+                "fillcolor": "#990101",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              }
+            ]
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>Phred %{x}</b>: %{y} reads<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039516_1",
+              "pairs": [
+                [
+                  2.0,
+                  3.0
+                ],
+                [
+                  3.0,
+                  4.0
+                ],
+                [
+                  4.0,
+                  4.0
+                ],
+                [
+                  5.0,
+                  9.0
+                ],
+                [
+                  6.0,
+                  25.0
+                ],
+                [
+                  7.0,
+                  42.0
+                ],
+                [
+                  8.0,
+                  49.0
+                ],
+                [
+                  9.0,
+                  65.0
+                ],
+                [
+                  10.0,
+                  63.0
+                ],
+                [
+                  11.0,
+                  74.0
+                ],
+                [
+                  12.0,
+                  83.0
+                ],
+                [
+                  13.0,
+                  94.0
+                ],
+                [
+                  14.0,
+                  95.0
+                ],
+                [
+                  15.0,
+                  96.0
+                ],
+                [
+                  16.0,
+                  122.0
+                ],
+                [
+                  17.0,
+                  120.0
+                ],
+                [
+                  18.0,
+                  133.0
+                ],
+                [
+                  19.0,
+                  162.0
+                ],
+                [
+                  20.0,
+                  173.0
+                ],
+                [
+                  21.0,
+                  198.0
+                ],
+                [
+                  22.0,
+                  213.0
+                ],
+                [
+                  23.0,
+                  230.0
+                ],
+                [
+                  24.0,
+                  292.0
+                ],
+                [
+                  25.0,
+                  327.0
+                ],
+                [
+                  26.0,
+                  425.0
+                ],
+                [
+                  27.0,
+                  530.0
+                ],
+                [
+                  28.0,
+                  631.0
+                ],
+                [
+                  29.0,
+                  751.0
+                ],
+                [
+                  30.0,
+                  942.0
+                ],
+                [
+                  31.0,
+                  1177.0
+                ],
+                [
+                  32.0,
+                  1506.0
+                ],
+                [
+                  33.0,
+                  1945.0
+                ],
+                [
+                  34.0,
+                  2911.0
+                ],
+                [
+                  35.0,
+                  3696.0
+                ],
+                [
+                  36.0,
+                  5884.0
+                ],
+                [
+                  37.0,
+                  9852.0
+                ],
+                [
+                  38.0,
+                  15864.0
+                ],
+                [
+                  39.0,
+                  24303.0
+                ],
+                [
+                  40.0,
+                  26907.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039516_2",
+              "pairs": [
+                [
+                  2.0,
+                  542.0
+                ],
+                [
+                  3.0,
+                  65.0
+                ],
+                [
+                  4.0,
+                  90.0
+                ],
+                [
+                  5.0,
+                  88.0
+                ],
+                [
+                  6.0,
+                  96.0
+                ],
+                [
+                  7.0,
+                  90.0
+                ],
+                [
+                  8.0,
+                  91.0
+                ],
+                [
+                  9.0,
+                  111.0
+                ],
+                [
+                  10.0,
+                  126.0
+                ],
+                [
+                  11.0,
+                  155.0
+                ],
+                [
+                  12.0,
+                  140.0
+                ],
+                [
+                  13.0,
+                  171.0
+                ],
+                [
+                  14.0,
+                  180.0
+                ],
+                [
+                  15.0,
+                  169.0
+                ],
+                [
+                  16.0,
+                  205.0
+                ],
+                [
+                  17.0,
+                  196.0
+                ],
+                [
+                  18.0,
+                  214.0
+                ],
+                [
+                  19.0,
+                  229.0
+                ],
+                [
+                  20.0,
+                  246.0
+                ],
+                [
+                  21.0,
+                  285.0
+                ],
+                [
+                  22.0,
+                  293.0
+                ],
+                [
+                  23.0,
+                  309.0
+                ],
+                [
+                  24.0,
+                  385.0
+                ],
+                [
+                  25.0,
+                  402.0
+                ],
+                [
+                  26.0,
+                  497.0
+                ],
+                [
+                  27.0,
+                  619.0
+                ],
+                [
+                  28.0,
+                  763.0
+                ],
+                [
+                  29.0,
+                  831.0
+                ],
+                [
+                  30.0,
+                  1045.0
+                ],
+                [
+                  31.0,
+                  1297.0
+                ],
+                [
+                  32.0,
+                  1547.0
+                ],
+                [
+                  33.0,
+                  2055.0
+                ],
+                [
+                  34.0,
+                  2812.0
+                ],
+                [
+                  35.0,
+                  3985.0
+                ],
+                [
+                  36.0,
+                  5875.0
+                ],
+                [
+                  37.0,
+                  9736.0
+                ],
+                [
+                  38.0,
+                  15382.0
+                ],
+                [
+                  39.0,
+                  22768.0
+                ],
+                [
+                  40.0,
+                  25910.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_per_sequence_quality_scores_plot",
+        "title": "FastQC: Per Sequence Quality Scores",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Mean Sequence Quality (Phred Score)",
+        "ylab": "Count",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>Phred {point.x}</b>: {point.y} reads",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": 0,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": 0,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": [
+          {
+            "from_": 28,
+            "to": 100,
+            "color": "#009500",
+            "opacity": 0.13
+          },
+          {
+            "from_": 20,
+            "to": 28,
+            "color": "#a07300",
+            "opacity": 0.13
+          },
+          {
+            "from_": 0,
+            "to": 20,
+            "color": "#990101",
+            "opacity": 0.13
+          }
+        ],
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039516_1": "#5cb85c",
+          "SRR1039516_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039516_1",
+        "SRR1039516_2"
+      ]
+    },
+    "fastqc_per_sequence_gc_content_plot": {
+      "id": "fastqc_per_sequence_gc_content_plot",
+      "anchor": "fastqc_per_sequence_gc_content_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Per Sequence GC Content",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_per_sequence_gc_content_plot",
+          "label": "Percentages",
+          "uid": "fastqc_per_sequence_gc_content_plot_Percentages",
+          "dconfig": {
+            "name": "Percentages",
+            "ylab": "Percentage",
+            "tt_suffix": "%",
+            "title": "FastQC: Per Sequence GC Content",
+            "subtitle": "Percentages, 2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Per Sequence GC Content<br><sup>Percentages, 2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "%",
+              "title": {
+                "text": "% GC"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": 100
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "%",
+              "title": {
+                "text": "Percentage"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            }
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>%{x} GC</b>: %{y}<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039516_1",
+              "pairs": [
+                [
+                  0.0,
+                  0.0006298121585237203
+                ],
+                [
+                  1.0,
+                  0.00031490607926186015
+                ],
+                [
+                  2.0,
+                  0.00031490607926186015
+                ],
+                [
+                  3.0,
+                  0.0006298121585237203
+                ],
+                [
+                  4.0,
+                  0.00031490607926186015
+                ],
+                [
+                  5.0,
+                  0.0
+                ],
+                [
+                  6.0,
+                  0.0006298121585237203
+                ],
+                [
+                  7.0,
+                  0.0009447182377855805
+                ],
+                [
+                  8.0,
+                  0.0006298121585237203
+                ],
+                [
+                  9.0,
+                  0.0012596243170474406
+                ],
+                [
+                  10.0,
+                  0.0028341547133567415
+                ],
+                [
+                  11.0,
+                  0.003778872951142322
+                ],
+                [
+                  12.0,
+                  0.004723591188927902
+                ],
+                [
+                  13.0,
+                  0.008187558060808363
+                ],
+                [
+                  14.0,
+                  0.010706806694903245
+                ],
+                [
+                  15.0,
+                  0.016375116121616726
+                ],
+                [
+                  16.0,
+                  0.022043425548330213
+                ],
+                [
+                  17.0,
+                  0.028971359292091135
+                ],
+                [
+                  18.0,
+                  0.05825762466344413
+                ],
+                [
+                  19.0,
+                  0.0806159562910362
+                ],
+                [
+                  20.0,
+                  0.10391900615641385
+                ],
+                [
+                  21.0,
+                  0.14643132685676497
+                ],
+                [
+                  22.0,
+                  0.16564059769173844
+                ],
+                [
+                  23.0,
+                  0.2157106642943742
+                ],
+                [
+                  24.0,
+                  0.26578073089701
+                ],
+                [
+                  25.0,
+                  0.33694950481019037
+                ],
+                [
+                  26.0,
+                  0.4666908094660767
+                ],
+                [
+                  27.0,
+                  0.5252633402087827
+                ],
+                [
+                  28.0,
+                  0.6055643904205571
+                ],
+                [
+                  29.0,
+                  0.7737242367463903
+                ],
+                [
+                  30.0,
+                  0.8615830328604493
+                ],
+                [
+                  31.0,
+                  0.9919541496748594
+                ],
+                [
+                  32.0,
+                  1.1223252664892696
+                ],
+                [
+                  33.0,
+                  1.2303380516760876
+                ],
+                [
+                  34.0,
+                  1.4548660861897937
+                ],
+                [
+                  35.0,
+                  1.5713813355166824
+                ],
+                [
+                  36.0,
+                  1.7839429390184378
+                ],
+                [
+                  37.0,
+                  2.096644675725465
+                ],
+                [
+                  38.0,
+                  2.1967848089307367
+                ],
+                [
+                  39.0,
+                  2.366519185652879
+                ],
+                [
+                  40.0,
+                  2.661901088000504
+                ],
+                [
+                  41.0,
+                  2.7875486136259857
+                ],
+                [
+                  42.0,
+                  2.875407409740045
+                ],
+                [
+                  43.0,
+                  2.963266205854104
+                ],
+                [
+                  44.0,
+                  3.0026294657618364
+                ],
+                [
+                  45.0,
+                  3.0813559855773014
+                ],
+                [
+                  46.0,
+                  3.120719245485034
+                ],
+                [
+                  47.0,
+                  3.151894947331958
+                ],
+                [
+                  48.0,
+                  3.2262127820377575
+                ],
+                [
+                  49.0,
+                  3.269354914896632
+                ],
+                [
+                  50.0,
+                  3.215191069263592
+                ],
+                [
+                  51.0,
+                  3.1610272236305517
+                ],
+                [
+                  52.0,
+                  3.1443372014296735
+                ],
+                [
+                  53.0,
+                  3.1339453008140326
+                ],
+                [
+                  54.0,
+                  3.1402434223992692
+                ],
+                [
+                  55.0,
+                  3.04892065941333
+                ],
+                [
+                  56.0,
+                  2.9128812331722065
+                ],
+                [
+                  57.0,
+                  2.868164569917022
+                ],
+                [
+                  58.0,
+                  2.7702287792665836
+                ],
+                [
+                  59.0,
+                  2.672292988616145
+                ],
+                [
+                  60.0,
+                  2.579080789154635
+                ],
+                [
+                  61.0,
+                  2.32432177103179
+                ],
+                [
+                  62.0,
+                  2.162774952370455
+                ],
+                [
+                  63.0,
+                  2.013194564721072
+                ],
+                [
+                  64.0,
+                  1.7200170049282801
+                ],
+                [
+                  65.0,
+                  1.576419832784872
+                ],
+                [
+                  66.0,
+                  1.4054258317456818
+                ],
+                [
+                  67.0,
+                  1.1267339515989356
+                ],
+                [
+                  68.0,
+                  1.0190360724913794
+                ],
+                [
+                  69.0,
+                  0.8496166018484987
+                ],
+                [
+                  70.0,
+                  0.6801971312056179
+                ],
+                [
+                  71.0,
+                  0.6172159153532459
+                ],
+                [
+                  72.0,
+                  0.46889515202090976
+                ],
+                [
+                  73.0,
+                  0.38355560454094567
+                ],
+                [
+                  74.0,
+                  0.32498307379823965
+                ],
+                [
+                  75.0,
+                  0.2267323770685393
+                ],
+                [
+                  76.0,
+                  0.18705421108154494
+                ],
+                [
+                  77.0,
+                  0.1571381335516682
+                ],
+                [
+                  78.0,
+                  0.12722205602179149
+                ],
+                [
+                  79.0,
+                  0.103604100077152
+                ],
+                [
+                  80.0,
+                  0.059517248980491565
+                ],
+                [
+                  81.0,
+                  0.03904835382847066
+                ],
+                [
+                  82.0,
+                  0.03086079576766229
+                ],
+                [
+                  83.0,
+                  0.01983908299349719
+                ],
+                [
+                  84.0,
+                  0.017004928280140448
+                ],
+                [
+                  85.0,
+                  0.014485679646045567
+                ],
+                [
+                  86.0,
+                  0.011966431011950685
+                ],
+                [
+                  87.0,
+                  0.008187558060808363
+                ],
+                [
+                  88.0,
+                  0.003778872951142322
+                ],
+                [
+                  89.0,
+                  0.0031490607926186014
+                ],
+                [
+                  90.0,
+                  0.002519248634094881
+                ],
+                [
+                  91.0,
+                  0.0015745303963093007
+                ],
+                [
+                  92.0,
+                  0.0012596243170474406
+                ],
+                [
+                  93.0,
+                  0.0012596243170474406
+                ],
+                [
+                  94.0,
+                  0.0006298121585237203
+                ],
+                [
+                  95.0,
+                  0.0
+                ],
+                [
+                  96.0,
+                  0.0
+                ],
+                [
+                  97.0,
+                  0.0
+                ],
+                [
+                  98.0,
+                  0.0
+                ],
+                [
+                  99.0,
+                  0.0
+                ],
+                [
+                  100.0,
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039516_2",
+              "pairs": [
+                [
+                  0.0,
+                  0.000630423613146854
+                ],
+                [
+                  1.0,
+                  0.0022064826460139893
+                ],
+                [
+                  2.0,
+                  0.002836906259160843
+                ],
+                [
+                  3.0,
+                  0.001891270839440562
+                ],
+                [
+                  4.0,
+                  0.002521694452587416
+                ],
+                [
+                  5.0,
+                  0.0031521180657342702
+                ],
+                [
+                  6.0,
+                  0.0034673298723076973
+                ],
+                [
+                  7.0,
+                  0.002521694452587416
+                ],
+                [
+                  8.0,
+                  0.001260847226293708
+                ],
+                [
+                  9.0,
+                  0.0015760590328671351
+                ],
+                [
+                  10.0,
+                  0.0034673298723076973
+                ],
+                [
+                  11.0,
+                  0.005043388905174832
+                ],
+                [
+                  12.0,
+                  0.0063042361314685404
+                ],
+                [
+                  13.0,
+                  0.010086777810349664
+                ],
+                [
+                  14.0,
+                  0.012608472262937081
+                ],
+                [
+                  15.0,
+                  0.019543132007552474
+                ],
+                [
+                  16.0,
+                  0.02647779175216787
+                ],
+                [
+                  17.0,
+                  0.03687978136909096
+                ],
+                [
+                  18.0,
+                  0.06398799673440568
+                ],
+                [
+                  19.0,
+                  0.08069422248279731
+                ],
+                [
+                  20.0,
+                  0.10622637881524491
+                ],
+                [
+                  21.0,
+                  0.15697547967356668
+                ],
+                [
+                  22.0,
+                  0.18219242419944082
+                ],
+                [
+                  23.0,
+                  0.22600686531314718
+                ],
+                [
+                  24.0,
+                  0.26982130642685354
+                ],
+                [
+                  25.0,
+                  0.3249833725772032
+                ],
+                [
+                  26.0,
+                  0.44886161256056006
+                ],
+                [
+                  27.0,
+                  0.5175777863935671
+                ],
+                [
+                  28.0,
+                  0.6102500575261547
+                ],
+                [
+                  29.0,
+                  0.8170290026383228
+                ],
+                [
+                  30.0,
+                  0.9311356766179033
+                ],
+                [
+                  31.0,
+                  0.9998518504509104
+                ],
+                [
+                  32.0,
+                  1.0685680242839175
+                ],
+                [
+                  33.0,
+                  1.234999858154687
+                ],
+                [
+                  34.0,
+                  1.5290924736876943
+                ],
+                [
+                  35.0,
+                  1.6567532553499322
+                ],
+                [
+                  36.0,
+                  1.8260219954798627
+                ],
+                [
+                  37.0,
+                  2.0863869477095136
+                ],
+                [
+                  38.0,
+                  2.177483159809234
+                ],
+                [
+                  39.0,
+                  2.369762361819024
+                ],
+                [
+                  40.0,
+                  2.6402140918590247
+                ],
+                [
+                  41.0,
+                  2.7183866198892344
+                ],
+                [
+                  42.0,
+                  2.8000264777917523
+                ],
+                [
+                  43.0,
+                  2.8816663356942698
+                ],
+                [
+                  44.0,
+                  2.9428174261695146
+                ],
+                [
+                  45.0,
+                  3.0585001591819623
+                ],
+                [
+                  46.0,
+                  3.113031801719165
+                ],
+                [
+                  47.0,
+                  3.1363574754055987
+                ],
+                [
+                  48.0,
+                  3.1571614546394446
+                ],
+                [
+                  49.0,
+                  3.1546397601868574
+                ],
+                [
+                  50.0,
+                  3.1369878990187456
+                ],
+                [
+                  51.0,
+                  3.119336037850634
+                ],
+                [
+                  52.0,
+                  3.1038906593285356
+                ],
+                [
+                  53.0,
+                  3.0216203778128716
+                ],
+                [
+                  54.0,
+                  2.9547954748193046
+                ],
+                [
+                  55.0,
+                  2.9469151796549693
+                ],
+                [
+                  56.0,
+                  2.8917531135046195
+                ],
+                [
+                  57.0,
+                  2.8444713425186055
+                ],
+                [
+                  58.0,
+                  2.7826898284302137
+                ],
+                [
+                  59.0,
+                  2.720908314341822
+                ],
+                [
+                  60.0,
+                  2.6001821924241995
+                ],
+                [
+                  61.0,
+                  2.368186302786157
+                ],
+                [
+                  62.0,
+                  2.2569165350657374
+                ],
+                [
+                  63.0,
+                  2.0791370761583243
+                ],
+                [
+                  64.0,
+                  1.7456429848036388
+                ],
+                [
+                  65.0,
+                  1.5899283523563659
+                ],
+                [
+                  66.0,
+                  1.4241269420987432
+                ],
+                [
+                  67.0,
+                  1.1158497952699318
+                ],
+                [
+                  68.0,
+                  0.9733740586987427
+                ],
+                [
+                  69.0,
+                  0.8860603882779033
+                ],
+                [
+                  70.0,
+                  0.7987467178570641
+                ],
+                [
+                  71.0,
+                  0.6789662313591618
+                ],
+                [
+                  72.0,
+                  0.4750241925061545
+                ],
+                [
+                  73.0,
+                  0.3908626401510495
+                ],
+                [
+                  74.0,
+                  0.3451569281979026
+                ],
+                [
+                  75.0,
+                  0.259104105003357
+                ],
+                [
+                  76.0,
+                  0.21875699376195834
+                ],
+                [
+                  77.0,
+                  0.18376848323230793
+                ],
+                [
+                  78.0,
+                  0.14877997270265755
+                ],
+                [
+                  79.0,
+                  0.12198696914391625
+                ],
+                [
+                  80.0,
+                  0.08353112874195816
+                ],
+                [
+                  81.0,
+                  0.07186829189874136
+                ],
+                [
+                  82.0,
+                  0.05390121892405603
+                ],
+                [
+                  83.0,
+                  0.030890757044195846
+                ],
+                [
+                  84.0,
+                  0.025847368139021016
+                ],
+                [
+                  85.0,
+                  0.021434402846993036
+                ],
+                [
+                  86.0,
+                  0.01702143755496506
+                ],
+                [
+                  87.0,
+                  0.01386931948923079
+                ],
+                [
+                  88.0,
+                  0.011347625036643372
+                ],
+                [
+                  89.0,
+                  0.011978048649790227
+                ],
+                [
+                  90.0,
+                  0.009456354197202812
+                ],
+                [
+                  91.0,
+                  0.0063042361314685404
+                ],
+                [
+                  92.0,
+                  0.005673812518321686
+                ],
+                [
+                  93.0,
+                  0.005989024324895113
+                ],
+                [
+                  94.0,
+                  0.004412965292027979
+                ],
+                [
+                  95.0,
+                  0.002521694452587416
+                ],
+                [
+                  96.0,
+                  0.0022064826460139893
+                ],
+                [
+                  97.0,
+                  0.001891270839440562
+                ],
+                [
+                  98.0,
+                  0.0015760590328671351
+                ],
+                [
+                  99.0,
+                  0.001891270839440562
+                ],
+                [
+                  100.0,
+                  0.002521694452587416
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        },
+        {
+          "plot_id": "fastqc_per_sequence_gc_content_plot",
+          "label": "Counts",
+          "uid": "fastqc_per_sequence_gc_content_plot_Counts",
+          "dconfig": {
+            "name": "Counts",
+            "ylab": "Count",
+            "tt_suffix": "",
+            "title": "FastQC: Per Sequence GC Content",
+            "subtitle": "Counts, 2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Per Sequence GC Content<br><sup>Counts, 2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "%",
+              "title": {
+                "text": "% GC"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": 100
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": "Count"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            }
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>%{x} GC</b>: %{y}<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039516_1",
+              "pairs": [
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  0.5
+                ],
+                [
+                  2.0,
+                  0.5
+                ],
+                [
+                  3.0,
+                  1.0
+                ],
+                [
+                  4.0,
+                  0.5
+                ],
+                [
+                  5.0,
+                  0.0
+                ],
+                [
+                  6.0,
+                  1.0
+                ],
+                [
+                  7.0,
+                  1.5
+                ],
+                [
+                  8.0,
+                  1.0
+                ],
+                [
+                  9.0,
+                  2.0
+                ],
+                [
+                  10.0,
+                  4.5
+                ],
+                [
+                  11.0,
+                  6.0
+                ],
+                [
+                  12.0,
+                  7.5
+                ],
+                [
+                  13.0,
+                  13.0
+                ],
+                [
+                  14.0,
+                  17.0
+                ],
+                [
+                  15.0,
+                  26.0
+                ],
+                [
+                  16.0,
+                  35.0
+                ],
+                [
+                  17.0,
+                  46.0
+                ],
+                [
+                  18.0,
+                  92.5
+                ],
+                [
+                  19.0,
+                  128.0
+                ],
+                [
+                  20.0,
+                  165.0
+                ],
+                [
+                  21.0,
+                  232.5
+                ],
+                [
+                  22.0,
+                  263.0
+                ],
+                [
+                  23.0,
+                  342.5
+                ],
+                [
+                  24.0,
+                  422.0
+                ],
+                [
+                  25.0,
+                  535.0
+                ],
+                [
+                  26.0,
+                  741.0
+                ],
+                [
+                  27.0,
+                  834.0
+                ],
+                [
+                  28.0,
+                  961.5
+                ],
+                [
+                  29.0,
+                  1228.5
+                ],
+                [
+                  30.0,
+                  1368.0
+                ],
+                [
+                  31.0,
+                  1575.0
+                ],
+                [
+                  32.0,
+                  1782.0
+                ],
+                [
+                  33.0,
+                  1953.5
+                ],
+                [
+                  34.0,
+                  2310.0
+                ],
+                [
+                  35.0,
+                  2495.0
+                ],
+                [
+                  36.0,
+                  2832.5
+                ],
+                [
+                  37.0,
+                  3329.0
+                ],
+                [
+                  38.0,
+                  3488.0
+                ],
+                [
+                  39.0,
+                  3757.5
+                ],
+                [
+                  40.0,
+                  4226.5
+                ],
+                [
+                  41.0,
+                  4426.0
+                ],
+                [
+                  42.0,
+                  4565.5
+                ],
+                [
+                  43.0,
+                  4705.0
+                ],
+                [
+                  44.0,
+                  4767.5
+                ],
+                [
+                  45.0,
+                  4892.5
+                ],
+                [
+                  46.0,
+                  4955.0
+                ],
+                [
+                  47.0,
+                  5004.5
+                ],
+                [
+                  48.0,
+                  5122.5
+                ],
+                [
+                  49.0,
+                  5191.0
+                ],
+                [
+                  50.0,
+                  5105.0
+                ],
+                [
+                  51.0,
+                  5019.0
+                ],
+                [
+                  52.0,
+                  4992.5
+                ],
+                [
+                  53.0,
+                  4976.0
+                ],
+                [
+                  54.0,
+                  4986.0
+                ],
+                [
+                  55.0,
+                  4841.0
+                ],
+                [
+                  56.0,
+                  4625.0
+                ],
+                [
+                  57.0,
+                  4554.0
+                ],
+                [
+                  58.0,
+                  4398.5
+                ],
+                [
+                  59.0,
+                  4243.0
+                ],
+                [
+                  60.0,
+                  4095.0
+                ],
+                [
+                  61.0,
+                  3690.5
+                ],
+                [
+                  62.0,
+                  3434.0
+                ],
+                [
+                  63.0,
+                  3196.5
+                ],
+                [
+                  64.0,
+                  2731.0
+                ],
+                [
+                  65.0,
+                  2503.0
+                ],
+                [
+                  66.0,
+                  2231.5
+                ],
+                [
+                  67.0,
+                  1789.0
+                ],
+                [
+                  68.0,
+                  1618.0
+                ],
+                [
+                  69.0,
+                  1349.0
+                ],
+                [
+                  70.0,
+                  1080.0
+                ],
+                [
+                  71.0,
+                  980.0
+                ],
+                [
+                  72.0,
+                  744.5
+                ],
+                [
+                  73.0,
+                  609.0
+                ],
+                [
+                  74.0,
+                  516.0
+                ],
+                [
+                  75.0,
+                  360.0
+                ],
+                [
+                  76.0,
+                  297.0
+                ],
+                [
+                  77.0,
+                  249.5
+                ],
+                [
+                  78.0,
+                  202.0
+                ],
+                [
+                  79.0,
+                  164.5
+                ],
+                [
+                  80.0,
+                  94.5
+                ],
+                [
+                  81.0,
+                  62.0
+                ],
+                [
+                  82.0,
+                  49.0
+                ],
+                [
+                  83.0,
+                  31.5
+                ],
+                [
+                  84.0,
+                  27.0
+                ],
+                [
+                  85.0,
+                  23.0
+                ],
+                [
+                  86.0,
+                  19.0
+                ],
+                [
+                  87.0,
+                  13.0
+                ],
+                [
+                  88.0,
+                  6.0
+                ],
+                [
+                  89.0,
+                  5.0
+                ],
+                [
+                  90.0,
+                  4.0
+                ],
+                [
+                  91.0,
+                  2.5
+                ],
+                [
+                  92.0,
+                  2.0
+                ],
+                [
+                  93.0,
+                  2.0
+                ],
+                [
+                  94.0,
+                  1.0
+                ],
+                [
+                  95.0,
+                  0.0
+                ],
+                [
+                  96.0,
+                  0.0
+                ],
+                [
+                  97.0,
+                  0.0
+                ],
+                [
+                  98.0,
+                  0.0
+                ],
+                [
+                  99.0,
+                  0.0
+                ],
+                [
+                  100.0,
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039516_2",
+              "pairs": [
+                [
+                  0.0,
+                  1.0
+                ],
+                [
+                  1.0,
+                  3.5
+                ],
+                [
+                  2.0,
+                  4.5
+                ],
+                [
+                  3.0,
+                  3.0
+                ],
+                [
+                  4.0,
+                  4.0
+                ],
+                [
+                  5.0,
+                  5.0
+                ],
+                [
+                  6.0,
+                  5.5
+                ],
+                [
+                  7.0,
+                  4.0
+                ],
+                [
+                  8.0,
+                  2.0
+                ],
+                [
+                  9.0,
+                  2.5
+                ],
+                [
+                  10.0,
+                  5.5
+                ],
+                [
+                  11.0,
+                  8.0
+                ],
+                [
+                  12.0,
+                  10.0
+                ],
+                [
+                  13.0,
+                  16.0
+                ],
+                [
+                  14.0,
+                  20.0
+                ],
+                [
+                  15.0,
+                  31.0
+                ],
+                [
+                  16.0,
+                  42.0
+                ],
+                [
+                  17.0,
+                  58.5
+                ],
+                [
+                  18.0,
+                  101.5
+                ],
+                [
+                  19.0,
+                  128.0
+                ],
+                [
+                  20.0,
+                  168.5
+                ],
+                [
+                  21.0,
+                  249.0
+                ],
+                [
+                  22.0,
+                  289.0
+                ],
+                [
+                  23.0,
+                  358.5
+                ],
+                [
+                  24.0,
+                  428.0
+                ],
+                [
+                  25.0,
+                  515.5
+                ],
+                [
+                  26.0,
+                  712.0
+                ],
+                [
+                  27.0,
+                  821.0
+                ],
+                [
+                  28.0,
+                  968.0
+                ],
+                [
+                  29.0,
+                  1296.0
+                ],
+                [
+                  30.0,
+                  1477.0
+                ],
+                [
+                  31.0,
+                  1586.0
+                ],
+                [
+                  32.0,
+                  1695.0
+                ],
+                [
+                  33.0,
+                  1959.0
+                ],
+                [
+                  34.0,
+                  2425.5
+                ],
+                [
+                  35.0,
+                  2628.0
+                ],
+                [
+                  36.0,
+                  2896.5
+                ],
+                [
+                  37.0,
+                  3309.5
+                ],
+                [
+                  38.0,
+                  3454.0
+                ],
+                [
+                  39.0,
+                  3759.0
+                ],
+                [
+                  40.0,
+                  4188.0
+                ],
+                [
+                  41.0,
+                  4312.0
+                ],
+                [
+                  42.0,
+                  4441.5
+                ],
+                [
+                  43.0,
+                  4571.0
+                ],
+                [
+                  44.0,
+                  4668.0
+                ],
+                [
+                  45.0,
+                  4851.5
+                ],
+                [
+                  46.0,
+                  4938.0
+                ],
+                [
+                  47.0,
+                  4975.0
+                ],
+                [
+                  48.0,
+                  5008.0
+                ],
+                [
+                  49.0,
+                  5004.0
+                ],
+                [
+                  50.0,
+                  4976.0
+                ],
+                [
+                  51.0,
+                  4948.0
+                ],
+                [
+                  52.0,
+                  4923.5
+                ],
+                [
+                  53.0,
+                  4793.0
+                ],
+                [
+                  54.0,
+                  4687.0
+                ],
+                [
+                  55.0,
+                  4674.5
+                ],
+                [
+                  56.0,
+                  4587.0
+                ],
+                [
+                  57.0,
+                  4512.0
+                ],
+                [
+                  58.0,
+                  4414.0
+                ],
+                [
+                  59.0,
+                  4316.0
+                ],
+                [
+                  60.0,
+                  4124.5
+                ],
+                [
+                  61.0,
+                  3756.5
+                ],
+                [
+                  62.0,
+                  3580.0
+                ],
+                [
+                  63.0,
+                  3298.0
+                ],
+                [
+                  64.0,
+                  2769.0
+                ],
+                [
+                  65.0,
+                  2522.0
+                ],
+                [
+                  66.0,
+                  2259.0
+                ],
+                [
+                  67.0,
+                  1770.0
+                ],
+                [
+                  68.0,
+                  1544.0
+                ],
+                [
+                  69.0,
+                  1405.5
+                ],
+                [
+                  70.0,
+                  1267.0
+                ],
+                [
+                  71.0,
+                  1077.0
+                ],
+                [
+                  72.0,
+                  753.5
+                ],
+                [
+                  73.0,
+                  620.0
+                ],
+                [
+                  74.0,
+                  547.5
+                ],
+                [
+                  75.0,
+                  411.0
+                ],
+                [
+                  76.0,
+                  347.0
+                ],
+                [
+                  77.0,
+                  291.5
+                ],
+                [
+                  78.0,
+                  236.0
+                ],
+                [
+                  79.0,
+                  193.5
+                ],
+                [
+                  80.0,
+                  132.5
+                ],
+                [
+                  81.0,
+                  114.0
+                ],
+                [
+                  82.0,
+                  85.5
+                ],
+                [
+                  83.0,
+                  49.0
+                ],
+                [
+                  84.0,
+                  41.0
+                ],
+                [
+                  85.0,
+                  34.0
+                ],
+                [
+                  86.0,
+                  27.0
+                ],
+                [
+                  87.0,
+                  22.0
+                ],
+                [
+                  88.0,
+                  18.0
+                ],
+                [
+                  89.0,
+                  19.0
+                ],
+                [
+                  90.0,
+                  15.0
+                ],
+                [
+                  91.0,
+                  10.0
+                ],
+                [
+                  92.0,
+                  9.0
+                ],
+                [
+                  93.0,
+                  9.5
+                ],
+                [
+                  94.0,
+                  7.0
+                ],
+                [
+                  95.0,
+                  4.0
+                ],
+                [
+                  96.0,
+                  3.5
+                ],
+                [
+                  97.0,
+                  3.0
+                ],
+                [
+                  98.0,
+                  2.5
+                ],
+                [
+                  99.0,
+                  3.0
+                ],
+                [
+                  100.0,
+                  4.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_per_sequence_gc_content_plot",
+        "title": "FastQC: Per Sequence GC Content",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [
+          {
+            "name": "Percentages",
+            "ylab": "Percentage",
+            "tt_suffix": "%",
+            "title": "FastQC: Per Sequence GC Content",
+            "subtitle": "Percentages, 2 lines"
+          },
+          {
+            "name": "Counts",
+            "ylab": "Count",
+            "tt_suffix": "",
+            "title": "FastQC: Per Sequence GC Content",
+            "subtitle": "Counts, 2 lines"
+          }
+        ],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "% GC",
+        "ylab": "Percentage",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>{point.x}% GC</b>: {point.y}",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": 0,
+        "xmax": 100,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039516_1": "#5cb85c",
+          "SRR1039516_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039516_1",
+        "SRR1039516_2"
+      ]
+    },
+    "fastqc_per_base_n_content_plot": {
+      "id": "fastqc_per_base_n_content_plot",
+      "anchor": "fastqc_per_base_n_content_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Per Base N Content",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_per_base_n_content_plot",
+          "label": "1",
+          "uid": "fastqc_per_base_n_content_plot",
+          "dconfig": {
+            "title": "FastQC: Per Base N Content",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Per Base N Content<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": " bp",
+              "title": {
+                "text": "Position in Read (bp)"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "%",
+              "title": {
+                "text": "Percentage N-Count"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": 100,
+                "minallowed": 0,
+                "maxallowed": null
+              },
+              "range": [
+                0,
+                5
+              ]
+            },
+            "shapes": [
+              {
+                "type": "rect",
+                "y0": 20,
+                "y1": 100,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#990101",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 5,
+                "y1": 20,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#a07300",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              },
+              {
+                "type": "rect",
+                "y0": 0,
+                "y1": 5,
+                "x0": 0,
+                "x1": 1,
+                "xref": "paper",
+                "fillcolor": "#009500",
+                "opacity": 0.13,
+                "line": {
+                  "width": 0
+                },
+                "layer": "below"
+              }
+            ]
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br><b>Base %{x}</b>: %{y:.2f}%<extra></extra>",
+            "mode": "lines",
+            "line": {
+              "width": 2
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039516_1",
+              "pairs": [
+                [
+                  1,
+                  0.0
+                ],
+                [
+                  2,
+                  0.0
+                ],
+                [
+                  3,
+                  0.0
+                ],
+                [
+                  4,
+                  0.0
+                ],
+                [
+                  5,
+                  0.0
+                ],
+                [
+                  6,
+                  0.0
+                ],
+                [
+                  7,
+                  0.0
+                ],
+                [
+                  8,
+                  0.0
+                ],
+                [
+                  9,
+                  0.0
+                ],
+                [
+                  10,
+                  0.0
+                ],
+                [
+                  11,
+                  0.0
+                ],
+                [
+                  12,
+                  0.0
+                ],
+                [
+                  13,
+                  0.0
+                ],
+                [
+                  14,
+                  0.0
+                ],
+                [
+                  15,
+                  0.0
+                ],
+                [
+                  16,
+                  0.0
+                ],
+                [
+                  17,
+                  0.0
+                ],
+                [
+                  18,
+                  0.0
+                ],
+                [
+                  19,
+                  0.0
+                ],
+                [
+                  20,
+                  0.0
+                ],
+                [
+                  21,
+                  0.0
+                ],
+                [
+                  22,
+                  0.0
+                ],
+                [
+                  23,
+                  0.0
+                ],
+                [
+                  24,
+                  0.0
+                ],
+                [
+                  25,
+                  0.0
+                ],
+                [
+                  26,
+                  0.0
+                ],
+                [
+                  27,
+                  0.0
+                ],
+                [
+                  28,
+                  0.0
+                ],
+                [
+                  29,
+                  0.0
+                ],
+                [
+                  30,
+                  0.0
+                ],
+                [
+                  31,
+                  0.0
+                ],
+                [
+                  32,
+                  0.0
+                ],
+                [
+                  33,
+                  0.012
+                ],
+                [
+                  34,
+                  0.0
+                ],
+                [
+                  35,
+                  0.0
+                ],
+                [
+                  36,
+                  0.0
+                ],
+                [
+                  37,
+                  0.0
+                ],
+                [
+                  38,
+                  0.0
+                ],
+                [
+                  39,
+                  0.0
+                ],
+                [
+                  40,
+                  0.0
+                ],
+                [
+                  41,
+                  0.0
+                ],
+                [
+                  42,
+                  0.0
+                ],
+                [
+                  43,
+                  0.0
+                ],
+                [
+                  44,
+                  0.0
+                ],
+                [
+                  45,
+                  0.0
+                ],
+                [
+                  46,
+                  0.0
+                ],
+                [
+                  47,
+                  0.0
+                ],
+                [
+                  48,
+                  0.0
+                ],
+                [
+                  49,
+                  0.0
+                ],
+                [
+                  50,
+                  0.0
+                ],
+                [
+                  51,
+                  0.0
+                ],
+                [
+                  52,
+                  0.0
+                ],
+                [
+                  53,
+                  0.0
+                ],
+                [
+                  54,
+                  0.0
+                ],
+                [
+                  55,
+                  0.0
+                ],
+                [
+                  56,
+                  0.0
+                ],
+                [
+                  57,
+                  0.0
+                ],
+                [
+                  58,
+                  0.0
+                ],
+                [
+                  59,
+                  0.0
+                ],
+                [
+                  60,
+                  0.0
+                ],
+                [
+                  61,
+                  0.0
+                ],
+                [
+                  62,
+                  0.0
+                ],
+                [
+                  63,
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039516_2",
+              "pairs": [
+                [
+                  1,
+                  0.0
+                ],
+                [
+                  2,
+                  0.0
+                ],
+                [
+                  3,
+                  0.0
+                ],
+                [
+                  4,
+                  0.0
+                ],
+                [
+                  5,
+                  0.0
+                ],
+                [
+                  6,
+                  0.0
+                ],
+                [
+                  7,
+                  0.0
+                ],
+                [
+                  8,
+                  0.0
+                ],
+                [
+                  9,
+                  0.0
+                ],
+                [
+                  10,
+                  0.0
+                ],
+                [
+                  11,
+                  0.0
+                ],
+                [
+                  12,
+                  0.0
+                ],
+                [
+                  13,
+                  0.0
+                ],
+                [
+                  14,
+                  0.0
+                ],
+                [
+                  15,
+                  0.0
+                ],
+                [
+                  16,
+                  0.0
+                ],
+                [
+                  17,
+                  0.0
+                ],
+                [
+                  18,
+                  0.0
+                ],
+                [
+                  19,
+                  0.0
+                ],
+                [
+                  20,
+                  0.0
+                ],
+                [
+                  21,
+                  0.0
+                ],
+                [
+                  22,
+                  0.0
+                ],
+                [
+                  23,
+                  0.0
+                ],
+                [
+                  24,
+                  0.0
+                ],
+                [
+                  25,
+                  0.0
+                ],
+                [
+                  26,
+                  0.0
+                ],
+                [
+                  27,
+                  0.0
+                ],
+                [
+                  28,
+                  0.0
+                ],
+                [
+                  29,
+                  0.0
+                ],
+                [
+                  30,
+                  0.0
+                ],
+                [
+                  31,
+                  0.0
+                ],
+                [
+                  32,
+                  0.0
+                ],
+                [
+                  33,
+                  0.0
+                ],
+                [
+                  34,
+                  0.0
+                ],
+                [
+                  35,
+                  0.0
+                ],
+                [
+                  36,
+                  0.0
+                ],
+                [
+                  37,
+                  0.0
+                ],
+                [
+                  38,
+                  0.0
+                ],
+                [
+                  39,
+                  0.0
+                ],
+                [
+                  40,
+                  0.0
+                ],
+                [
+                  41,
+                  0.0
+                ],
+                [
+                  42,
+                  0.0
+                ],
+                [
+                  43,
+                  0.0
+                ],
+                [
+                  44,
+                  0.0
+                ],
+                [
+                  45,
+                  0.0
+                ],
+                [
+                  46,
+                  0.0
+                ],
+                [
+                  47,
+                  0.0
+                ],
+                [
+                  48,
+                  0.0
+                ],
+                [
+                  49,
+                  0.0
+                ],
+                [
+                  50,
+                  0.0
+                ],
+                [
+                  51,
+                  0.0
+                ],
+                [
+                  52,
+                  0.0
+                ],
+                [
+                  53,
+                  0.0
+                ],
+                [
+                  54,
+                  0.0
+                ],
+                [
+                  55,
+                  0.0
+                ],
+                [
+                  56,
+                  0.0
+                ],
+                [
+                  57,
+                  0.0
+                ],
+                [
+                  58,
+                  0.0
+                ],
+                [
+                  59,
+                  0.0
+                ],
+                [
+                  60,
+                  0.0
+                ],
+                [
+                  61,
+                  0.0
+                ],
+                [
+                  62,
+                  0.0
+                ],
+                [
+                  63,
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_per_base_n_content_plot",
+        "title": "FastQC: Per Base N Content",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Position in Read (bp)",
+        "ylab": "Percentage N-Count",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": "<b>Base {point.x}</b>: {point.y:.2f}%",
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": 0,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": 100,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": 5,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": [
+          {
+            "from_": 20,
+            "to": 100,
+            "color": "#990101",
+            "opacity": 0.13
+          },
+          {
+            "from_": 5,
+            "to": 20,
+            "color": "#a07300",
+            "opacity": 0.13
+          },
+          {
+            "from_": 0,
+            "to": 5,
+            "color": "#009500",
+            "opacity": 0.13
+          }
+        ],
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": false,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039516_1": "#5cb85c",
+          "SRR1039516_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039516_1",
+        "SRR1039516_2"
+      ]
+    },
+    "fastqc_sequence_duplication_levels_plot": {
+      "id": "fastqc_sequence_duplication_levels_plot",
+      "anchor": "fastqc_sequence_duplication_levels_plot",
+      "plot_type": "x/y line",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Sequence Duplication Levels",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true
+        },
+        "yaxis": {
+          "automargin": true
+        },
+        "hoverdistance": -1
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc_sequence_duplication_levels_plot",
+          "label": "1",
+          "uid": "fastqc_sequence_duplication_levels_plot",
+          "dconfig": {
+            "title": "FastQC: Sequence Duplication Levels",
+            "subtitle": "2 lines"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Sequence Duplication Levels<br><sup>2 lines</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": "Sequence Duplication Level"
+              },
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              },
+              "type": "category"
+            },
+            "yaxis": {
+              "hoverformat": ",.2f",
+              "ticksuffix": "%",
+              "title": {
+                "text": "% of Library"
+              },
+              "rangemode": "tozero",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": 0,
+                "maxallowed": 100
+              }
+            }
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b><br>%{x}: %{y}<extra></extra>",
+            "mode": "lines+markers",
+            "line": {
+              "width": 0.6
+            },
+            "marker": {
+              "size": 5
+            }
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "lines": [
+            {
+              "name": "SRR1039516_1",
+              "pairs": [
+                [
+                  1.0,
+                  89.50399999999999
+                ],
+                [
+                  2.0,
+                  6.18
+                ],
+                [
+                  3.0,
+                  1.779
+                ],
+                [
+                  4.0,
+                  0.808
+                ],
+                [
+                  5.0,
+                  0.475
+                ],
+                [
+                  6.0,
+                  0.3
+                ],
+                [
+                  7.0,
+                  0.189
+                ],
+                [
+                  8.0,
+                  0.168
+                ],
+                [
+                  9.0,
+                  0.117
+                ],
+                [
+                  ">10",
+                  0.334
+                ],
+                [
+                  ">50",
+                  0.146
+                ],
+                [
+                  ">100",
+                  0.0
+                ],
+                [
+                  ">500",
+                  0.0
+                ],
+                [
+                  ">1k",
+                  0.0
+                ],
+                [
+                  ">5k",
+                  0.0
+                ],
+                [
+                  ">10k+",
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            },
+            {
+              "name": "SRR1039516_2",
+              "pairs": [
+                [
+                  1.0,
+                  90.134
+                ],
+                [
+                  2.0,
+                  5.827999999999999
+                ],
+                [
+                  3.0,
+                  1.686
+                ],
+                [
+                  4.0,
+                  0.804
+                ],
+                [
+                  5.0,
+                  0.47000000000000003
+                ],
+                [
+                  6.0,
+                  0.306
+                ],
+                [
+                  7.0,
+                  0.168
+                ],
+                [
+                  8.0,
+                  0.16
+                ],
+                [
+                  9.0,
+                  0.045
+                ],
+                [
+                  ">10",
+                  0.312
+                ],
+                [
+                  ">50",
+                  0.087
+                ],
+                [
+                  ">100",
+                  0.0
+                ],
+                [
+                  ">500",
+                  0.0
+                ],
+                [
+                  ">1k",
+                  0.0
+                ],
+                [
+                  ">5k",
+                  0.0
+                ],
+                [
+                  ">10k+",
+                  0.0
+                ]
+              ],
+              "color": "#5cb85c",
+              "width": 2,
+              "dash": null,
+              "showlegend": true,
+              "marker": null,
+              "extra_trace_params": {}
+            }
+          ]
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc_sequence_duplication_levels_plot",
+        "title": "FastQC: Sequence Duplication Levels",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Sequence Duplication Level",
+        "ylab": "% of Library",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": "%",
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": 2,
+        "xmin": null,
+        "xmax": null,
+        "ymin": 0,
+        "ymax": 100,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": false,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "categories": true,
+        "smooth_points": 500,
+        "smooth_points_sumcounts": null,
+        "extra_series": null,
+        "style": null,
+        "hide_empty": true,
+        "colors": {
+          "SRR1039516_1": "#5cb85c",
+          "SRR1039516_2": "#5cb85c"
+        },
+        "dash_styles": {},
+        "hovertemplates": {},
+        "legend_groups": {},
+        "axis_controlled_by_switches": null
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [
+        "yaxis"
+      ],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "sample_names": [
+        "SRR1039516_1",
+        "SRR1039516_2"
+      ]
+    },
+    "fastqc-status-check-heatmap": {
+      "id": "fastqc-status-check-heatmap",
+      "anchor": "fastqc-status-check-heatmap",
+      "plot_type": "heatmap",
+      "layout": {
+        "autosize": true,
+        "height": 360,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 65,
+          "l": 60,
+          "pad": 5,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "FastQC: Status Checks",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": true,
+          "type": "category",
+          "tickmode": "array",
+          "tickvals": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "ticktext": [
+            "Basic <br>Statistics",
+            "Per Base <br>Sequence <br>Quality",
+            "Per <br>Sequence <br>Quality <br>Scores",
+            "Per Base <br>Sequence <br>Content",
+            "Per <br>Sequence <br>GC Content",
+            "Per Base N<br> Content",
+            "Sequence <br>Length <br>Distribution",
+            "Sequence <br>Duplication<br> Levels",
+            "Overrepresented<br> Sequences",
+            "Adapter <br>Content"
+          ],
+          "tickangle": 0,
+          "showgrid": false
+        },
+        "yaxis": {
+          "automargin": true,
+          "type": "category",
+          "tickmode": "array",
+          "tickvals": [
+            0,
+            1
+          ],
+          "ticktext": [
+            "SRR1039516_1",
+            "SRR1039516_2"
+          ],
+          "showgrid": false,
+          "autorange": "reversed",
+          "ticklabelposition": "outside right"
+        }
+      },
+      "datasets": [
+        {
+          "plot_id": "fastqc-status-check-heatmap",
+          "label": "1",
+          "uid": "fastqc-status-check-heatmap",
+          "dconfig": {
+            "title": "FastQC: Status Checks",
+            "subtitle": "2 samples"
+          },
+          "layout": {
+            "title": {
+              "text": "FastQC: Status Checks<br><sup>2 samples</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": null,
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": ",.1f",
+              "ticksuffix": "",
+              "title": null,
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            }
+          },
+          "trace_params": {
+            "colorscale": [
+              [
+                0.0,
+                "rgba(255, 255, 255, 0.0)"
+              ],
+              [
+                0.25,
+                "#d9534f"
+              ],
+              [
+                0.5,
+                "#fee391"
+              ],
+              [
+                1.0,
+                "#5cb85c"
+              ]
+            ],
+            "reversescale": false,
+            "showscale": false,
+            "zmin": 0,
+            "zmax": 1,
+            "hovertemplate": "Section Name: %{x}<br>Sample: %{y}<br>z: %{z}<extra></extra>"
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "rows": [
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "rows_clustered": [
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          ],
+          "xcats": [
+            "Basic Statistics",
+            "Per Base Sequence Quality",
+            "Per Sequence Quality Scores",
+            "Per Base Sequence Content",
+            "Per Sequence GC Content",
+            "Per Base N Content",
+            "Sequence Length Distribution",
+            "Sequence Duplication Levels",
+            "Overrepresented Sequences",
+            "Adapter Content"
+          ],
+          "ycats": [
+            "SRR1039516_1",
+            "SRR1039516_2"
+          ],
+          "xcats_clustered": [
+            "Per Sequence GC Content",
+            "Per Base N Content",
+            "Sequence Length Distribution",
+            "Sequence Duplication Levels",
+            "Overrepresented Sequences",
+            "Adapter Content",
+            "Basic Statistics",
+            "Per Base Sequence Quality",
+            "Per Sequence Quality Scores",
+            "Per Base Sequence Content"
+          ],
+          "ycats_clustered": [
+            "SRR1039516_1",
+            "SRR1039516_2"
+          ],
+          "xcats_samples": false,
+          "ycats_samples": true
+        }
+      ],
+      "pconfig": {
+        "id": "fastqc-status-check-heatmap",
+        "title": "FastQC: Status Checks",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": "Section Name",
+        "ylab": "Sample",
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": 2,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": 1,
+        "xmin": null,
+        "xmax": null,
+        "ymin": null,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": null,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": true,
+        "zlab": "z",
+        "min": 0,
+        "max": 1,
+        "xcats_samples": false,
+        "ycats_samples": true,
+        "colstops": [
+          [
+            0,
+            "#ffffff00"
+          ],
+          [
+            0.25,
+            "#d9534f"
+          ],
+          [
+            0.5,
+            "#fee391"
+          ],
+          [
+            1,
+            "#5cb85c"
+          ]
+        ],
+        "reverseColors": false,
+        "reverse_colors": false,
+        "legend": false,
+        "datalabels": null,
+        "display_values": false,
+        "angled_xticks": false,
+        "cluster_rows": true,
+        "cluster_cols": true,
+        "cluster_method": "complete",
+        "cluster_switch_clustered_active": false
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "xcats_samples": false,
+      "ycats_samples": true,
+      "min": 0.0,
+      "max": 1.0,
+      "cluster_switch_clustered_active": false
+    },
+    "general_stats_table": {
+      "id": "general_stats_table",
+      "anchor": "general_stats_table",
+      "plot_type": "violin plot",
+      "layout": {
+        "autosize": true,
+        "height": 500,
+        "hoverlabel": {
+          "namelength": -1
+        },
+        "margin": {
+          "b": 40,
+          "l": 60,
+          "pad": 0,
+          "r": 15,
+          "t": 50
+        },
+        "showlegend": false,
+        "template": {
+          "layout": {
+            "colorway": [
+              "#7cb5ec",
+              "#434348",
+              "#90ed7d",
+              "#f7a35c",
+              "#8085e9",
+              "#f15c80",
+              "#e4d354",
+              "#2b908f",
+              "#f45b5b",
+              "#91e8e1"
+            ],
+            "font": {
+              "color": "rgba(60,60,60,1)",
+              "family": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+            },
+            "legend": {
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            },
+            "modebar": {
+              "activecolor": "rgba(80, 80, 80, 1)",
+              "bgcolor": "rgba(0, 0, 0, 0)",
+              "color": "rgba(100, 100, 100, 0.5)"
+            },
+            "paper_bgcolor": "rgba(0,0,0,0)",
+            "plot_bgcolor": "rgba(0,0,0,0)",
+            "title": {
+              "font": {
+                "color": "rgba(60,60,60,1)",
+                "size": 20
+              }
+            },
+            "xaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            },
+            "yaxis": {
+              "color": "rgba(100,100,100,1)",
+              "gridcolor": "rgba(128,128,128,0.15)",
+              "spikecolor": "rgba(60,60,60,1)",
+              "spikethickness": -3,
+              "tickfont": {
+                "color": "rgba(80,80,80,1)",
+                "size": 10
+              },
+              "zerolinecolor": "rgba(128,128,128,0.2)"
+            }
+          }
+        },
+        "title": {
+          "text": "General Statistics",
+          "x": 0.5,
+          "xanchor": "center"
+        },
+        "xaxis": {
+          "automargin": false,
+          "tickfont": {
+            "size": 9,
+            "color": "rgba(0,0,0,0.5)"
+          },
+          "gridcolor": "rgba(0,0,0,0.1)",
+          "zerolinecolor": "rgba(0,0,0,0.1)"
+        },
+        "yaxis": {
+          "automargin": true,
+          "tickfont": {
+            "size": 9,
+            "color": "rgba(0,0,0,0.5)"
+          },
+          "gridcolor": "rgba(0,0,0,0.1)",
+          "zerolinecolor": "rgba(0,0,0,0.1)"
+        },
+        "violingap": 0,
+        "grid": {
+          "columns": 1,
+          "roworder": "top to bottom",
+          "ygap": 0.4
+        }
+      },
+      "datasets": [
+        {
+          "plot_id": "general_stats_table",
+          "label": "1",
+          "uid": "general_stats_table",
+          "dconfig": {
+            "ylab": "",
+            "title": "General Statistics",
+            "subtitle": "2 samples"
+          },
+          "layout": {
+            "title": {
+              "text": "General Statistics<br><sup>2 samples</sup>"
+            },
+            "xaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": null
+              },
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            },
+            "yaxis": {
+              "hoverformat": null,
+              "ticksuffix": "",
+              "title": {
+                "text": ""
+              },
+              "rangemode": "normal",
+              "autorangeoptions": {
+                "clipmin": null,
+                "clipmax": null,
+                "minallowed": null,
+                "maxallowed": null
+              }
+            }
+          },
+          "trace_params": {
+            "hovertemplate": "<b>%{text}</b>: %{x}<extra></extra>",
+            "orientation": "h",
+            "box": {
+              "visible": true
+            },
+            "meanline": {
+              "visible": true
+            },
+            "fillcolor": "#999999",
+            "line": {
+              "width": 0
+            },
+            "opacity": 1,
+            "points": false,
+            "hoveron": "points"
+          },
+          "pct_range": {
+            "xaxis": {
+              "min": 0,
+              "max": 100
+            },
+            "yaxis": {
+              "min": 0,
+              "max": 100
+            }
+          },
+          "n_series": 2,
+          "metrics": [
+            "fastqc-percent_duplicates",
+            "fastqc-percent_gc",
+            "fastqc-avg_sequence_length",
+            "fastqc-median_sequence_length",
+            "fastqc-percent_fails",
+            "fastqc-total_sequences"
+          ],
+          "header_by_metric": {
+            "fastqc-percent_duplicates": {
+              "title": "Dups",
+              "description": "% duplicate reads",
+              "suffix": "%",
+              "dmin": 0.0,
+              "dmax": 100.0,
+              "hidden": false,
+              "xaxis": {
+                "ticksuffix": "%",
+                "tickvals": null,
+                "range": [
+                  -0.5,
+                  100.5025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-percent_gc": {
+              "title": "GC",
+              "description": "Average % GC content",
+              "suffix": "%",
+              "dmin": 0.0,
+              "dmax": 100.0,
+              "hidden": false,
+              "xaxis": {
+                "ticksuffix": "%",
+                "tickvals": null,
+                "range": [
+                  -0.5,
+                  100.5025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-avg_sequence_length": {
+              "title": "Avg len",
+              "description": "Average read length",
+              "suffix": " bp",
+              "dmin": 0.0,
+              "dmax": 63.0,
+              "hidden": true,
+              "xaxis": {
+                "ticksuffix": " bp",
+                "tickvals": null,
+                "range": [
+                  -0.315,
+                  63.316575
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-median_sequence_length": {
+              "title": "Median len",
+              "description": "Median read length",
+              "suffix": " bp",
+              "dmin": 0.0,
+              "dmax": 63,
+              "hidden": true,
+              "xaxis": {
+                "ticksuffix": " bp",
+                "tickvals": null,
+                "range": [
+                  -0.315,
+                  63.316575
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": null
+            },
+            "fastqc-percent_fails": {
+              "title": "Failed",
+              "description": "Percentage of modules failed in FastQC report (includes those not plotted here)",
+              "suffix": "%",
+              "dmin": 0.0,
+              "dmax": 100.0,
+              "hidden": true,
+              "xaxis": {
+                "ticksuffix": "%",
+                "tickvals": null,
+                "range": [
+                  -0.5,
+                  100.5025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            },
+            "fastqc-total_sequences": {
+              "title": "Seqs",
+              "description": "Total sequences (millions)",
+              "suffix": " M",
+              "dmin": 0.0,
+              "dmax": 0.09999999999999999,
+              "hidden": false,
+              "xaxis": {
+                "ticksuffix": " M",
+                "tickvals": null,
+                "range": [
+                  -0.0005,
+                  0.1005025
+                ]
+              },
+              "show_only_outliers": false,
+              "show_points": true,
+              "namespace": "FastQC",
+              "color": null,
+              "hoverformat": ".2f"
+            }
+          },
+          "violin_value_by_sample_by_metric": {
+            "fastqc-percent_duplicates": {
+              "SRR1039516_1": 6.378,
+              "SRR1039516_2": 5.971999999999994
+            },
+            "fastqc-percent_gc": {
+              "SRR1039516_1": 49.0,
+              "SRR1039516_2": 49.0
+            },
+            "fastqc-avg_sequence_length": {
+              "SRR1039516_1": 63.0,
+              "SRR1039516_2": 63.0
+            },
+            "fastqc-median_sequence_length": {
+              "SRR1039516_1": 63,
+              "SRR1039516_2": 63
+            },
+            "fastqc-percent_fails": {
+              "SRR1039516_1": 0.0,
+              "SRR1039516_2": 0.0
+            },
+            "fastqc-total_sequences": {
+              "SRR1039516_1": 0.09999999999999999,
+              "SRR1039516_2": 0.09999999999999999
+            }
+          },
+          "scatter_value_by_sample_by_metric": {
+            "fastqc-percent_duplicates": {},
+            "fastqc-percent_gc": {},
+            "fastqc-avg_sequence_length": {},
+            "fastqc-median_sequence_length": {},
+            "fastqc-percent_fails": {},
+            "fastqc-total_sequences": {}
+          },
+          "all_samples": [
+            "SRR1039516_1",
+            "SRR1039516_2"
+          ],
+          "scatter_trace_params": {
+            "mode": "markers",
+            "marker": {
+              "size": 4,
+              "color": "#0b79e6",
+              "opacity": 1
+            },
+            "showlegend": false,
+            "hovertemplate": "<b>%{text}</b>: %{x}<extra></extra>",
+            "hoverlabel": {
+              "bgcolor": "white",
+              "font": {
+                "color": "rgba(60,60,60,1)"
+              }
+            }
+          },
+          "dt": {
+            "id": "general_stats_table",
+            "anchor": "general_stats_table_table",
+            "pconfig": {
+              "id": "general_stats_table",
+              "title": "General Statistics",
+              "subtitle": null,
+              "anchor": null,
+              "table_title": null,
+              "height": null,
+              "width": null,
+              "square": false,
+              "logswitch": false,
+              "logswitch_active": false,
+              "logswitch_label": "Log10",
+              "cpswitch": true,
+              "cpswitch_c_active": true,
+              "cpswitch_counts_label": "Counts",
+              "cpswitch_percent_label": "Percentages",
+              "xLog": null,
+              "yLog": null,
+              "xlog": false,
+              "ylog": false,
+              "data_labels": [],
+              "xTitle": null,
+              "yTitle": null,
+              "xlab": null,
+              "ylab": null,
+              "xsuffix": null,
+              "ysuffix": null,
+              "tt_suffix": null,
+              "xLabFormat": null,
+              "yLabFormat": null,
+              "xLabelFormat": null,
+              "yLabelFormat": null,
+              "xlab_format": null,
+              "ylab_format": null,
+              "tt_label": null,
+              "xDecimals": null,
+              "yDecimals": null,
+              "decimalPlaces": null,
+              "x_decimals": null,
+              "y_decimals": null,
+              "tt_decimals": null,
+              "xmin": null,
+              "xmax": null,
+              "ymin": null,
+              "ymax": null,
+              "xFloor": null,
+              "xCeiling": null,
+              "yFloor": null,
+              "yCeiling": null,
+              "x_clipmin": null,
+              "x_clipmax": null,
+              "y_clipmin": null,
+              "y_clipmax": null,
+              "save_data_file": true,
+              "showlegend": null,
+              "xMinRange": null,
+              "yMinRange": null,
+              "x_minrange": null,
+              "y_minrange": null,
+              "xPlotBands": null,
+              "yPlotBands": null,
+              "xPlotLines": null,
+              "yPlotLines": null,
+              "x_bands": null,
+              "y_bands": null,
+              "x_lines": null,
+              "y_lines": null,
+              "series_label": "samples",
+              "flat_if_very_large": false,
+              "namespace": "",
+              "save_file": true,
+              "raw_data_fn": "multiqc_general_stats",
+              "defaultsort": null,
+              "sortRows": true,
+              "sort_rows": true,
+              "only_defined_headers": true,
+              "col1_header": "Sample Name",
+              "no_beeswarm": false,
+              "no_violin": false,
+              "scale": "GnBu",
+              "min": null,
+              "parse_numeric": true,
+              "rows_are_samples": true
+            },
+            "section_by_id": {
+              "fastqc": {
+                "column_by_key": {
+                  "percent_duplicates": {
+                    "rid": "fastqc-percent_duplicates",
+                    "clean_rid": "fastqc-percent_duplicates",
+                    "title": "Dups",
+                    "description": "% duplicate reads",
+                    "scale": "RdYlGn-rev",
+                    "hidden": false,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": 100.0,
+                    "dmax": 100.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": "%",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": null
+                  },
+                  "percent_gc": {
+                    "rid": "fastqc-percent_gc",
+                    "clean_rid": "fastqc-percent_gc",
+                    "title": "GC",
+                    "description": "Average % GC content",
+                    "scale": "PuRd",
+                    "hidden": false,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": 100.0,
+                    "dmax": 100.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": "%",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.1f}"
+                  },
+                  "avg_sequence_length": {
+                    "rid": "fastqc-avg_sequence_length",
+                    "clean_rid": "fastqc-avg_sequence_length",
+                    "title": "Avg len",
+                    "description": "Average read length",
+                    "scale": "RdYlGn",
+                    "hidden": true,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": null,
+                    "dmax": 63.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": " bp",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.0f}"
+                  },
+                  "median_sequence_length": {
+                    "rid": "fastqc-median_sequence_length",
+                    "clean_rid": "fastqc-median_sequence_length",
+                    "title": "Median len",
+                    "description": "Median read length",
+                    "scale": "RdYlGn",
+                    "hidden": true,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": null,
+                    "dmax": 63,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": " bp",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.0f}"
+                  },
+                  "percent_fails": {
+                    "rid": "fastqc-percent_fails",
+                    "clean_rid": "fastqc-percent_fails",
+                    "title": "Failed",
+                    "description": "Percentage of modules failed in FastQC report (includes those not plotted here)",
+                    "scale": "Reds",
+                    "hidden": true,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": 100.0,
+                    "dmax": 100.0,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": null,
+                    "tt_decimals": null,
+                    "suffix": "%",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": "{:,.0f}"
+                  },
+                  "total_sequences": {
+                    "rid": "fastqc-total_sequences",
+                    "clean_rid": "fastqc-total_sequences",
+                    "title": "Seqs",
+                    "description": "Total sequences (millions)",
+                    "scale": "Blues",
+                    "hidden": false,
+                    "placement": 1000.0,
+                    "namespace": "FastQC",
+                    "colour": null,
+                    "color": null,
+                    "max": null,
+                    "dmax": 0.09999999999999999,
+                    "min": 0.0,
+                    "dmin": 0.0,
+                    "ceiling": null,
+                    "floor": null,
+                    "minRange": null,
+                    "minrange": null,
+                    "shared_key": "read_count",
+                    "tt_decimals": null,
+                    "suffix": " M",
+                    "cond_formatting_colours": [
+                      {
+                        "blue": "#337ab7"
+                      },
+                      {
+                        "lbue": "#5bc0de"
+                      },
+                      {
+                        "pass": "#5cb85c"
+                      },
+                      {
+                        "warn": "#f0ad4e"
+                      },
+                      {
+                        "fail": "#d9534f"
+                      },
+                      {
+                        "male": "#5bc0de"
+                      },
+                      {
+                        "female": "#d9534f"
+                      }
+                    ],
+                    "cond_formatting_rules": {},
+                    "bgcols": {},
+                    "bars_zero_centrepoint": false,
+                    "modify": null,
+                    "format": null
+                  }
+                },
+                "rows_by_sgroup": {
+                  "SRR1039516_1": [
+                    {
+                      "sample": "SRR1039516_1",
+                      "data": {
+                        "total_sequences": {
+                          "raw": 100000.0,
+                          "mod": 0.09999999999999999,
+                          "fmt": "0.1"
+                        },
+                        "percent_gc": {
+                          "raw": 49.0,
+                          "mod": 49.0,
+                          "fmt": "49.0"
+                        },
+                        "avg_sequence_length": {
+                          "raw": 63.0,
+                          "mod": 63.0,
+                          "fmt": "63"
+                        },
+                        "median_sequence_length": {
+                          "raw": 63,
+                          "mod": 63,
+                          "fmt": "63"
+                        },
+                        "percent_duplicates": {
+                          "raw": 6.378,
+                          "mod": 6.378,
+                          "fmt": "6.4"
+                        },
+                        "percent_fails": {
+                          "raw": 0.0,
+                          "mod": 0.0,
+                          "fmt": "0"
+                        }
+                      }
+                    }
+                  ],
+                  "SRR1039516_2": [
+                    {
+                      "sample": "SRR1039516_2",
+                      "data": {
+                        "total_sequences": {
+                          "raw": 100000.0,
+                          "mod": 0.09999999999999999,
+                          "fmt": "0.1"
+                        },
+                        "percent_gc": {
+                          "raw": 49.0,
+                          "mod": 49.0,
+                          "fmt": "49.0"
+                        },
+                        "avg_sequence_length": {
+                          "raw": 63.0,
+                          "mod": 63.0,
+                          "fmt": "63"
+                        },
+                        "median_sequence_length": {
+                          "raw": 63,
+                          "mod": 63,
+                          "fmt": "63"
+                        },
+                        "percent_duplicates": {
+                          "raw": 5.971999999999994,
+                          "mod": 5.971999999999994,
+                          "fmt": "6.0"
+                        },
+                        "percent_fails": {
+                          "raw": 0.0,
+                          "mod": 0.0,
+                          "fmt": "0"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "headers_in_order": {
+              "1000.0": [
+                [
+                  0,
+                  "percent_duplicates"
+                ],
+                [
+                  0,
+                  "percent_gc"
+                ],
+                [
+                  0,
+                  "avg_sequence_length"
+                ],
+                [
+                  0,
+                  "median_sequence_length"
+                ],
+                [
+                  0,
+                  "percent_fails"
+                ],
+                [
+                  0,
+                  "total_sequences"
+                ]
+              ]
+            }
+          },
+          "show_table_by_default": true,
+          "is_downsampled": false
+        }
+      ],
+      "pconfig": {
+        "id": "general_stats_table",
+        "title": "General Statistics",
+        "subtitle": null,
+        "anchor": null,
+        "table_title": null,
+        "height": null,
+        "width": null,
+        "square": false,
+        "logswitch": false,
+        "logswitch_active": false,
+        "logswitch_label": "Log10",
+        "cpswitch": true,
+        "cpswitch_c_active": true,
+        "cpswitch_counts_label": "Counts",
+        "cpswitch_percent_label": "Percentages",
+        "xLog": null,
+        "yLog": null,
+        "xlog": false,
+        "ylog": false,
+        "data_labels": [],
+        "xTitle": null,
+        "yTitle": null,
+        "xlab": null,
+        "ylab": null,
+        "xsuffix": null,
+        "ysuffix": null,
+        "tt_suffix": null,
+        "xLabFormat": null,
+        "yLabFormat": null,
+        "xLabelFormat": null,
+        "yLabelFormat": null,
+        "xlab_format": null,
+        "ylab_format": null,
+        "tt_label": null,
+        "xDecimals": null,
+        "yDecimals": null,
+        "decimalPlaces": null,
+        "x_decimals": null,
+        "y_decimals": null,
+        "tt_decimals": null,
+        "xmin": null,
+        "xmax": null,
+        "ymin": null,
+        "ymax": null,
+        "xFloor": null,
+        "xCeiling": null,
+        "yFloor": null,
+        "yCeiling": null,
+        "x_clipmin": null,
+        "x_clipmax": null,
+        "y_clipmin": null,
+        "y_clipmax": null,
+        "save_data_file": true,
+        "showlegend": null,
+        "xMinRange": null,
+        "yMinRange": null,
+        "x_minrange": null,
+        "y_minrange": null,
+        "xPlotBands": null,
+        "yPlotBands": null,
+        "xPlotLines": null,
+        "yPlotLines": null,
+        "x_bands": null,
+        "y_bands": null,
+        "x_lines": null,
+        "y_lines": null,
+        "series_label": "samples",
+        "flat_if_very_large": false,
+        "namespace": "",
+        "save_file": true,
+        "raw_data_fn": "multiqc_general_stats",
+        "defaultsort": null,
+        "sortRows": true,
+        "sort_rows": true,
+        "only_defined_headers": true,
+        "col1_header": "Sample Name",
+        "no_beeswarm": false,
+        "no_violin": false,
+        "scale": "GnBu",
+        "min": null,
+        "parse_numeric": true,
+        "rows_are_samples": true
+      },
+      "add_log_tab": false,
+      "add_pct_tab": false,
+      "l_active": false,
+      "p_active": false,
+      "pct_axis_update": {
+        "ticksuffix": "%",
+        "hoverformat": ".1f"
+      },
+      "axis_controlled_by_switches": [],
+      "square": false,
+      "flat": false,
+      "defer_render": false,
+      "section_anchor": null,
+      "module_anchor": null,
+      "violin_height": 70,
+      "extra_height": 63,
+      "no_violin": false,
+      "show_table": true,
+      "show_table_by_default": true,
+      "n_samples": 2,
+      "table_anchor": "general_stats_table_table"
+    }
+  },
+  "config_analysis_dir": [
+    "data/multiqc_reports/SRR1039516/_fastqc/"
+  ],
+  "config_git_hash": null,
+  "config_intro_text": null,
+  "config_report_comment": null,
+  "config_report_header_info": null,
+  "config_script_path": "/Users/ryan/miniconda3/envs/multiqc/lib/python3.14/site-packages/multiqc",
+  "config_short_version": "1.35",
+  "config_subtitle": null,
+  "config_title": null,
+  "config_version": "1.35",
+  "config_output_dir": "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039516",
+  "config_sample_names_rename": [],
+  "config_sample_names_rename_buttons": [],
+  "config_analysis_dir_abs": [
+    "/Users/ryan/Downloads/AI/multiqc-foundation-gate/data/multiqc_reports/SRR1039516/_fastqc"
+  ],
+  "report_saved_raw_data": {
+    "multiqc_fastqc": {
+      "SRR1039516_1": {
+        "Filename": "SRR1039516_1.fastq.gz",
+        "File type": "Conventional base calls",
+        "Encoding": "Sanger / Illumina 1.9",
+        "Total Sequences": 100000.0,
+        "Total Bases": "6.3 Mbp",
+        "Sequences flagged as poor quality": 0.0,
+        "Sequence length": 63.0,
+        "%GC": 49.0,
+        "total_deduplicated_percentage": 93.622,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "basic_statistics": "pass",
+        "per_base_sequence_quality": "pass",
+        "per_sequence_quality_scores": "pass",
+        "per_base_sequence_content": "pass",
+        "per_sequence_gc_content": "pass",
+        "per_base_n_content": "pass",
+        "sequence_length_distribution": "pass",
+        "sequence_duplication_levels": "pass",
+        "overrepresented_sequences": "pass",
+        "adapter_content": "pass"
+      },
+      "SRR1039516_2": {
+        "Filename": "SRR1039516_2.fastq.gz",
+        "File type": "Conventional base calls",
+        "Encoding": "Sanger / Illumina 1.9",
+        "Total Sequences": 100000.0,
+        "Total Bases": "6.3 Mbp",
+        "Sequences flagged as poor quality": 0.0,
+        "Sequence length": 63.0,
+        "%GC": 49.0,
+        "total_deduplicated_percentage": 94.028,
+        "avg_sequence_length": 63.0,
+        "median_sequence_length": 63,
+        "basic_statistics": "pass",
+        "per_base_sequence_quality": "pass",
+        "per_sequence_quality_scores": "pass",
+        "per_base_sequence_content": "pass",
+        "per_sequence_gc_content": "pass",
+        "per_base_n_content": "pass",
+        "sequence_length_distribution": "pass",
+        "sequence_duplication_levels": "pass",
+        "overrepresented_sequences": "pass",
+        "adapter_content": "pass"
+      }
+    },
+    "multiqc_general_stats": {
+      "SRR1039516_1": {
+        "fastqc-percent_duplicates": 6.378,
+        "fastqc-percent_gc": 49.0,
+        "fastqc-avg_sequence_length": 63.0,
+        "fastqc-median_sequence_length": 63,
+        "fastqc-percent_fails": 0.0,
+        "fastqc-total_sequences": 0.09999999999999999
+      },
+      "SRR1039516_2": {
+        "fastqc-percent_duplicates": 5.971999999999994,
+        "fastqc-percent_gc": 49.0,
+        "fastqc-avg_sequence_length": 63.0,
+        "fastqc-median_sequence_length": 63,
+        "fastqc-percent_fails": 0.0,
+        "fastqc-total_sequences": 0.09999999999999999
+      }
+    }
+  }
+}

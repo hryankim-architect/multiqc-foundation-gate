@@ -1,0 +1,3 @@
+Sample	Unique Reads	Duplicate Reads
+SRR1039521_mixed_1	95958.0	4042.0
+SRR1039521_mixed_2	96014.0	3986.0
