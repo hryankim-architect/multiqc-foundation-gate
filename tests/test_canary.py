@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from bioscaffold import canary
+from multiqc_gate import canary
 
 
 def test_canary_passes_on_default_fixture(tmp_path: Path, monkeypatch) -> None:

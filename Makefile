@@ -4,7 +4,7 @@
 
 PYTHON ?= .venv/bin/python
 UV ?= uv
-PKG := bioscaffold
+PKG := multiqc_gate
 RUN_NAME ?= demo
 ARTIFACT_DIR := artifacts
 DATA_DIR := data

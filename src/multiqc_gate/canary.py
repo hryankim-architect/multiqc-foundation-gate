@@ -21,7 +21,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from bioscaffold import audit, tracking
+from multiqc_gate import audit, tracking
 
 DEFAULT_FIXTURE = Path("tests/fixtures/canary.json")
 

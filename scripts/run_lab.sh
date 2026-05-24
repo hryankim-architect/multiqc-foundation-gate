@@ -28,6 +28,6 @@ uv run make run RUN_NAME="${BIOSCAFFOLD_RUN_NAME}"
 
 # --- post-run: invoke canary for substrate registration ---
 echo "[run_lab] canary check"
-uv run python -m bioscaffold.canary
+uv run python -m multiqc_gate.canary
 
 echo "[run_lab] done"

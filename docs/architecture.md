@@ -14,7 +14,7 @@ a reviewer can navigate any of them in 30 seconds.
                                     │
                                     ▼
                   ┌──────────────────────────────────────┐
-                  │  bioscaffold.pipeline.run_pipeline   │
+                  │  multiqc_gate.pipeline.run_pipeline   │
                   └─────────────────┬────────────────────┘
                                     │
        ┌────────────────────────────┼────────────────────────────┐
@@ -43,9 +43,9 @@ loosely-coupled channels:
 
 | Channel | Module | Env var | Substrate endpoint |
 |---|---|---|---|
-| Audit (immutable record) | `bioscaffold.audit` | `AUDIT_HOST` | `http://${AUDIT_HOST}/events` |
-| MLflow (experiment tracking) | `bioscaffold.tracking` | `MLFLOW_TRACKING_URI` | configurable |
-| Canary (daily probe) | `bioscaffold.canary` | `BIOSCAFFOLD_CANARY_FIXTURE` | invoked by `lab_semantic_check.py` |
+| Audit (immutable record) | `multiqc_gate.audit` | `AUDIT_HOST` | `http://${AUDIT_HOST}/events` |
+| MLflow (experiment tracking) | `multiqc_gate.tracking` | `MLFLOW_TRACKING_URI` | configurable |
+| Canary (daily probe) | `multiqc_gate.canary` | `BIOSCAFFOLD_CANARY_FIXTURE` | invoked by `lab_semantic_check.py` |
 
 All three channels degrade to no-ops when the substrate is absent. The
 deterministic local NDJSON ledger remains the source of truth for audit
