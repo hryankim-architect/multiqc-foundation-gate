@@ -1,5 +1,31 @@
-# Never commit raw data - URLs and checksums live in manifest.yaml
-*
-!.gitignore
-!manifest.yaml
-!README.md
+# Specific-ignore for raw bioinformatics data. Everything else under data/
+# is tracked (manifest.yaml, labels.csv, multiqc_reports/ JSON, README.md).
+#
+# Rule of thumb: if it can be regenerated from the manifest + tooling in
+# under a few minutes, ignore it. If it's a small derived artifact that
+# downstream code (or a reviewer) needs to see the demo's input shape,
+# track it.
+
+# Raw sequencing data (regenerable from manifest URLs)
+fastq/
+*.fastq.gz
+*.fastq
+*.bam
+*.cram
+
+# Reference genomes / indexes (regenerable)
+reference/
+*.fa
+*.fa.gz
+*.gtf
+*.gtf.gz
+*.fai
+hisat2_index/
+
+# Per-run artifacts (out-of-scope for git)
+work/
+results/
+artifacts/
+
+# OS / editor noise
+.DS_Store

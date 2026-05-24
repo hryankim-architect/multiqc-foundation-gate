@@ -1,0 +1,15 @@
+# MultiQC reports tree — keep the parsed JSON (classifier input) + small text
+# summaries; drop the HTML report (~2 MB each, not needed for ML) and the raw
+# FastQC zip / module dirs (~5 MB each, regenerable from FASTQ).
+#
+# Keep:
+#   - <sample>/multiqc_data/multiqc_data.json       (~300 KB, the input vector source)
+#   - <sample>/multiqc_data/general_stats.txt        (~few KB)
+#   - <sample>/multiqc_data/multiqc_sources.txt      (~few KB)
+#   - <sample>/multiqc_data/multiqc_software_versions.txt
+#
+# Drop:
+#   - <sample>/multiqc_report.html                   (~1-3 MB, redundant with JSON)
+#   - <sample>/_fastqc/**                            (~5 MB per sample, regenerable)
+*.html
+_fastqc/
