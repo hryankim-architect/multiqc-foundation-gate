@@ -1,0 +1,5 @@
+# Never commit raw data - URLs and checksums live in manifest.yaml
+*
+!.gitignore
+!manifest.yaml
+!README.md
