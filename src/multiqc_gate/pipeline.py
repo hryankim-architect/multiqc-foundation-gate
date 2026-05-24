@@ -24,7 +24,7 @@ from typing import Any
 import click
 import yaml
 
-from bioscaffold import audit, tracking
+from multiqc_gate import audit, tracking
 
 
 def _run_id(name: str) -> str:
@@ -92,7 +92,7 @@ def run_pipeline(run_name: str, out_dir: Path) -> dict[str, Any]:
 
     metrics: dict[str, float] = {}
 
-    with tracking.run(name=job_id, experiment="bioscaffold"):
+    with tracking.run(name=job_id, experiment="multiqc_gate"):
         tracking.log_params({"run_name": run_name})
 
         # --- begin body (replace in derived repo) ---
@@ -127,7 +127,7 @@ def run_pipeline(run_name: str, out_dir: Path) -> dict[str, Any]:
 
 @click.group()
 def cli() -> None:
-    """bioscaffold capability-portrait pipeline."""
+    """multiqc_gate capability-portrait pipeline."""
 
 
 @cli.command()

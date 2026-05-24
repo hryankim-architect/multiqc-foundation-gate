@@ -13,7 +13,7 @@ The schema mirrors the Polish-Phase5 audit format::
     {
         "ts": "2026-05-23T17:00:00Z",
         "action": "pipeline_start",
-        "actor": "bioscaffold@chi-mac-p",
+        "actor": "multiqc_gate@chi-mac-p",
         "job_id": "demo-2026-05-23-17",
         "fields": {...arbitrary payload...},
         "prev_hash": "...",

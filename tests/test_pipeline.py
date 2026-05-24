@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from bioscaffold import audit, pipeline
+from multiqc_gate import audit, pipeline
 
 
 def test_pipeline_runs_and_produces_artifact(tmp_path: Path, monkeypatch) -> None:

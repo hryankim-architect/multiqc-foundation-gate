@@ -73,7 +73,7 @@ contributor strips the preamble, CI fails.
 ├── data/
 │   ├── .gitignore           # raw data never committed
 │   └── manifest.yaml        # public URLs + checksums for the tiny subset
-├── src/bioscaffold/
+├── src/multiqc_gate/
 │   ├── __init__.py
 │   ├── pipeline.py          # CLI entry; demonstrates audit + tracking pattern
 │   ├── audit.py             # NDJSON hash-chained ledger emit
@@ -91,7 +91,7 @@ contributor strips the preamble, CI fails.
     └── run_lab.sh           # one-liner to execute on a lab node
 ```
 
-Rename `src/bioscaffold/` to your project package name when creating the new
+Rename `src/multiqc_gate/` to your project package name when creating the new
 repo. The substrate modules (`audit.py`, `tracking.py`, `canary.py`) are
 designed to be copy-and-edit, not pip-installed, so each capability repo can
 diverge as needed without coordinating releases.
