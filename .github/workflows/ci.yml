@@ -39,4 +39,4 @@ jobs:
           fi
 
       - name: Run canary
-        run: uv run python -m bioscaffold.canary
+        run: uv run python -m multiqc_gate.canary
