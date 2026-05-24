@@ -87,29 +87,96 @@ inputs:
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
 
-# ===== Cohort 2 (Phase B): ENCODE ChIP-seq (5 SRR) =====
-# Target: K562 or GM12878 cell line, mix of histone marks (H3K27me3,
-# H3K4me3, H3K27ac, etc.) so the FastQC profile differs from bulk RNA-seq
-# (different read length distributions, GC content, duplication patterns).
-# Pending ENA URL lookup; populate after Phase A succeeds.
-#
-# ===== Cohort 3 (Phase B): ENCODE ATAC-seq (5 SRR) =====
-# Target: same cell line as Cohort 2 for controlled comparison. ATAC-seq
-# has distinct sequence-content modules (Tn5 adapter bias) that the
-# classifier should learn to recognize.
-# Pending ENA URL lookup.
-#
-# ===== Cohort 4 (Phase B): GTEx-style bulk RNA-seq, different tissue (5 SRR) =====
-# Target: lung, liver, or muscle bulk RNA-seq from a different study so
-# the classifier sees biological-condition diversity, not just technical
-# replicate variation within Himes.
-# Pending ENA URL lookup.
+  # ===== Cohort 2: Himes series 5 more (SRR1039518-522) =====
+  # Same GSE52778 series, different biological samples (asthma vs control,
+  # dex-treated vs untreated). Same library prep means baseline QC profile
+  # is similar to Cohort 1; the per-sample MultiQC variation comes from
+  # biological + technical replicate-level noise. Cohort diversity in v0.1
+  # is achieved via Phase C augmentation rather than multi-cohort fetches.
+  #
+  # Phase B decision (2026-05-25): single-cohort strategy chosen over
+  # multi-cohort to keep `make data` under 5 minutes and avoid ENA URL
+  # discovery overhead. Multi-cohort expansion deferred to v0.2.
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1039518/SRR1039518_1.fastq.gz
+    path: fastq/SRR1039518_1.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1039518/SRR1039518_2.fastq.gz
+    path: fastq/SRR1039518_2.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
 
-# ===== Augmentation plan (Phase C, Hour 4-5) =====
-# Each base sample's MultiQC report is augmented into ~2.5 versions:
-#   1. Original (n=20)
-#   2. Random module dropout: remove 1-2 FastQC modules to simulate
-#      "edge case reports" (n=15)
-#   3. Adapter injection: prepend 10-50 bp adapter sequence to 5-10% of
-#      reads before FastQC to create "exclude" labels (n=15)
-# Total: ~50 augmented reports, hand-labeled by user.
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1039519/SRR1039519_1.fastq.gz
+    path: fastq/SRR1039519_1.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1039519/SRR1039519_2.fastq.gz
+    path: fastq/SRR1039519_2.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/000/SRR1039520/SRR1039520_1.fastq.gz
+    path: fastq/SRR1039520_1.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/000/SRR1039520/SRR1039520_2.fastq.gz
+    path: fastq/SRR1039520_2.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/001/SRR1039521/SRR1039521_1.fastq.gz
+    path: fastq/SRR1039521_1.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/001/SRR1039521/SRR1039521_2.fastq.gz
+    path: fastq/SRR1039521_2.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1039522/SRR1039522_1.fastq.gz
+    path: fastq/SRR1039522_1.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+  - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1039522/SRR1039522_2.fastq.gz
+    path: fastq/SRR1039522_2.fastq.gz
+    sha256: TBD-fill-after-download
+    size_mb: 5
+    license: SRA public-domain
+    source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
+
+# ===== Phase C augmentation plan (Hour 4-5) =====
+# Single-cohort + heavy augmentation strategy. Base 10 SRR -> 50 reports:
+#
+#   1. Originals (n=10):                      include (clean)
+#   2. Module dropout (n=10):                 manual-review (edge cases)
+#      - randomly remove 1-2 FastQC modules to simulate upstream tool failures
+#   3. Adapter injection (n=10):              exclude (clear fail)
+#      - prepend Illumina adapter (50 bp) to 10% of reads -> high adapter content
+#   4. Quality degradation (n=10):            exclude (clear fail)
+#      - truncate reads to 30 bp + append low-quality bases -> failed per-base-quality
+#   5. Mixed-issue (n=10):                    manual-review (boundary)
+#      - light adapter (3%) + slight read-length variation + 1 module dropout
+#
+# Label distribution: include 10 / exclude 20 / manual-review 20.
+# Hand-verified by user during Phase C; CSV at data/labels.csv.
+#
+# Phase D (Hour 6-7): feature extraction parses each multiqc_data.json into
+# a ~50-element numerical vector that becomes the MLP / sklearn input.
