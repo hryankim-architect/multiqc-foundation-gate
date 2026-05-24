@@ -29,3 +29,6 @@ artifacts/
 
 # OS / editor noise
 .DS_Store
+
+# Phase C: augmented raw FASTQ (regenerable from base FASTQ + scripts/run_phase_c.py)
+fastq_augmented/
