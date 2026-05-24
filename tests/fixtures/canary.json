@@ -1,0 +1,5 @@
+{
+  "name": "scaffold-default",
+  "tier": "tier-1",
+  "expected_metric": 1.0
+}
