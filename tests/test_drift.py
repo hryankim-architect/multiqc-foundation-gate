@@ -7,7 +7,7 @@ import pytest
 
 scipy = pytest.importorskip("scipy")
 
-from multiqc_gate import drift
+from multiqc_gate import drift  # noqa: E402
 
 
 def test_no_drift_when_samples_identical():

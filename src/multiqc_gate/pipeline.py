@@ -15,7 +15,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import time
 import urllib.request
 from datetime import UTC, datetime
 from pathlib import Path
@@ -99,6 +98,7 @@ def run_pipeline(run_name: str, out_dir: Path) -> dict[str, Any]:
     # Lazy imports so `multiqc_gate.pipeline` is importable even if torch
     # is not installed (e.g. in a CI job that only runs the scaffold tests).
     import numpy as np
+
     from multiqc_gate import baseline as baseline_mod
     from multiqc_gate import drift as drift_mod
     from multiqc_gate import eval as eval_mod
@@ -137,7 +137,9 @@ def run_pipeline(run_name: str, out_dir: Path) -> dict[str, Any]:
             labels_df = labels_mod.load_labels(labels_path)
 
             # Align labels to features by sample_id order.
-            label_map = dict(zip(labels_df["report_id"], labels_df["label"]))
+            label_map = dict(
+                zip(labels_df["report_id"], labels_df["label"], strict=True)
+            )
             y_strings = [label_map[sid] for sid in sample_ids]
             y = train_mod.labels_to_indices(y_strings)
 

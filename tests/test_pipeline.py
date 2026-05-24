@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import csv
 import json
-from pathlib import Path
 
 import numpy as np
 import pytest
@@ -18,9 +17,9 @@ import pytest
 torch = pytest.importorskip("torch")  # pipeline needs torch
 sklearn = pytest.importorskip("sklearn")
 
-from multiqc_gate import audit, pipeline
-from multiqc_gate.features import N_FEATURES
-from multiqc_gate.labels import LABELS
+from multiqc_gate import audit, pipeline  # noqa: E402
+from multiqc_gate.features import N_FEATURES  # noqa: E402
+from multiqc_gate.labels import LABELS  # noqa: E402
 
 
 @pytest.fixture
@@ -46,7 +45,7 @@ def fake_dataset(tmp_path):
     with (data_dir / "labels.csv").open("w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["report_id", "label", "augmentation", "label_source", "notes"])
-        for sid, lbl in zip(sample_ids, labels):
+        for sid, lbl in zip(sample_ids, labels, strict=True):
             w.writerow([sid, lbl, "synthetic", "test", ""])
 
     return data_dir
