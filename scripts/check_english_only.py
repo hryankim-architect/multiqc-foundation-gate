@@ -6,10 +6,14 @@ GitHub artifact (code, README, lessons-learned, architecture docs) must be
 English-only. This scanner enforces that as a CI gate.
 
 Paths scanned by default:
-    README.md, src/**/*.py, tests/**/*.py, docs/**/*.md, scripts/**/*.sh
+    README.md, src/**/*.py, tests/**/*.py, docs/**/*.md, audit/**/*.md,
+    scripts/**/*.sh, scripts/**/*.py, .github/workflows/**/*.yml
 
 Skip the scan for a file by listing it in scripts/english-only.skip
 (one path per line).
+
+Also runnable as a pre-push client-side gate from any commit_*.sh helper
+(Polish-Phase5-Lτ). Catches CJK pre-push so we don't waste a CI round-trip.
 """
 
 from __future__ import annotations
@@ -35,6 +39,7 @@ DEFAULT_GLOBS = [
     "src/**/*.py",
     "tests/**/*.py",
     "docs/**/*.md",
+    "audit/**/*.md",
     "scripts/**/*.sh",
     "scripts/**/*.py",
     ".github/workflows/**/*.yml",
