@@ -1,5 +1,7 @@
 # `multiqc-foundation-gate`
 
+![ci](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/ci.yml/badge.svg) ![english-only](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/english-only.yml/badge.svg)
+
 > **Capability portrait, not a research result.** The dataset is intentionally
 > small (n=50, single Himes airway smooth muscle cohort + synthetic
 > augmentation) to keep the demo reproducible on a single workstation in
