@@ -9,7 +9,7 @@
 
 **What this shows**: turning an operational QC artifact (MultiQC report JSON)
 into an ML-driven include / exclude / manual-review decision, with audit +
-MLflow substrate hooks per training epoch and an honest baseline comparison
+MLflow substrate hooks per training epoch and a baseline comparison
 that shows when the deep-learning model loses to plain sklearn.
 
 **Reproducibility**: `make run` produces the full classifier comparison + drift
@@ -27,7 +27,7 @@ internal MultiQC reports at Gilead during my time directing clinical
 bioinformatics, where the MLP dominated the sklearn baselines and the gate
 caught ~12% of low-quality samples that human review would otherwise miss.
 The lab version here proves the *architecture* and the *substrate integration*,
-not the result at production scale — see
+not the result at production scale, see
 [`docs/what-is-out-of-scope.md`](docs/what-is-out-of-scope.md).
 
 ---
@@ -43,12 +43,12 @@ The question this repo codifies:
 
 > Can a small classifier read the MultiQC JSON directly and produce a
 > calibrated 3-way decision (include / exclude / manual-review) that a
-> downstream pipeline can consume — with the audit trail and drift detection
+> downstream pipeline can consume, with the audit trail and drift detection
 > a regulated environment requires?
 
 The classifier itself is the *secondary* contribution. The *primary*
 contribution is the substrate around it (28-feature vector schema, per-epoch
-audit chain, per-feature drift detection, honest sklearn-baseline comparison
+audit chain, per-feature drift detection, sklearn-baseline comparison
 that prevents over-claiming) that turns a one-off ML model into a piece of
 trusted pipeline machinery.
 
@@ -135,7 +135,7 @@ make canary
 
 ---
 
-## Real-data climax — sklearn beats MLP on n=50, and that is the right answer
+## Real-data climax, sklearn beats MLP on n=50, and that is the right answer
 
 End-to-end run on the n=50 canonical dataset, chi-mac-p, 2026-05-25:
 
@@ -152,7 +152,7 @@ Substrate metrics:
 | Wall-clock (`make run`, 5-fold CV x 3 methods + drift + audit + MLflow) | **3.76 sec** on chi-mac-p (CPU; MPS not engaged for tiny tensors) |
 | Audit chain entries | **215** (1 pipeline_start + 5 fold_start + 5 fold_end + ~140 epoch_end + 10 baseline_fold_end + 1 comparison + 1 drift + 1 pipeline_end + framing) |
 | Audit chain validity | `ok=True` (`prev_hash` replay verifies every entry) |
-| Drift detection | **5 of 28 features drifted** at alpha=0.05 (quality-degradation cohort vs include baseline). Top drifted: `num__avg_sequence_length`, `num__median_sequence_length` — exactly what the quality-degradation augmentation is designed to shift |
+| Drift detection | **5 of 28 features drifted** at alpha=0.05 (quality-degradation cohort vs include baseline). Top drifted: `num__avg_sequence_length`, `num__median_sequence_length`, exactly what the quality-degradation augmentation is designed to shift |
 | Test count | **49 passing** (3 scaffold + 9 augment + 5 labels + 6 features + 4 model + 5 train + 5 baseline + 5 eval + 6 drift + 4 pipeline) |
 
 ### What the MLP-vs-sklearn gap means (this is the capability claim, not a failure)
@@ -163,7 +163,7 @@ predict-majority pattern is the *expected* behavior for ~1,500 trainable
 parameters trained on 40 examples per fold. The classifier comparison itself
 is the substrate value:
 
-1. A capability portrait that pretended the MLP wins would be a lie — n=50 is
+1. A capability portrait that pretended the MLP wins would be a lie, n=50 is
    below the regime where small MLPs reliably beat linear models on tabular
    data.
 2. A production version at n=3,000+ (Gilead-scale internal data) flips this
@@ -174,7 +174,7 @@ is the substrate value:
    reusable engineering pattern.
 
 This is the difference between "I trained an MLP" and "I built a classifier
-gate with honest evaluation and audit-grade reproducibility." The repo proves
+gate with rigorous evaluation and audit-grade reproducibility." The repo proves
 the latter.
 
 ### Audit chain composition (215 entries)
@@ -194,16 +194,16 @@ read the chain once and see every model decision the run made.
 
 ---
 
-## Honest scope — why n=50, single cohort, and no foundation model
+## Scope, why n=50, single cohort, and no foundation model
 
 The first draft of this demo planned for a 4-layer transformer (~1M params)
 on 50 reports. With 50 samples for 3 classes (n=10 / n=20 / n=20), 1M
 parameters is 100x over-parameterized. Even with strong regularization the
 model would memorize the training set and the holdout would be noise. So
-v0.1 picks the simpler-but-honest architecture (LayerNorm + 32 -> 16 MLP,
+v0.1 picks the simpler architecture (LayerNorm + 32 -> 16 MLP,
 ~1.5k params) and reports the comparison openly. The "foundation" in
 `multiqc-foundation-gate` is the **gating substrate** (audit + drift +
-honest comparison), not the model size.
+comparison), not the model size.
 
 Diversity in the 50-sample dataset comes from **augmentation**, not
 multi-cohort sampling:
@@ -219,7 +219,7 @@ multi-cohort sampling:
   light adapter (3%)
 
 Multi-cohort expansion (ChIP-seq, ATAC-seq, GTEx tissue RNA-seq) was
-considered for Phase B and deliberately deferred to v0.2 — see
+considered for Phase B and deliberately deferred to v0.2, see
 `data/manifest.yaml` comments for the deferral rationale.
 
 ---
@@ -229,7 +229,7 @@ considered for Phase B and deliberately deferred to v0.2 — see
 | ID | Symptom | Fix |
 |---|---|---|
 | **find -name yaml only** | scaffold `bioscaffold -> multiqc_gate` rename missed `.github/workflows/ci.yml` because the find pattern listed `*.yaml` but not `*.yml` | Use `git ls-files \| while ... file -b --mime` instead, or include both `-o -name "*.yml"` |
-| **labels CSV row count drift** | `test_load_labels_parses_committed_sheet` asserted `len == 20` (Hour 3 partial) but Hour 4.B expanded the CSV to 50 — green pytest at write time, red CI on push | Add the count to the test as a derived value or update both in the same commit; alternatively, use `>=` not `==` for forward compatibility |
+| **labels CSV row count drift** | `test_load_labels_parses_committed_sheet` asserted `len == 20` (Hour 3 partial) but Hour 4.B expanded the CSV to 50, green pytest at write time, red CI on push | Add the count to the test as a derived value or update both in the same commit; alternatively, use `>=` not `==` for forward compatibility |
 | **MLP collapse on tiny tabular data** | n=50 with 3 classes and ~1.5k params -> the MLP learns to predict majority class only (val_acc = 0.40, std = 0.0) | This is expected, not a bug. The sklearn baseline is the correct comparison. The capability claim is the substrate framing, not "DL wins" |
 | **LogReg max_iter warning** | sklearn `LogisticRegression(max_iter=1000)` did not converge on the 28-feature input -> ConvergenceWarning at every fold | Either bump max_iter, scale features with StandardScaler in the pipeline, or accept that the model still achieves 86% accuracy without converging (the warning is informational) |
 
@@ -312,9 +312,9 @@ the shared scaffold that every capability-portrait repo in the quartet
 (P1 / P2 / P3 / P4) inherits.
 
 Sibling repos:
-- [`tp53-aml-hrd-severity`](https://github.com/hryankim-architect/tp53-aml-hrd-severity) (P3) — clinical-genomics analytical-method portrait (Cox HR 8.39 on TCGA-LAML)
-- [`healthomics-lab-orchestrator`](https://github.com/hryankim-architect/healthomics-lab-orchestrator) (P1) — Nextflow + substrate-hooked RNA-seq orchestration (22-entry audit chain)
-- `hnscc-time-multimodal` (P4) — multimodal IHC + genomics calibration (planned)
+- [`tp53-aml-hrd-severity`](https://github.com/hryankim-architect/tp53-aml-hrd-severity) (P3), clinical-genomics analytical-method portrait (Cox HR 8.39 on TCGA-LAML)
+- [`healthomics-lab-orchestrator`](https://github.com/hryankim-architect/healthomics-lab-orchestrator) (P1), Nextflow + substrate-hooked RNA-seq orchestration (22-entry audit chain)
+- `hnscc-time-multimodal` (P4), multimodal IHC + genomics calibration (planned)
 
 ---
 

@@ -1,4 +1,4 @@
-# Architecture — `multiqc-foundation-gate`
+# Architecture, `multiqc-foundation-gate`
 
 This repo composes two layers on top of the shared scaffold substrate:
 
@@ -109,7 +109,7 @@ classifier comparison + drift detection run.
 
 The ordering is wall-clock monotonic. Hash chain links every entry's
 `prev_hash` field to the SHA-256 of the canonical encoding of the
-preceding entry — `audit.verify()` walks the chain and confirms every
+preceding entry, `audit.verify()` walks the chain and confirms every
 link.
 
 ---
@@ -158,7 +158,7 @@ Same four-channel substrate as every other capability-portrait repo:
 | Audit (immutable record) | `multiqc_gate.audit` | `AUDIT_HOST` | `http://${AUDIT_HOST}/events` |
 | MLflow (experiment tracking) | `multiqc_gate.tracking` | `MLFLOW_TRACKING_URI` | configurable |
 | Canary (daily probe) | `multiqc_gate.canary` | `HEALTHOMICS_LAB_CANARY_FIXTURE` | invoked by `lab_semantic_check.py` |
-| Drift (per-feature KS) | `multiqc_gate.drift` | (none — invoked by `pipeline.py`) | results land in audit + `drift.json` |
+| Drift (per-feature KS) | `multiqc_gate.drift` | (none, invoked by `pipeline.py`) | results land in audit + `drift.json` |
 
 All channels degrade to no-ops when the substrate is absent. The
 deterministic local NDJSON ledger remains the source of truth for audit
@@ -175,7 +175,7 @@ strong regularization (LayerNorm + dropout 0.3 + class-weighted CE),
 the model would memorize the training set and the holdout would be
 noise.
 
-The v0.1 picks the simpler-but-honest path:
+The v0.1 picks the simpler path:
 
 - **Input**: 28-dim feature vector (LayerNorm-normalised to handle
   heterogeneous scales: Total Sequences ~1e5, status codes ~[-1, 2],
@@ -195,7 +195,7 @@ substrate-preserving even as the data scale changes.
 ## What this architecture intentionally avoids
 
 - **No DAG engine.** No Nextflow / Airflow / Prefect / Dagster. The
-  pipeline is a single Python process — `pipeline.py` calls each stage
+  pipeline is a single Python process, `pipeline.py` calls each stage
   in sequence. P1 (`healthomics-lab-orchestrator`) is the DAG-engine
   capability portrait; P2 is the analytical-method portrait that runs
   inside one Nextflow process when deployed at production scale.

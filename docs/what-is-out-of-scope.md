@@ -1,7 +1,7 @@
-# What is out of scope (P2 — `multiqc-foundation-gate`)
+# What is out of scope (P2, `multiqc-foundation-gate`)
 
 This file is the anti-scope-creep ledger for the P2 capability portrait.
-The repo's value comes from being *small and complete* — every item below
+The repo's value comes from being *small and complete*, every item below
 is something a reviewer might reasonably ask for that the v0.1 demo
 deliberately does not attempt.
 
@@ -33,7 +33,7 @@ gene-expression vectors derived from MultiQC report inputs.
 **Why out of scope**: foundation-model fine-tuning requires GPU-scale
 compute and ~5 GB of pre-trained weights, breaking the "no GPU required"
 contract. The 28-feature engineered vector is the right input modality
-for a 50-sample dataset — foundation models on this input would over-
+for a 50-sample dataset, foundation models on this input would over-
 parameterize even more aggressively than the current MLP.
 
 ---
@@ -47,7 +47,7 @@ gate on hold-out samples.
 
 **Why out of scope**: rule-based gates vary by lab, and "the right rule"
 itself is an internal decision. The v0.1 sklearn baselines (LogReg + RF)
-are the closest proxy — they learn a (linear or tree-based) decision
+are the closest proxy, they learn a (linear or tree-based) decision
 boundary from the same features the rule-based gate would use, and the
 LogReg coefficient signs serve as an interpretable rule extraction.
 A formal A/B test belongs to a production deployment, not the capability
@@ -73,10 +73,10 @@ in a production deployment.
 
 A gate trained on Himes RNA-seq MultiQC reports may or may not transfer
 to ChIP-seq, ATAC-seq, or single-cell RNA-seq reports. v0.1 does not test
-this — all 50 samples come from a single Himes airway smooth muscle cohort.
+this, all 50 samples come from a single Himes airway smooth muscle cohort.
 
 **Why out of scope**: cross-pipeline transfer learning needs multi-cohort
-data (deferred to v0.2 — see Phase B comments in `data/manifest.yaml`).
+data (deferred to v0.2, see Phase B comments in `data/manifest.yaml`).
 The 28-feature schema is *designed* to be pipeline-agnostic (FastQC module
 status + summary stats are common to all FastQC-targeting workflows), so
 v0.2 expansion is a feature-vector reuse, not a redesign.
@@ -118,7 +118,7 @@ include-class baseline. v0.1 *reports* drift; it does not *act* on it
 (no automatic retraining, no alerting, no model rollback).
 
 **Why out of scope**: drift remediation policy is operational, not
-analytical — it depends on the deployment SLA, the cost of false-positive
+analytical, it depends on the deployment SLA, the cost of false-positive
 exclusion, and the lab's review capacity. The drift signal itself is the
 substrate contribution; the policy on top is a deployment-tier decision.
 

@@ -35,10 +35,10 @@ MPS is a quality-of-life win, not a hard requirement.
 | ID | Pattern | P2 applicability |
 |---|---|---|
 | L-phi | conda runtime dylib mismatch in base env | MultiQC stays in dedicated env; FastQC stays in base |
-| L-psi | macOS conda Java 25 vs Nextflow 23.04 | **N/A** — P2 does not use Nextflow |
-| L-omega | `conda deactivate` removes venv python | **N/A** — P2 does not shell out to subprocess from Nextflow |
-| L-alpha2 | `conda deactivate` removes bioconda tools | partially relevant — `conda run -n multiqc/base` form is robust |
-| L-beta2 | Nextflow `-resume` cache key ignores env vars | **N/A** — no Nextflow |
+| L-psi | macOS conda Java 25 vs Nextflow 23.04 | **N/A**, P2 does not use Nextflow |
+| L-omega | `conda deactivate` removes venv python | **N/A**, P2 does not shell out to subprocess from Nextflow |
+| L-alpha2 | `conda deactivate` removes bioconda tools | partially relevant, `conda run -n multiqc/base` form is robust |
+| L-beta2 | Nextflow `-resume` cache key ignores env vars | **N/A**, no Nextflow |
 | L-chi | `!` in commit-msg body triggers zsh BANG_HIST | `git commit -F file` with quoted heredoc |
 | hostname-mismatch | SSH alias != macOS LocalHostName | `scripts/run_lab.sh` already defaults to `chi-mac-p.local` |
 
