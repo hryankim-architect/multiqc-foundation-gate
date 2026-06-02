@@ -1,0 +1,11 @@
+method	bin_lo	bin_hi	count	mean_conf	accuracy
+logistic_regression	0.50	0.60	4	0.5669	0.7500
+logistic_regression	0.60	0.70	3	0.6645	0.6667
+logistic_regression	0.70	0.80	4	0.7668	1.0000
+logistic_regression	0.80	0.90	10	0.8339	0.5000
+logistic_regression	0.90	1.00	29	0.9763	1.0000
+random_forest	0.50	0.60	6	0.5358	0.5000
+random_forest	0.60	0.70	4	0.6421	0.7500
+random_forest	0.70	0.80	9	0.7506	0.7778
+random_forest	0.80	0.90	6	0.8597	0.6667
+random_forest	0.90	1.00	25	0.9770	1.0000
