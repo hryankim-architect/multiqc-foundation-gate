@@ -194,6 +194,28 @@ read the chain once and see every model decision the run made.
 
 ---
 
+## Calibration & interpretability diagnostics
+
+Because the gate makes an automated include / exclude decision, two oversight
+questions matter beyond raw accuracy: *how calibrated is its confidence?* and
+*what does it key on?*
+
+- **Calibration** (`scripts/calibrate_gate.py` → `audit/gate_calibration.md`):
+  confidence-ECE (Guo et al. 2017) + multiclass Brier on the pooled held-out
+  folds. RandomForest ECE **0.05** (mean confidence ≈ accuracy), LogisticRegression
+  ECE **0.11**. With n=50 across 3 classes this is reported as a **diagnostic, not a
+  re-calibration fix** — a fitted calibrator would overfit.
+- **Interpretability** (`scripts/interpret_gate.py` →
+  `audit/gate_feature_importance.md`): model-agnostic permutation importance over
+  the 28 named MultiQC features. The gate keys on sensible QC signals — the number
+  of passing modules, the per-sequence quality-score plot, and sequence-length
+  metrics — so its decisions are legible rather than opaque.
+
+Both are honest-scope diagnostics (n=50 → indicative, not definitive), in the same
+spirit as the sklearn-beats-MLP baseline below.
+
+---
+
 ## Scope, why n=50, single cohort, and no foundation model
 
 The first draft of this demo planned for a 4-layer transformer (~1M params)
