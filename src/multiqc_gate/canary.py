@@ -1,7 +1,7 @@
 """Deterministic canary smoke test.
 
 Every demo repo exposes a canary entry point that the
-Polish-Phase5 ``lab_semantic_check.py`` runner can probe daily. The canary
+``lab_semantic_check.py`` runner can probe daily. The canary
 must:
 
 1. Complete in under 30 seconds on a single workstation.

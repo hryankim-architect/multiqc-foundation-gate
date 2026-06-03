@@ -100,7 +100,7 @@ retry/backoff, no distributed orchestration.
 
 **Why out of scope**: the substrate (`audit.py`, `tracking.py`,
 `canary.py`) provides the building blocks; this repo does not
-re-implement Polish-Phase5 production infrastructure. Production
+re-implement production infrastructure. Production
 hardening belongs to the orchestration project (P1
 `healthomics-lab-orchestrator`).
 

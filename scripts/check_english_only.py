@@ -3,7 +3,7 @@
 
 The R6 convention is: internal docs may be Korean+English, but every public
 GitHub artifact (code, README, lessons-learned, architecture docs) must be
-English-only. This scanner enforces that as a CI gate.
+English-only. A local pre-commit hook runs this scanner before each commit.
 
 Paths scanned by default:
     README.md, src/**/*.py, tests/**/*.py, docs/**/*.md, audit/**/*.md,
@@ -12,8 +12,7 @@ Paths scanned by default:
 Skip the scan for a file by listing it in scripts/english-only.skip
 (one path per line).
 
-Also runnable as a pre-push client-side gate from any commit_*.sh helper
-(Polish-Phase5-Lτ). Catches CJK pre-push so we don't waste a CI round-trip.
+It also runs as a local pre-commit hook, catching CJK characters before they are committed.
 """
 
 from __future__ import annotations

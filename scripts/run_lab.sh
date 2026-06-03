@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Execute the capability-portrait pipeline on a Polish-Phase5 lab node.
+# Execute the capability-portrait pipeline on a lab node.
 #
 # This wraps `make run` with the substrate environment variables set to the
 # lab defaults, so audit entries flow to chi-mac-m:8081 and MLflow runs are

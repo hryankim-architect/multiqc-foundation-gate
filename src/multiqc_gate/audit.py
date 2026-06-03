@@ -8,7 +8,7 @@ The chain is intentionally simple: each entry's ``prev_hash`` field is the
 SHA-256 of the previous entry's canonical JSON encoding. Tampering is
 detectable by replaying the chain.
 
-The schema mirrors the Polish-Phase5 audit format::
+The schema mirrors the audit format::
 
     {
         "ts": "2026-05-23T17:00:00Z",

@@ -15,8 +15,7 @@ required (MPS used if available, falls back to CPU automatically). No cloud
 credentials.
 
 **Substrate**: emits a NDJSON ledger whose entries are hash-linked, one per fold, epoch, and stage across the training run, tracks MLflow runs,
-and exposes a deterministic canary smoke test that the Polish-Phase5
-`lab_semantic_check.py` probe can call.
+and exposes a deterministic canary smoke test that the `lab_semantic_check.py` probe can call.
 
 **Prior work context**: At Gilead I ran a version of this gate pattern on ~3,000
 internal MultiQC reports; there the MLP dominated the sklearn baselines and the gate
@@ -183,7 +182,7 @@ the latter.
 | drift_summary | 1 |
 | (canary, manifest, etc.) | ~50 |
 
-A downstream substrate consumer (Polish-Phase5 `lab_semantic_check.py`) can
+A downstream substrate consumer (`lab_semantic_check.py`) can
 read the chain once and see every model decision the run made.
 
 ---
@@ -261,7 +260,7 @@ Four-channel substrate (same interface as the other repos in this series):
 | `HEALTHOMICS_LAB_CANARY_FIXTURE` | `tests/fixtures/canary.json` | Path used by `canary.py` for the deterministic smoke test. |
 | `HEALTHOMICS_LAB_RUN_NAME` | derived | Overrides the run name in audit + MLflow entries. |
 
-On a Polish-Phase5 lab node, `scripts/run_lab.sh` exports the substrate
+On a lab node, `scripts/run_lab.sh` exports the substrate
 endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
 
 ---
