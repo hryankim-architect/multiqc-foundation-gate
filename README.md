@@ -1,6 +1,6 @@
 # `multiqc-foundation-gate`
 
-![ci](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/ci.yml/badge.svg) ![english-only](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/english-only.yml/badge.svg)
+![ci](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/ci.yml/badge.svg)
 
 n=50 (Himes airway smooth muscle, SRP033351, 10 base SRR + synthetic augmentation). `make run` finishes in 3.8 seconds on a laptop CPU; no cloud credentials or GPU needed.
 
@@ -275,8 +275,7 @@ endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
 ├── Makefile                        # install | data | run | test | canary | clean
 ├── pyproject.toml                  # uv-managed; pinned versions
 ├── .github/workflows/
-│   ├── ci.yml                      # ruff + pytest + canary + English-only/CJK scan
-│   └── english-only.yml            # CJK character scanner
+│   └── ci.yml                      # ruff + pytest + canary
 ├── data/
 │   ├── manifest.yaml               # 20 ENA URLs (Himes SRR1039513-522 paired-end)
 │   ├── labels.csv                  # 50 rows (10 include / 20 exclude / 20 manual-review)
@@ -304,7 +303,7 @@ endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
 └── scripts/
     ├── run_lab.sh                  # macOS-hardened launch wrapper
     ├── run_phase_c.py              # Phase C augmentation orchestration
-    └── check_english_only.py       # CJK scanner used by CI
+    └── check_english_only.py       # CJK scanner run by the pre-commit hook
 ```
 
 ---
