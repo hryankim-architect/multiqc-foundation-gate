@@ -275,7 +275,7 @@ endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
 ├── Makefile                        # install | data | run | test | canary | clean
 ├── pyproject.toml                  # uv-managed; pinned versions
 ├── .github/workflows/
-│   ├── ci.yml                      # ruff + pytest + scope-preamble lint
+│   ├── ci.yml                      # ruff + pytest + canary + English-only/CJK scan
 │   └── english-only.yml            # CJK character scanner
 ├── data/
 │   ├── manifest.yaml               # 20 ENA URLs (Himes SRR1039513-522 paired-end)

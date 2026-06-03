@@ -3,9 +3,9 @@
 Items below are things a reviewer might reasonably ask for that v0.1 does not attempt.
 The repo's value comes from being small and complete; each item here is a deliberate deferral, not an oversight.
 
-If a future PR proposes any of these, the contributor must answer one
-question: **why is this still out of scope?** If the answer is good, edit
-this file in the same PR. If not, the PR doesn't land.
+A PR that wants to pull one of these into scope has to say why it was left
+out to begin with. If that holds up, update this file in the same PR;
+otherwise the change doesn't merge.
 
 ---
 
@@ -94,9 +94,9 @@ not a v0.1 substrate test.
 
 ## Production hardening (HA, RBAC, multi-tenant)
 
-The pipeline runs in a single Python process. There is no HA, no RBAC,
-no per-tenant isolation, no input streaming, no retry/backoff, no
-distributed orchestration.
+Everything executes in one Python process. No high availability, no
+role-based access control, no per-tenant isolation, no input streaming, no
+retry/backoff, no distributed orchestration.
 
 **Why out of scope**: the substrate (`audit.py`, `tracking.py`,
 `canary.py`) provides the building blocks; this repo does not
@@ -135,11 +135,8 @@ framework for the comparison-of-hypotheses framing).
 
 ## Adding an item
 
-Open a PR that:
-
-1. Adds the item to the appropriate section above (or creates a new
-   section if none fits).
-2. Adds a one-sentence reason in italics for why it remains out of scope.
-3. Links to the upstream feature request or issue if there is one.
-
-That's it. The friction is intentional.
+To move something into scope, open a PR that touches this file. The PR
+must include a one-line rationale for the change and a link to the
+relevant issue or upstream request. No rationale, no merge. That
+requirement exists because a scope boundary without a written reason is
+just clutter.
