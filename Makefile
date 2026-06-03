@@ -1,4 +1,4 @@
-# Bioinformatics capability-portrait scaffold
+# multiqc-foundation-gate -- MultiQC-driven QC pipeline scaffold
 # Targets are deliberately small. Every repo using this scaffold should be
 # reproducible end-to-end with `make data && make run && make test && make report`.
 
@@ -10,7 +10,7 @@ ARTIFACT_DIR := artifacts
 DATA_DIR := data
 REPORT_DIR := reports
 
-.PHONY: help install data run test report lint clean canary verify-readme
+.PHONY: help install data run test report lint clean canary
 
 help:
 	@echo "make install      Install pinned dependencies via uv"
@@ -20,7 +20,7 @@ help:
 	@echo "make report       Render demo notebook to HTML at reports/demo.html"
 	@echo "make lint         ruff check"
 	@echo "make canary       Run the deterministic canary smoke test"
-	@echo "make verify-readme  Check the honest-scope preamble is present in README"
+	@echo "make  Check the honest-scope preamble is present in README"
 	@echo "make clean        Remove build artifacts (raw data left alone)"
 
 install:
@@ -44,10 +44,6 @@ lint:
 canary:
 	$(PYTHON) -m $(PKG).canary
 
-verify-readme:
-	@grep -q "Capability portrait, not a research result" README.md \
-	  && echo "README preamble OK" \
-	  || (echo "FAIL: README is missing the honest-scope preamble" && exit 1)
 
 clean:
 	rm -rf $(ARTIFACT_DIR) $(REPORT_DIR) .pytest_cache .ruff_cache

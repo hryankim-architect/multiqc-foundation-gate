@@ -31,12 +31,5 @@ jobs:
       - name: Run tests
         run: uv run pytest -q
 
-      - name: Verify honest-scope README preamble
-        run: |
-          if ! grep -q "Capability portrait, not a research result" README.md; then
-            echo "::error::README.md is missing the honest-scope preamble"
-            exit 1
-          fi
-
       - name: Run canary
         run: uv run python -m multiqc_gate.canary

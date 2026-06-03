@@ -10,6 +10,5 @@ file's SHA-256.
 If you need to ship a tiny fixture inside the repo (e.g. for tests), put it
 under `tests/fixtures/`, not here.
 
-The scaffold's anti-scope-creep guardrail is: **every input in
-`manifest.yaml` must be small and necessary**. Adding an input is a PR-sized
-decision, not a casual edit.
+Keep inputs minimal: **every entry in `manifest.yaml` must be small and necessary**.
+Adding one is a PR-level decision.

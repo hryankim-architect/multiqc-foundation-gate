@@ -1,6 +1,6 @@
 """End-to-end pipeline entry point.
 
-This is the *pattern* that capability-portrait repos inherit. Each repo
+This module provides the pipeline entry-point pattern used across repos. Each repo
 replaces the body of ``run_pipeline`` with the actual bioinformatics work
 (e.g. P3's VCF→HRD score, P1's Nextflow orchestration, P2's QC classifier,
 P4's IHC + genomics calibration), but keeps the surrounding shape::
@@ -253,7 +253,7 @@ def run_pipeline(run_name: str, out_dir: Path) -> dict[str, Any]:
 
 @click.group()
 def cli() -> None:
-    """multiqc_gate capability-portrait pipeline."""
+    """multiqc_gate demonstration pipeline."""
 
 
 @cli.command()

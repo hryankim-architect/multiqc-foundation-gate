@@ -1,6 +1,6 @@
 """Deterministic canary smoke test.
 
-Every capability-portrait repo exposes a canary entry point that the
+Every demo repo exposes a canary entry point that the
 Polish-Phase5 ``lab_semantic_check.py`` runner can probe daily. The canary
 must:
 

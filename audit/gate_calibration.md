@@ -18,9 +18,9 @@ An include/exclude gate's *confidence* matters: an over-confident wrong 'include
 
 Reliability bins: `gate_calibration_reliability.tsv`.
 
-## Honest scope
+## Limitations
 
-This is a calibration **diagnostic, not a fix**. With n=50 across 3 classes, post-hoc re-calibration (temperature / isotonic / Platt) cannot be reliably estimated — each reliability bin holds only a handful of points, so a fitted calibrator would overfit. The deliverable is the honest measurement of whether the gate is over- or under-confident, in the same spirit as dmoi-brca-poc v0.13's cross-cohort calibration result. A production gate trained on a larger label set is where a fitted calibrator becomes appropriate.
+This is a calibration **diagnostic, not a fix**. With n=50 across 3 classes, post-hoc re-calibration (temperature / isotonic / Platt) cannot be reliably estimated — each reliability bin holds only a handful of points, so a fitted calibrator would overfit. The output is a measurement of whether the gate is over- or under-confident. A production gate trained on a larger label set is where a fitted calibrator becomes appropriate.
 
 ## Reproduce
 

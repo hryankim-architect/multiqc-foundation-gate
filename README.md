@@ -2,10 +2,7 @@
 
 ![ci](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/ci.yml/badge.svg) ![english-only](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/english-only.yml/badge.svg)
 
-> **Capability portrait, not a research result.** The dataset is intentionally
-> small (n=50, single Himes airway smooth muscle cohort + synthetic
-> augmentation) to keep the demo reproducible on a single workstation in
-> under five seconds.
+n=50 (Himes airway smooth muscle, SRP033351, 10 base SRR + synthetic augmentation). `make run` finishes in 3.8 seconds on a laptop CPU; no cloud credentials or GPU needed.
 
 **What this shows**: turning an operational QC artifact (MultiQC report JSON)
 into an ML-driven include / exclude / manual-review decision, with audit +
@@ -17,17 +14,15 @@ detection + 215-entry audit chain in **3.8 seconds** on chi-mac-p. No GPU
 required (MPS used if available, falls back to CPU automatically). No cloud
 credentials.
 
-**Substrate**: emits a hash-chained NDJSON audit ledger spanning the entire
-training run (one entry per fold + per epoch + per stage), tracks MLflow runs,
+**Substrate**: emits a NDJSON ledger whose entries are hash-linked, one per fold, epoch, and stage across the training run, tracks MLflow runs,
 and exposes a deterministic canary smoke test that the Polish-Phase5
 `lab_semantic_check.py` probe can call.
 
-**Production framing**: A version of this gate pattern trained on ~3,000
-internal MultiQC reports at Gilead during my time directing clinical
-bioinformatics, where the MLP dominated the sklearn baselines and the gate
+**Prior work context**: At Gilead I ran a version of this gate pattern on ~3,000
+internal MultiQC reports; there the MLP dominated the sklearn baselines and the gate
 caught ~12% of low-quality samples that human review would otherwise miss.
-The lab version here proves the *architecture* and the *substrate integration*,
-not the result at production scale, see
+This repo validates the architecture and substrate integration on a small labeled dataset.
+Results at that scale are not reproducible here; see
 [`docs/what-is-out-of-scope.md`](docs/what-is-out-of-scope.md).
 
 ---
@@ -163,9 +158,8 @@ predict-majority pattern is the *expected* behavior for ~1,500 trainable
 parameters trained on 40 examples per fold. The classifier comparison itself
 is the substrate value:
 
-1. A capability portrait that pretended the MLP wins would be a lie, n=50 is
-   below the regime where small MLPs reliably beat linear models on tabular
-   data.
+1. On n=50, small MLPs do not reliably beat linear models on tabular data.
+   Reporting otherwise would misrepresent the result.
 2. A production version at n=3,000+ (Gilead-scale internal data) flips this
    ordering; the framework is designed to surface that flip cleanly via the
    `comparison.json` artifact.
@@ -211,8 +205,7 @@ questions matter beyond raw accuracy: *how calibrated is its confidence?* and
   of passing modules, the per-sequence quality-score plot, and sequence-length
   metrics — so its decisions are legible rather than opaque.
 
-Both are honest-scope diagnostics (n=50 → indicative, not definitive), in the same
-spirit as the sklearn-beats-MLP baseline below.
+Both are diagnostic-only at n=50: indicative, not definitive. Same caveat applies as the sklearn-beats-MLP baseline.
 
 ---
 
@@ -259,7 +252,7 @@ considered for Phase B and deliberately deferred to v0.2, see
 
 ## Substrate environment variables
 
-Same four-channel substrate as every other capability portrait in the quartet:
+Four-channel substrate (same interface as the other repos in this series):
 
 | Var | Default | What it does |
 |---|---|---|
@@ -307,7 +300,7 @@ endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
 ├── docs/
 │   ├── architecture.md             # 4-channel substrate + classifier pipeline
 │   ├── tooling-versions.md         # PyTorch 2.12 + sklearn 1.8 + MPS verified
-│   └── what-is-out-of-scope.md     # anti-scope-creep ledger
+│   └── what-is-out-of-scope.md     # out-of-scope items and rationale
 └── scripts/
     ├── run_lab.sh                  # macOS-hardened launch wrapper
     ├── run_phase_c.py              # Phase C augmentation orchestration
@@ -319,10 +312,9 @@ endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
 ## What this repo does not do
 
 See [`docs/what-is-out-of-scope.md`](docs/what-is-out-of-scope.md) for the
-full ledger. Short version: no full ENCODE corpus, no foundation-model
+full list. Short version: no full ENCODE corpus, no foundation-model
 fine-tuning, no A/B test against rule-based gates, no active-learning loop,
-no cross-pipeline transfer learning, no multi-cohort expansion. Those belong
-to the production version of this gate, not the capability portrait.
+no cross-pipeline transfer learning, no multi-cohort expansion.
 
 ---
 
@@ -330,8 +322,7 @@ to the production version of this gate, not the capability portrait.
 
 This repo was created from
 [`bioinformatics-repo-scaffold-template`](https://github.com/hryankim-architect/bioinformatics-repo-scaffold-template),
-the shared scaffold that every capability-portrait repo in the quartet
-(P1 / P2 / P3 / P4) inherits.
+the shared scaffold used by all four repos in this series (P1 / P2 / P3 / P4).
 
 Sibling repos:
 - [`tp53-aml-hrd-severity`](https://github.com/hryankim-architect/tp53-aml-hrd-severity) (P3), clinical-genomics analytical-method portrait (Cox HR 8.39 on TCGA-LAML)

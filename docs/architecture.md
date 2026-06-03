@@ -142,8 +142,7 @@ The substrate value is the **comparison artifact**, not any single model:
 | RandomForest | small-to-medium n, non-linear, captures feature interactions | very small n (tree depth limited), no probability calibration by default |
 | MLP (PyTorch) | n > ~hundreds-to-thousands, expressive non-linear function, MLflow + audit integration straightforward | n=50 with 3 classes -> over-parameterized regardless of LayerNorm and dropout |
 
-On n=50 the v0.1 demo intentionally exposes the MLP weakness, because
-a portrait that pretended otherwise would be a lie. A production version
+The v0.1 demo intentionally exposes the MLP weakness at n=50. A production version
 at n=3,000+ flips this ranking; the substrate flips with it automatically
 because `comparison.json` is regenerated each run.
 
@@ -151,7 +150,7 @@ because `comparison.json` is regenerated each run.
 
 ## Substrate integration points
 
-Same four-channel substrate as every other capability-portrait repo:
+Four-channel substrate (same interface across the repo series):
 
 | Channel | Module | Env var | Substrate endpoint |
 |---|---|---|---|
@@ -168,7 +167,7 @@ even when remote POST fails.
 
 ## Why a tiny MLP and not a transformer
 
-The original Capability-Showcase spec called for a 4-layer transformer
+The original spec called for a 4-layer transformer
 encoder (~1M parameters). On 50 samples with 3 classes (n_per_class:
 10 / 20 / 20), 1M parameters is 100x over-parameterized. Even with
 strong regularization (LayerNorm + dropout 0.3 + class-weighted CE),
@@ -195,10 +194,9 @@ substrate-preserving even as the data scale changes.
 ## What this architecture intentionally avoids
 
 - **No DAG engine.** No Nextflow / Airflow / Prefect / Dagster. The
-  pipeline is a single Python process, `pipeline.py` calls each stage
-  in sequence. P1 (`healthomics-lab-orchestrator`) is the DAG-engine
-  capability portrait; P2 is the analytical-method portrait that runs
-  inside one Nextflow process when deployed at production scale.
+  pipeline is a single Python process; `pipeline.py` calls each stage
+  in sequence. P1 (`healthomics-lab-orchestrator`) covers DAG-engine
+  orchestration; this repo runs inside one Nextflow process when deployed at production scale.
 - **No GPU dependency.** PyTorch MPS is used opportunistically on
   Apple Silicon; CPU is fully sufficient for n=50.
 - **No data validation framework beyond Pydantic-on-demand.** The

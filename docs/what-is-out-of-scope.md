@@ -1,9 +1,7 @@
 # What is out of scope (P2, `multiqc-foundation-gate`)
 
-This file is the anti-scope-creep ledger for the P2 capability portrait.
-The repo's value comes from being *small and complete*, every item below
-is something a reviewer might reasonably ask for that the v0.1 demo
-deliberately does not attempt.
+Items below are things a reviewer might reasonably ask for that v0.1 does not attempt.
+The repo's value comes from being small and complete; each item here is a deliberate deferral, not an oversight.
 
 If a future PR proposes any of these, the contributor must answer one
 question: **why is this still out of scope?** If the answer is good, edit
@@ -17,9 +15,8 @@ The capability claim is anchored at n=50 (10 base SRR x 5 augmentation
 strategies). A production version would train on ~3,000 internal MultiQC
 reports across multiple cohorts (RNA-seq, ChIP-seq, ATAC-seq, scRNA-seq).
 
-**Why out of scope**: a full corpus run would need controlled-access
-internal data + an order-of-magnitude longer training time, breaking the
-"reproducible in 4 seconds on a single workstation" contract. The
+**Why out of scope**: a full corpus run requires controlled-access
+internal data and an order-of-magnitude longer training time. The
 v0.1 substrate framing (audit + drift + comparison) is the production
 contribution regardless of dataset size.
 
@@ -50,8 +47,7 @@ itself is an internal decision. The v0.1 sklearn baselines (LogReg + RF)
 are the closest proxy, they learn a (linear or tree-based) decision
 boundary from the same features the rule-based gate would use, and the
 LogReg coefficient signs serve as an interpretable rule extraction.
-A formal A/B test belongs to a production deployment, not the capability
-portrait.
+A formal A/B test belongs to a production deployment.
 
 ---
 
@@ -62,10 +58,9 @@ predictions and retrain. v0.1 trains once and reports cross-validation
 accuracy.
 
 **Why out of scope**: active learning requires a label-acquisition
-oracle (a human or a wet-lab assay), which is out-of-scope for a
-clone-and-run capability portrait. The drift detection module is the
-forward-looking substrate hook for triggering active-learning loops
-in a production deployment.
+oracle (a human or a wet-lab assay), which this demo does not provide.
+The drift detection module is the forward-looking substrate hook for triggering
+active-learning loops in a production deployment.
 
 ---
 
@@ -104,10 +99,10 @@ no per-tenant isolation, no input streaming, no retry/backoff, no
 distributed orchestration.
 
 **Why out of scope**: the substrate (`audit.py`, `tracking.py`,
-`canary.py`) provides the building blocks; the capability portrait does
-not re-implement Polish-Phase5 production infrastructure. Production
+`canary.py`) provides the building blocks; this repo does not
+re-implement Polish-Phase5 production infrastructure. Production
 hardening belongs to the orchestration project (P1
-`healthomics-lab-orchestrator`), not the analytical-gate portrait.
+`healthomics-lab-orchestrator`).
 
 ---
 

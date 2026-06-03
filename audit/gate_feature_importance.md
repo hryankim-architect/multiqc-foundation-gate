@@ -43,9 +43,9 @@ Which QC signals drive the gate's include / exclude / manual-review decision? A 
 
 Full ranking: `gate_feature_importance_reliability.tsv`.
 
-## Honest scope
+## Limitations
 
-At n=50, permutation-importance magnitudes are **indicative, not precise**; near-zero features are not proven irrelevant, and fold-to-fold ranking will jitter. We average over repeats and folds to damp variance and report the ranking as a legibility diagnostic, not a definitive feature-selection claim — the same honest posture as the calibration diagnostic and the repo's sklearn-beats-MLP baseline.
+At n=50, permutation-importance magnitudes are **indicative, not precise**. Near-zero features are not proven irrelevant, and fold-to-fold ranking will jitter. Averaging over repeats and folds damps variance; treat the output as a legibility diagnostic rather than a definitive feature-selection result.
 
 ## Reproduce
 

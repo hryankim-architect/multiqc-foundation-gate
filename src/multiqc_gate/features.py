@@ -33,7 +33,7 @@ Feature schema (28 dimensions total):
         as the manual-review signal.
 
 The 28-dim vector is small enough for an MLP with ~2-3k parameters on
-n=50 samples (the canonical capability-portrait n) without immediately
+n=50 samples (the canonical demo-scale n) without immediately
 overfitting. The sklearn RandomForest baseline reads the same features.
 """
 
