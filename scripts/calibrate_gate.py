@@ -11,7 +11,7 @@ general **confidence-ECE** (Guo et al. 2017: max-probability confidence vs
 accuracy) plus a multiclass Brier score, computed on the pooled held-out
 predictions of the existing stratified 5-fold baselines (LogReg, RandomForest).
 
-Honest scope: with n=50 samples across 3 classes, post-hoc *re-calibration*
+Limitations: with n=50 samples across 3 classes, post-hoc *re-calibration*
 (temperature / isotonic / Platt) cannot be reliably estimated — each calibration
 bin would hold a handful of points. So this is reported as a **diagnostic**
 (is the gate over- or under-confident?), not a calibration *fix*. Reporting that
@@ -147,7 +147,7 @@ def main() -> int:
         "| Method | ECE | Brier | mean conf | accuracy | tendency |\n"
         "|---|---|---|---|---|---|\n" + table + "\n\n"
         "Reliability bins: `gate_calibration_reliability.tsv`.\n\n"
-        "## Honest scope\n\n"
+        "## Limitations\n\n"
         "This is a calibration **diagnostic, not a fix**. With n=50 across 3 "
         "classes, post-hoc re-calibration (temperature / isotonic / Platt) cannot "
         "be reliably estimated — each reliability bin holds only a handful of "

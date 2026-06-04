@@ -13,7 +13,7 @@ across folds, scored by macro-F1 (the cohort is class-imbalanced:
 include=10 / exclude=20 / manual-review=20). Importances are mapped to the 28
 named features in `multiqc_gate.features.FEATURE_NAMES`.
 
-Honest scope: at n=50 permutation importance is noisy — magnitudes are
+Limitations: at n=50 permutation importance is noisy — magnitudes are
 indicative, not precise, and near-zero features are not "proven irrelevant". We
 report the ranking with that caveat and average over repeats + folds to damp the
 variance, in the same honest-evaluation spirit as the rest of the repo.
@@ -130,7 +130,7 @@ def main() -> int:
         "## Top features by permuted macro-F1 drop\n\n"
         + "\n\n".join(md_blocks) + "\n\n"
         "Full ranking: `gate_feature_importance_reliability.tsv`.\n\n"
-        "## Honest scope\n\n"
+        "## Limitations\n\n"
         "At n=50, permutation-importance magnitudes are **indicative, not "
         "precise**; near-zero features are not proven irrelevant, and fold-to-fold "
         "ranking will jitter. We average over repeats and folds to damp variance "
