@@ -2,6 +2,10 @@
 
 ![ci](https://github.com/hryankim-architect/multiqc-foundation-gate/actions/workflows/ci.yml/badge.svg)
 
+> **One principle, applied here.** Pick the smallest, most interpretable representation that could carry the signal; measure it against an honest baseline; report the verdict faithfully — whether the compact choice wins, ties, or loses. *That last step is why AI safety is needed: knowing a capability is real rather than a flattering benchmark.*
+>
+> In this repo: **representation** a 28-feature engineered vector + linear/tree model → **baseline** an MLP (~1.5k params) → **verdict** compact *wins*: LogReg 0.86 beats MLP 0.40 at n=50 — capacity without data hurts, narrated honestly.
+
 n=50 (Himes airway smooth muscle, SRP033351, 10 base SRR + synthetic augmentation). `make run` finishes in 3.8 seconds on a laptop CPU; no cloud credentials or GPU needed.
 
 **What this shows**: turning an operational QC artifact (MultiQC report JSON)
@@ -257,8 +261,8 @@ Four-channel substrate (same interface as the other repos in this series):
 |---|---|---|
 | `AUDIT_HOST` | unset | If set, audit entries POST to `http://${AUDIT_HOST}/events`. |
 | `MLFLOW_TRACKING_URI` | unset | If set, MLflow runs are tracked at this URI. |
-| `HEALTHOMICS_LAB_CANARY_FIXTURE` | `tests/fixtures/canary.json` | Path used by `canary.py` for the deterministic smoke test. |
-| `HEALTHOMICS_LAB_RUN_NAME` | derived | Overrides the run name in audit + MLflow entries. |
+| `BIOSCAFFOLD_CANARY_FIXTURE` | `tests/fixtures/canary.json` | Path used by `canary.py` for the deterministic smoke test. |
+| `BIOSCAFFOLD_RUN_NAME` | derived | Overrides the run name in audit + MLflow entries. |
 
 On a lab node, `scripts/run_lab.sh` exports the substrate
 endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
