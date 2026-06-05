@@ -51,3 +51,4 @@ ignore = ["E501"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q --strict-markers"
+pythonpath = ["src"]   # run tests from a fresh clone (no editable install needed)
