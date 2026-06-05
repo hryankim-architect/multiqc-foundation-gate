@@ -305,8 +305,7 @@ endpoints to the lab defaults (`chi-mac-p.local:8081`, `chi-mac-p.local:5050`).
 │   └── what-is-out-of-scope.md     # out-of-scope items and rationale
 └── scripts/
     ├── run_lab.sh                  # macOS-hardened launch wrapper
-    ├── run_phase_c.py              # Phase C augmentation orchestration
-    └── check_english_only.py       # CJK scanner run by the pre-commit hook
+    └── run_phase_c.py              # Phase C augmentation orchestration
 ```
 
 ---
