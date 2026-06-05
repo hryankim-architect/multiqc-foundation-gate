@@ -17,14 +17,13 @@ help:
 	@echo "make data         Download + checksum-verify public inputs from data/manifest.yaml"
 	@echo "make run          Run the end-to-end pipeline (audit + MLflow hooks engaged)"
 	@echo "make test         Run pytest"
-	@echo "make report       Render demo notebook to HTML at reports/demo.html"
+	@echo "make report       (stub) notebooks/demo.ipynb not present in this repo"
 	@echo "make lint         ruff check"
 	@echo "make canary       Run the deterministic canary smoke test"
-	@echo "make  Check the honest-scope preamble is present in README"
 	@echo "make clean        Remove build artifacts (raw data left alone)"
 
 install:
-	$(UV) sync
+	$(UV) sync --extra dev
 
 data:
 	$(PYTHON) -m $(PKG).pipeline fetch --manifest $(DATA_DIR)/manifest.yaml --out $(DATA_DIR)
