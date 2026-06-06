@@ -19,10 +19,11 @@
 # License: SRA public-domain (US NIH), per-study terms vary.
 # Provenance: ENA mirror (faster than NCBI for chi-mac-p) ftp.sra.ebi.ac.uk
 #
-# Checksums: the sha256 fields below are 'TBD-fill-after-download'. The fetch step
-# skips verification when sha256 is unset, so `make data` runs but is not yet
-# byte-reproducible. After a first download, lock reproducibility with
-# `sha256sum data/fastq/*.fastq.gz` and paste the hashes in (deferred to v0.2).
+# Checksums: the sha256 fields below are 'TBD-fill-after-download'. `make data`
+# now streams + downsamples each FASTQ to 100k reads (reproducible, zeroed-mtime
+# gzip → ~3 MB files), so the hashes are small and stable. Fill them in one step:
+#   python -m multiqc_gate.pipeline fetch --out <data-dir> --write-checksums
+# then commit this manifest. Every later run re-verifies the hash on fetch.
 
 inputs:
 

@@ -13,8 +13,10 @@ the same code path with a fixture input.
 
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
+import re
 import urllib.request
 from datetime import UTC, datetime
 from pathlib import Path
@@ -39,8 +41,46 @@ def _checksum(path: Path) -> str:
     return h.hexdigest()
 
 
-def fetch_manifest(manifest_path: Path, out_dir: Path) -> dict[str, Any]:
-    """Download every entry in the manifest; verify SHA-256 checksums."""
+DOWNSAMPLE_READS = 100_000  # FASTQ records kept per file (see data/manifest.yaml)
+
+
+def _gzip_deterministic(payload: bytes, dest: Path) -> None:
+    """Write *payload* to *dest* as gzip with a zeroed mtime, so the bytes — and
+    therefore the sha256 — are reproducible across machines and runs."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    # filename="" suppresses the gzip FNAME header field, so the bytes are
+    # independent of the destination path (otherwise the basename leaks in).
+    with open(dest, "wb") as raw, gzip.GzipFile(
+        filename="", fileobj=raw, mode="wb", mtime=0, compresslevel=6
+    ) as gz:
+        gz.write(payload)
+
+
+def _fetch_fastq_downsampled(url: str, dest: Path, n_reads: int) -> None:
+    """Stream a gzipped FASTQ from *url*, keep the first *n_reads* records, and
+    write a reproducibly-gzipped FASTQ to *dest*. The transfer stops as soon as
+    enough reads are decoded, so only a few MB cross the wire even when the
+    source run is several GB."""
+    want = n_reads * 4  # 4 lines per FASTQ record
+    out: list[bytes] = []
+    with urllib.request.urlopen(url, timeout=120) as resp, gzip.GzipFile(
+        fileobj=resp, mode="rb"
+    ) as gz:
+        for line in gz:
+            out.append(line)
+            if len(out) >= want:
+                break
+    _gzip_deterministic(b"".join(out), dest)
+
+
+def fetch_manifest(
+    manifest_path: Path, out_dir: Path, downsample_reads: int = DOWNSAMPLE_READS
+) -> dict[str, Any]:
+    """Download every entry in the manifest; verify SHA-256 checksums.
+
+    FASTQ entries (``*.fastq.gz`` / ``*.fq.gz``) are streamed and downsampled to
+    the first ``downsample_reads`` records (pass ``downsample_reads=0`` to keep
+    the full file). The recorded sha256 is of the resulting on-disk file."""
     out_dir.mkdir(parents=True, exist_ok=True)
     with manifest_path.open("r", encoding="utf-8") as fh:
         manifest = yaml.safe_load(fh) or {}
@@ -58,7 +98,10 @@ def fetch_manifest(manifest_path: Path, out_dir: Path) -> dict[str, Any]:
             results.append({"path": str(dest), "status": "cached"})
             continue
 
-        urllib.request.urlretrieve(url, dest)
+        if downsample_reads and rel.lower().endswith((".fastq.gz", ".fq.gz")):
+            _fetch_fastq_downsampled(url, dest, downsample_reads)
+        else:
+            urllib.request.urlretrieve(url, dest)
         actual = _checksum(dest)
         if expected and actual != expected:
             results.append({
@@ -69,6 +112,7 @@ def fetch_manifest(manifest_path: Path, out_dir: Path) -> dict[str, Any]:
             })
             continue
         results.append({
+            "rel": rel,
             "path": str(dest),
             "status": "downloaded",
             "sha256": actual,
@@ -76,6 +120,45 @@ def fetch_manifest(manifest_path: Path, out_dir: Path) -> dict[str, Any]:
         })
 
     return {"inputs": results}
+
+
+def write_manifest_checksums(manifest_path: Path, result: dict[str, Any]) -> int:
+    """Write freshly-computed sha256 values back into the manifest, matching
+    entries by ``path``. Comment-preserving (line-based). Returns count filled."""
+    by_rel = {
+        r["rel"]: r["sha256"]
+        for r in result.get("inputs", [])
+        if r.get("status") == "downloaded" and r.get("rel") and r.get("sha256")
+    }
+    if not by_rel:
+        return 0
+    lines = manifest_path.read_text(encoding="utf-8").splitlines(keepends=True)
+    url_re = re.compile(r"^\s*-\s*url:")
+    path_re = re.compile(r"^\s*path:\s*(.+?)\s*$")
+    sha_re = re.compile(r"^(\s*)sha256:\s*(.+?)\s*$")
+    starts = [
+        i for i, l in enumerate(lines)
+        if url_re.match(l) and not l.lstrip().startswith("#")
+    ]
+    filled = 0
+    for k, si in enumerate(starts):
+        ei = starts[k + 1] if k + 1 < len(starts) else len(lines)
+        rel = sha_i = None
+        indent = ""
+        for j in range(si, ei):
+            if lines[j].lstrip().startswith("#"):
+                continue
+            mp, ms = path_re.match(lines[j]), sha_re.match(lines[j])
+            if mp and rel is None:
+                rel = mp.group(1).strip().strip('"').strip("'")
+            if ms and sha_i is None:
+                sha_i, indent = j, ms.group(1)
+        if rel in by_rel and sha_i is not None:
+            lines[sha_i] = f"{indent}sha256: {by_rel[rel]}\n"
+            filled += 1
+    if filled:
+        manifest_path.write_text("".join(lines), encoding="utf-8")
+    return filled
 
 
 def run_pipeline(run_name: str, out_dir: Path) -> dict[str, Any]:
@@ -267,9 +350,22 @@ def cli() -> None:
     type=click.Path(file_okay=False, path_type=Path),
     default=Path("data"),
 )
-def fetch(manifest: Path, out: Path) -> None:
+@click.option(
+    "--downsample-reads",
+    type=int,
+    default=DOWNSAMPLE_READS,
+    help="FASTQ records to keep per file (0 = full file).",
+)
+@click.option(
+    "--write-checksums",
+    is_flag=True,
+    help="Write the computed sha256 values back into the manifest.",
+)
+def fetch(manifest: Path, out: Path, downsample_reads: int, write_checksums: bool) -> None:
     """Download public inputs declared in the manifest."""
-    result = fetch_manifest(manifest, out)
+    result = fetch_manifest(manifest, out, downsample_reads=downsample_reads)
+    if write_checksums:
+        result["checksums_written"] = write_manifest_checksums(manifest, result)
     click.echo(json.dumps(result, indent=2))
 
 
