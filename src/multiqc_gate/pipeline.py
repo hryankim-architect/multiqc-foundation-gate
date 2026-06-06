@@ -155,8 +155,8 @@ def write_manifest_checksums(manifest_path: Path, result: dict[str, Any]) -> int
     path_re = re.compile(r"^\s*path:\s*(.+?)\s*$")
     sha_re = re.compile(r"^(\s*)sha256:\s*(.+?)\s*$")
     starts = [
-        i for i, l in enumerate(lines)
-        if url_re.match(l) and not l.lstrip().startswith("#")
+        i for i, line in enumerate(lines)
+        if url_re.match(line) and not line.lstrip().startswith("#")
     ]
     filled = 0
     for k, si in enumerate(starts):
