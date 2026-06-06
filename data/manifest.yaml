@@ -18,6 +18,11 @@
 #
 # License: SRA public-domain (US NIH), per-study terms vary.
 # Provenance: ENA mirror (faster than NCBI for chi-mac-p) ftp.sra.ebi.ac.uk
+#
+# Checksums: the sha256 fields below are 'TBD-fill-after-download'. The fetch step
+# skips verification when sha256 is unset, so `make data` runs but is not yet
+# byte-reproducible. After a first download, lock reproducibility with
+# `sha256sum data/fastq/*.fastq.gz` and paste the hashes in (deferred to v0.2).
 
 inputs:
 
