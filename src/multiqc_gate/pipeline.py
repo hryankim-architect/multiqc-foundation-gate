@@ -63,7 +63,7 @@ def _fetch_fastq_downsampled(url: str, dest: Path, n_reads: int) -> None:
     source run is several GB."""
     want = n_reads * 4  # 4 lines per FASTQ record
     out: list[bytes] = []
-    with urllib.request.urlopen(url, timeout=120) as resp, gzip.GzipFile(
+    with urllib.request.urlopen(url, timeout=60) as resp, gzip.GzipFile(
         fileobj=resp, mode="rb"
     ) as gz:
         for line in gz:
@@ -71,6 +71,14 @@ def _fetch_fastq_downsampled(url: str, dest: Path, n_reads: int) -> None:
             if len(out) >= want:
                 break
     _gzip_deterministic(b"".join(out), dest)
+
+
+def _https_for_ena(url: str) -> str:
+    """ENA serves the same files over HTTPS; prefer it (FTP is slow and often
+    firewall-blocked). The bytes are identical, so the sha256 is unchanged."""
+    if url.startswith("ftp://ftp.sra.ebi.ac.uk/"):
+        return "https://" + url[len("ftp://"):]
+    return url
 
 
 def fetch_manifest(
@@ -86,37 +94,47 @@ def fetch_manifest(
         manifest = yaml.safe_load(fh) or {}
 
     results: list[dict[str, Any]] = []
-    for entry in manifest.get("inputs", []):
+    inputs = manifest.get("inputs", [])
+    for n, entry in enumerate(inputs, 1):
         url = entry["url"]
         rel = entry["path"]
         expected = entry.get("sha256")
         size_mb = entry.get("size_mb")
+        # A 'TBD...' placeholder is not a real expectation.
+        want = expected if (expected and not str(expected).lower().startswith("tbd")) else None
         dest = out_dir / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
 
-        if dest.exists() and expected and _checksum(dest) == expected:
-            results.append({"path": str(dest), "status": "cached"})
+        if dest.exists() and want and _checksum(dest) == want:
+            print(f"[{n}/{len(inputs)}] cached  {rel}", flush=True)
+            results.append({"rel": rel, "path": str(dest), "status": "cached"})
             continue
 
-        if downsample_reads and rel.lower().endswith((".fastq.gz", ".fq.gz")):
-            _fetch_fastq_downsampled(url, dest, downsample_reads)
-        else:
-            urllib.request.urlretrieve(url, dest)
+        is_fastq = bool(downsample_reads) and rel.lower().endswith((".fastq.gz", ".fq.gz"))
+        print(f"[{n}/{len(inputs)}] fetch   {rel} …", flush=True)
+        try:
+            src = _https_for_ena(url)
+            if is_fastq:
+                _fetch_fastq_downsampled(src, dest, downsample_reads)
+            else:
+                urllib.request.urlretrieve(src, dest)
+        except Exception as exc:  # noqa: BLE001 — keep going on a single bad URL
+            print(f"          ERROR {type(exc).__name__}: {str(exc)[:90]}", flush=True)
+            results.append({"rel": rel, "path": str(dest), "status": "error", "error": str(exc)})
+            continue
+
         actual = _checksum(dest)
-        if expected and actual != expected:
+        if want and actual != want:
+            print(f"          MISMATCH expected {want[:12]}… got {actual[:12]}…", flush=True)
             results.append({
-                "path": str(dest),
-                "status": "checksum_mismatch",
-                "expected": expected,
-                "actual": actual,
+                "rel": rel, "path": str(dest), "status": "checksum_mismatch",
+                "expected": want, "actual": actual,
             })
             continue
+        print(f"          ok {dest.stat().st_size / 1e6:.1f} MB  sha {actual[:12]}…", flush=True)
         results.append({
-            "rel": rel,
-            "path": str(dest),
-            "status": "downloaded",
-            "sha256": actual,
-            "size_mb": size_mb,
+            "rel": rel, "path": str(dest), "status": "downloaded",
+            "sha256": actual, "size_mb": size_mb,
         })
 
     return {"inputs": results}

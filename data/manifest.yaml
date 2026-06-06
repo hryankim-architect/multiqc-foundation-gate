@@ -30,65 +30,65 @@ inputs:
   # ===== Cohort 1: Himes airway smooth muscle RNA-seq (5 SRR) =====
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1039513/SRR1039513_1.fastq.gz
     path: fastq/SRR1039513_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: c4631597919c002474a5c0a9b1c44d46b7e2fa268b4c138440ee789120c0b8d3
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1039513/SRR1039513_2.fastq.gz
     path: fastq/SRR1039513_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: b8c27b36af1d5ba721b1b8b48ec359c60967f2bd6d894f4433adf79926f7572e
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/004/SRR1039514/SRR1039514_1.fastq.gz
     path: fastq/SRR1039514_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: ad6f9bc7298e3c4c0c46a77f590eacdf3e3da5f35d1ac5a2111e040f614cbced
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/004/SRR1039514/SRR1039514_2.fastq.gz
     path: fastq/SRR1039514_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 4f935d51fb511ddedc80f1ff439e2d92f3d96a79a595e1540b4b93fc5840a88c
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/005/SRR1039515/SRR1039515_1.fastq.gz
     path: fastq/SRR1039515_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: e6f4d924bc6b2e54e7c7687c0d024244b620fca221ddb419d3c0b4da1285d977
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/005/SRR1039515/SRR1039515_2.fastq.gz
     path: fastq/SRR1039515_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: d13fe8459cab049c03062c1ab513a7744960601121546ef11a33b6a7f078e957
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/006/SRR1039516/SRR1039516_1.fastq.gz
     path: fastq/SRR1039516_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: f43c77fd7f8e3c747091eb29bb754a23fc6265769634aafb953d491a8dd38db1
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/006/SRR1039516/SRR1039516_2.fastq.gz
     path: fastq/SRR1039516_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 92eec6fc0c58b46dd198519016e5dba6cd0553f1cbf5daed5e606dac7090cd7f
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/007/SRR1039517/SRR1039517_1.fastq.gz
     path: fastq/SRR1039517_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 4f5af8c38d4d015e2634567848ab2ece4dd20611edc8844c383914ba741554e6
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/007/SRR1039517/SRR1039517_2.fastq.gz
     path: fastq/SRR1039517_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: d115c8111662f3f288250a1f9aa790c68f6b0b94ffbe38e17d0ba5c232660adc
     size_mb: 3
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 1, P2-new)"
@@ -105,65 +105,65 @@ inputs:
   # discovery overhead. Multi-cohort expansion deferred to v0.2.
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1039518/SRR1039518_1.fastq.gz
     path: fastq/SRR1039518_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 4437880b044d70e2c3d2004d423405d4102090793c5ab6b090e8b50b0f33c657
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1039518/SRR1039518_2.fastq.gz
     path: fastq/SRR1039518_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 34095c0729897d82c953032fabbe3373a1d40f1d0a2d6cdc9981e126327b8a27
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1039519/SRR1039519_1.fastq.gz
     path: fastq/SRR1039519_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 1fa1aa8ba315ebaedfdb9b81496236bdeaf5cb31d1cf2d874c07549824c8bf7a
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/009/SRR1039519/SRR1039519_2.fastq.gz
     path: fastq/SRR1039519_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: cd21af507b7b563b8f3a64626e5d54759827732f63cdab7fc38e7e7e9cb1a289
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/000/SRR1039520/SRR1039520_1.fastq.gz
     path: fastq/SRR1039520_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 75b0e0c439af0eb31115673f3004e8c77ba08d9cf7f6d507f4b974a6b0fa929d
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/000/SRR1039520/SRR1039520_2.fastq.gz
     path: fastq/SRR1039520_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: fdf002e287b50543fe459e592a1000d00a7396d6766e77384435c54bdee68baa
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/001/SRR1039521/SRR1039521_1.fastq.gz
     path: fastq/SRR1039521_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 2d66289cc6dd0d996a54f4c7a8dbc98579aefa54107a355093ab8ee603c9975d
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/001/SRR1039521/SRR1039521_2.fastq.gz
     path: fastq/SRR1039521_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 2c524a4ab470566acfcaaac56e126fd459859613a40bcdffabfce484dae70ea4
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
 
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1039522/SRR1039522_1.fastq.gz
     path: fastq/SRR1039522_1.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 8868ad280388473cc09dcd7e8b76987fa0f1511c6d15a7ce91d2f7cf31e27ee5
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
   - url: ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1039522/SRR1039522_2.fastq.gz
     path: fastq/SRR1039522_2.fastq.gz
-    sha256: TBD-fill-after-download
+    sha256: 52799ec596856cd0afcd34c80e8259e7c05a5255a209d37ee368d7672e24875b
     size_mb: 5
     license: SRA public-domain
     source: "Himes airway smooth muscle, GSE52778, PRJNA229998 (cohort 2, P2-Phase-B)"
