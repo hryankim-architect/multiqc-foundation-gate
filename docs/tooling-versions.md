@@ -40,7 +40,7 @@ MPS is a quality-of-life win, not a hard requirement.
 | L-alpha2 | `conda deactivate` removes bioconda tools | partially relevant, `conda run -n multiqc/base` form is robust |
 | L-beta2 | Nextflow `-resume` cache key ignores env vars | **N/A**, no Nextflow |
 | L-chi | `!` in commit-msg body triggers zsh BANG_HIST | `git commit -F file` with quoted heredoc |
-| hostname-mismatch | SSH alias != macOS LocalHostName | `scripts/run_lab.sh` already defaults to `chi-mac-p.local` |
+| hostname-mismatch | SSH alias != macOS LocalHostName | `scripts/run_lab.sh` defaults to the substrate host `chi-mac-m` (override via `AUDIT_HOST`/`MLFLOW_TRACKING_URI`) |
 
 ## P2-specific lessons (captured as they appear)
 

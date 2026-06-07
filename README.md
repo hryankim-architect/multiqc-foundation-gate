@@ -265,7 +265,7 @@ Four-channel substrate (same interface as the other repos in this series):
 | `BIOSCAFFOLD_RUN_NAME` | derived | Overrides the run name in audit + MLflow entries. |
 
 On a lab node, `scripts/run_lab.sh` exports the substrate
-endpoints to the lab defaults (`chi-mac-p:8081`, `chi-mac-p:5050`).
+endpoints to the lab defaults (`chi-mac-m:8081`, `chi-mac-m:5050`).
 
 ---
 
