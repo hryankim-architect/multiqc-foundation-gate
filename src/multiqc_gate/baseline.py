@@ -21,6 +21,8 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
 from multiqc_gate import audit
 
@@ -46,12 +48,21 @@ def _build_classifier(method: str, seed: int):
             class_weight="balanced",
         )
     if method == "logistic_regression":
-        return LogisticRegression(
-            C=1.0,
-            max_iter=1000,
-            random_state=seed,
-            class_weight="balanced",
-            solver="lbfgs",
+        # StandardScaler is required, not optional: lbfgs on the raw 28-feature
+        # vector does not converge (ConvergenceWarning at every fold), and the
+        # non-converged solution is sklearn-version-dependent — it scored 0.86
+        # on sklearn 1.7 but 0.56 on a newer release. Scaling makes lbfgs
+        # converge, giving a stable ~0.80 across versions. See the README
+        # "Engineering lessons" table.
+        return make_pipeline(
+            StandardScaler(),
+            LogisticRegression(
+                C=1.0,
+                max_iter=1000,
+                random_state=seed,
+                class_weight="balanced",
+                solver="lbfgs",
+            ),
         )
     raise ValueError(f"unknown baseline method: {method}")
 

@@ -4,7 +4,7 @@
 
 > **One principle, applied here.** Pick the smallest, most interpretable representation that could carry the signal; measure it against an honest baseline; report the verdict faithfully — whether the compact choice wins, ties, or loses. *That last step is why AI safety is needed: knowing a capability is real rather than a flattering benchmark.*
 >
-> In this repo: **representation** a 28-feature engineered vector + linear/tree model → **baseline** an MLP (~1.5k params) → **verdict** compact *wins*: LogReg 0.86 beats MLP 0.40 at n=50 — capacity without data hurts, narrated honestly.
+> In this repo: **representation** a 28-feature engineered vector + linear/tree model → **baseline** an MLP (~1.5k params) → **verdict** compact *wins*: sklearn baselines (LogReg 0.80, RandomForest 0.84) beat the MLP's 0.40 at n=50 — capacity without data hurts, narrated honestly.
 
 n=50 (Himes airway smooth muscle, SRP033351, 10 base SRR + synthetic augmentation). `make run` finishes in 3.8 seconds on a laptop CPU; no cloud credentials or GPU needed.
 
@@ -139,9 +139,11 @@ End-to-end run on the n=50 canonical dataset, chi-mac-p, 2026-05-25:
 
 | Method | Accuracy (mean ± std) | F1 macro (mean ± std) | Trainable params |
 |---|---|---|---|
-| **LogisticRegression** | **0.860 ± 0.102** | **0.834 ± 0.114** | 87 |
-| **RandomForest** | 0.840 ± 0.102 | 0.814 ± 0.118 | (100 trees, depth 5) |
+| **RandomForest** | **0.840 ± 0.102** | **0.814 ± 0.118** | (100 trees, depth 5) |
+| **LogisticRegression** | **0.800 ± 0.063** | **0.768 ± 0.063** | 87 |
 | **MLP** (PyTorch) | **0.400 ± 0.000** | **0.190 ± 0.000** | ~1.5k |
+
+> **Reproducibility note (LogReg).** The LogisticRegression baseline runs on `StandardScaler`-normalized features. Without scaling, lbfgs does not converge on the raw 28-feature vector, and the non-converged solution is sklearn-version-dependent (it scored 0.86 on sklearn 1.7 but 0.56 on a newer release). Scaling makes lbfgs converge, giving a stable **0.80** across versions — the honest, reproducible number. The qualitative verdict (compact linear/tree models beat the MLP at n=50) is unchanged.
 
 Substrate metrics:
 
@@ -155,8 +157,8 @@ Substrate metrics:
 
 ### What the MLP-vs-sklearn gap means (this is the capability claim, not a failure)
 
-On n=50 with a 3-way class label, the **LogisticRegression baseline at 86%
-accuracy is the right number**, and the MLP collapsing to a 40% / std=0
+On n=50 with a 3-way class label, the **sklearn baselines at 80–84%
+accuracy are the right number**, and the MLP collapsing to a 40% / std=0
 predict-majority pattern is the *expected* behavior for ~1,500 trainable
 parameters trained on 40 examples per fold. The classifier comparison itself
 is the substrate value:
@@ -199,9 +201,10 @@ questions matter beyond raw accuracy: *how calibrated is its confidence?* and
 
 - **Calibration** (`scripts/calibrate_gate.py` → `audit/gate_calibration.md`):
   confidence-ECE (Guo et al. 2017) + multiclass Brier on the pooled held-out
-  folds. RandomForest ECE **0.05** (mean confidence ≈ accuracy), LogisticRegression
-  ECE **0.11**. With n=50 across 3 classes this is reported as a **diagnostic, not a
-  re-calibration fix** — a fitted calibrator would overfit.
+  folds. RandomForest ECE **0.05** (mean confidence ≈ accuracy, well-matched),
+  LogisticRegression ECE **0.15** (mildly over-confident once the features are
+  `StandardScaler`-normalized for convergence). With n=50 across 3 classes this is
+  reported as a **diagnostic, not a re-calibration fix** — a fitted calibrator would overfit.
 - **Interpretability** (`scripts/interpret_gate.py` →
   `audit/gate_feature_importance.md`): model-agnostic permutation importance over
   the 28 named MultiQC features. The gate keys on sensible QC signals — the number
@@ -249,7 +252,7 @@ considered for Phase B and deliberately deferred to v0.2, see
 | **find -name yaml only** | scaffold `bioscaffold -> multiqc_gate` rename missed `.github/workflows/ci.yml` because the find pattern listed `*.yaml` but not `*.yml` | Use `git ls-files \| while ... file -b --mime` instead, or include both `-o -name "*.yml"` |
 | **labels CSV row count drift** | `test_load_labels_parses_committed_sheet` asserted `len == 20` (Hour 3 partial) but Hour 4.B expanded the CSV to 50, green pytest at write time, red CI on push | Add the count to the test as a derived value or update both in the same commit; alternatively, use `>=` not `==` for forward compatibility |
 | **MLP collapse on tiny tabular data** | n=50 with 3 classes and ~1.5k params -> the MLP learns to predict majority class only (val_acc = 0.40, std = 0.0) | This is expected, not a bug. The sklearn baseline is the correct comparison. The capability claim is the substrate framing, not "DL wins" |
-| **LogReg max_iter warning** | sklearn `LogisticRegression(max_iter=1000)` did not converge on the 28-feature input -> ConvergenceWarning at every fold | Either bump max_iter, scale features with StandardScaler in the pipeline, or accept that the model still achieves 86% accuracy without converging (the warning is informational) |
+| **LogReg non-convergence was hiding version drift** | sklearn `LogisticRegression(max_iter=1000)` did not converge on the raw 28-feature input -> ConvergenceWarning at every fold. The non-converged solution was sklearn-version-dependent: 0.86 on sklearn 1.7, 0.56 on a newer release — a silent reproducibility hole in a repo whose whole point is reproducibility | **Fixed:** the LR baseline now runs inside a `StandardScaler` pipeline (`baseline.py`), so lbfgs converges and the score is a stable **0.80** across sklearn versions. Lesson: a ConvergenceWarning is not "informational" when it makes a headline number version-dependent — scale, then pin |
 
 ---
 

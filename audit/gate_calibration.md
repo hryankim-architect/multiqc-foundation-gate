@@ -1,6 +1,6 @@
 # MultiQC gate — calibration diagnostic
 
-Generated: 2026-06-02T20:47:53Z
+Generated: 2026-06-10T18:40:14Z (regenerated after the LogReg StandardScaler fix — see README "Engineering lessons")
 
 ## Why
 
@@ -13,8 +13,8 @@ An include/exclude gate's *confidence* matters: an over-confident wrong 'include
 
 | Method | ECE | Brier | mean conf | accuracy | tendency |
 |---|---|---|---|---|---|
-| logistic_regression | 0.1139 | 0.2204 | 0.880 | 0.860 | well-matched |
-| random_forest | 0.0525 | 0.2206 | 0.842 | 0.840 | well-matched |
+| logistic_regression | 0.1475 | 0.2974 | 0.830 | 0.800 | over-confident |
+| random_forest | 0.0521 | 0.2198 | 0.843 | 0.840 | well-matched |
 
 Reliability bins: `gate_calibration_reliability.tsv`.
 

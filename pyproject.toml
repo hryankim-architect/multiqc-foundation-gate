@@ -20,7 +20,7 @@ dependencies = [
     "jupyter>=1.0.0",
     "torch>=2.2",
     "torchvision>=0.17",
-    "scikit-learn>=1.3",
+    "scikit-learn>=1.3,<1.8",  # upper-bounded: the baseline numbers were verified on 1.7.x; LR is StandardScaler-wrapped so it converges, but pin the range so headline metrics don't drift on a future release
 ]
 
 [project.optional-dependencies]
