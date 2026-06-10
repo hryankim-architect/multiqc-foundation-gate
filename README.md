@@ -112,7 +112,7 @@ configured. Both default to no-ops so the demo runs cleanly on a fresh checkout.
 
 ```bash
 # 0. Pre-flight (macOS, one-time)
-#    PyTorch 2.12 + sklearn 1.8 + numpy/scipy (uv-managed; bioconda env hosts
+#    PyTorch 2.12 + sklearn 1.7 (pinned <1.8) + numpy/scipy (uv-managed; bioconda env hosts
 #    FastQC + MultiQC). MPS GPU backend is used automatically on Apple Silicon.
 
 # 1. Install pinned Python dependencies
@@ -124,7 +124,7 @@ make data                     # ~2 min on first call (download + augmentation)
 # 3. Run the end-to-end classifier comparison + drift detection
 make run                      # ~4 sec wall-clock; writes artifacts/ + audit chain
 
-# 4. Run the test suite (49 tests)
+# 4. Run the test suite (50 tests)
 make test
 
 # 5. Run the canary smoke test (substrate registration probe)
@@ -153,7 +153,7 @@ Substrate metrics:
 | Audit chain entries | **215** (1 pipeline_start + 5 fold_start + 5 fold_end + ~140 epoch_end + 10 baseline_fold_end + 1 comparison + 1 drift + 1 pipeline_end + framing) |
 | Audit chain validity | `ok=True` (`prev_hash` replay verifies every entry) |
 | Drift detection | **5 of 28 features drifted** at alpha=0.05 (quality-degradation cohort vs include baseline). Top drifted: `num__avg_sequence_length`, `num__median_sequence_length`, exactly what the quality-degradation augmentation is designed to shift |
-| Test count | **49 passing** (3 scaffold + 9 augment + 5 labels + 6 features + 4 model + 5 train + 5 baseline + 5 eval + 6 drift + 4 pipeline) |
+| Test count | **50** (8 augment + 4 baseline + 2 canary + 6 drift + 5 eval + 6 features + 1 headline-regression + 5 labels + 4 model + 4 pipeline + 5 train); 3 model/pipeline/train cases skip without PyTorch |
 
 ### What the MLP-vs-sklearn gap means (this is the capability claim, not a failure)
 
@@ -301,7 +301,7 @@ endpoints to the lab defaults (`chi-mac-m:8081`, `chi-mac-m:5050`).
 │   ├── eval.py                     # aggregate folds + classification report
 │   ├── drift.py                    # KS test per feature
 │   └── pipeline.py                 # end-to-end CLI entry
-├── tests/                          # 49 tests covering all modules
+├── tests/                          # 50 tests covering all modules
 ├── docs/
 │   ├── architecture.md             # 4-channel substrate + classifier pipeline
 │   ├── tooling-versions.md         # PyTorch 2.12 + sklearn 1.8 + MPS verified
