@@ -2,15 +2,15 @@
 # Execute the capability-portrait pipeline on a lab node.
 #
 # This wraps `make run` with the substrate environment variables set to the
-# lab defaults, so audit entries flow to chi-mac-m:8081 and MLflow runs are
-# tracked at chi-mac-m:5050. On a fresh checkout without the substrate
+# lab defaults, so audit entries flow to localhost:8081 and MLflow runs are
+# tracked at localhost:5050. On a fresh checkout without the substrate
 # present, run `make run` directly instead.
 
 set -euo pipefail
 
 # --- substrate env (override per host if needed) ---
-export AUDIT_HOST="${AUDIT_HOST:-chi-mac-m:8081}"
-export MLFLOW_TRACKING_URI="${MLFLOW_TRACKING_URI:-http://chi-mac-m:5050}"
+export AUDIT_HOST="${AUDIT_HOST:-localhost:8081}"
+export MLFLOW_TRACKING_URI="${MLFLOW_TRACKING_URI:-http://localhost:5050}"
 export BIOSCAFFOLD_RUN_NAME="${BIOSCAFFOLD_RUN_NAME:-lab-$(date -u +%Y%m%d-%H%M%S)}"
 
 # --- sanity check ---

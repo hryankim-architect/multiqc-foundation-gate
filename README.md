@@ -14,7 +14,7 @@ MLflow substrate hooks per training epoch and a baseline comparison
 that shows when the deep-learning model loses to plain sklearn.
 
 **Reproducibility**: `make run` produces the full classifier comparison + drift
-detection + 215-entry audit chain in **3.8 seconds** on chi-mac-p. No GPU
+detection + 215-entry audit chain in **3.8 seconds** on a local workstation. No GPU
 required (MPS used if available, falls back to CPU automatically). No cloud
 credentials.
 
@@ -135,7 +135,7 @@ make canary
 
 ## Real-data climax, sklearn beats MLP on n=50, and that is the right answer
 
-End-to-end run on the n=50 canonical dataset, chi-mac-p, 2026-05-25:
+End-to-end run on the n=50 canonical dataset, a local workstation, 2026-05-25:
 
 | Method | Accuracy (mean ± std) | F1 macro (mean ± std) | Trainable params |
 |---|---|---|---|
@@ -149,7 +149,7 @@ Substrate metrics:
 
 | Metric | Value |
 |---|---|
-| Wall-clock (`make run`, 5-fold CV x 3 methods + drift + audit + MLflow) | **3.76 sec** on chi-mac-p (CPU; MPS not engaged for tiny tensors) |
+| Wall-clock (`make run`, 5-fold CV x 3 methods + drift + audit + MLflow) | **3.76 sec** on a local workstation (CPU; MPS not engaged for tiny tensors) |
 | Audit chain entries | **215** (1 pipeline_start + 5 fold_start + 5 fold_end + ~140 epoch_end + 10 baseline_fold_end + 1 comparison + 1 drift + 1 pipeline_end + framing) |
 | Audit chain validity | `ok=True` (`prev_hash` replay verifies every entry) |
 | Drift detection | **5 of 28 features drifted** at alpha=0.05 (quality-degradation cohort vs include baseline). Top drifted: `num__avg_sequence_length`, `num__median_sequence_length`, exactly what the quality-degradation augmentation is designed to shift |
@@ -268,7 +268,7 @@ Four-channel substrate (same interface as the other repos in this series):
 | `BIOSCAFFOLD_RUN_NAME` | derived | Overrides the run name in audit + MLflow entries. |
 
 On a lab node, `scripts/run_lab.sh` exports the substrate
-endpoints to the lab defaults (`chi-mac-m:8081`, `chi-mac-m:5050`).
+endpoints to the lab defaults (`localhost:8081`, `localhost:5050`).
 
 ---
 

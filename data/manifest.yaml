@@ -17,7 +17,7 @@
 # carries the 15 future entries as comments.
 #
 # License: SRA public-domain (US NIH), per-study terms vary.
-# Provenance: ENA mirror (faster than NCBI for chi-mac-p) ftp.sra.ebi.ac.uk
+# Provenance: ENA mirror (often faster than NCBI) ftp.sra.ebi.ac.uk
 #
 # Checksums: the sha256 fields below are 'TBD-fill-after-download'. `make data`
 # now streams + downsamples each FASTQ to 100k reads (reproducible, zeroed-mtime

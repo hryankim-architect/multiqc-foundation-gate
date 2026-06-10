@@ -5,7 +5,7 @@
 | Tool | Version | Source / Env | Notes |
 |---|---|---|---|
 | Python | 3.12.13 | `.venv/bin/python` (uv-managed) | hosts the `multiqc_gate` package + PyTorch + sklearn |
-| **PyTorch** | **2.12.0** | `.venv` via `uv add torch` | MPS backend for chi-mac-p Apple Silicon, verified Hour 1 |
+| **PyTorch** | **2.12.0** | `.venv` via `uv add torch` | MPS backend on local Apple Silicon, verified Hour 1 |
 | torchvision | 0.27.0 | `.venv` | included for transforms (currently unused; reserved for future image-feature work) |
 | scikit-learn | **1.8.0** | `.venv` | Option C baseline (RandomForest + LogisticRegression) |
 | numpy / pandas | pulled in by torch / mlflow | `.venv` | |
@@ -16,13 +16,13 @@
 ## MPS availability
 
 PyTorch MPS (Metal Performance Shaders) is the Apple Silicon GPU backend. On
-chi-mac-p, verified via:
+a local workstation, verified via:
 
 ```bash
 .venv/bin/python -c "import torch; print(torch.backends.mps.is_available())"
 ```
 
-Result on chi-mac-p (Hour 1, 2026-05-25): **True** (both `is_available()` and
+Result on a local workstation (Hour 1, 2026-05-25): **True** (both `is_available()` and
 `is_built()`). Smoke test: `torch.randn(100, 100, device='mps') @ x.T`
 produced a `torch.float32` tensor on `mps:0` without error.
 
@@ -40,7 +40,7 @@ MPS is a quality-of-life win, not a hard requirement.
 | L-alpha2 | `conda deactivate` removes bioconda tools | partially relevant, `conda run -n multiqc/base` form is robust |
 | L-beta2 | Nextflow `-resume` cache key ignores env vars | **N/A**, no Nextflow |
 | L-chi | `!` in commit-msg body triggers zsh BANG_HIST | `git commit -F file` with quoted heredoc |
-| hostname-mismatch | SSH alias != macOS LocalHostName | `scripts/run_lab.sh` defaults to the substrate host `chi-mac-m` (override via `AUDIT_HOST`/`MLFLOW_TRACKING_URI`) |
+| hostname-mismatch | SSH alias != macOS LocalHostName | `scripts/run_lab.sh` defaults to the substrate host `localhost` (override via `AUDIT_HOST`/`MLFLOW_TRACKING_URI`) |
 
 ## P2-specific lessons (captured as they appear)
 
