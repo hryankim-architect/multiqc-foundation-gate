@@ -16,6 +16,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import json
+import os
 import re
 import urllib.request
 from datetime import UTC, datetime
@@ -26,6 +27,23 @@ import click
 import yaml
 
 from multiqc_gate import audit, tracking
+
+
+class AssetUnavailable(RuntimeError):
+    """A required input is absent and downloads are disabled (offline mode).
+
+    Mirrors _offline/bin/offline_guard.py semantics; kept inline so this repo
+    stays self-sufficient (no cross-repo import at runtime).
+    """
+
+
+def _downloads_allowed() -> bool:
+    """Reach the network only when explicitly opted in via AI_ALLOW_DOWNLOAD=1.
+
+    Default (unset/0) is fully offline: cached inputs are used; a missing input
+    yields a clear, actionable status instead of a silent fetch.
+    """
+    return os.environ.get("AI_ALLOW_DOWNLOAD", "") not in ("", "0", "false", "False")
 
 
 def _run_id(name: str) -> str:
@@ -110,6 +128,10 @@ def fetch_manifest(
             results.append({"rel": rel, "path": str(dest), "status": "cached"})
             continue
 
+        if not _downloads_allowed():
+            print(f"[{n}/{len(inputs)}] offline {rel} (missing; set AI_ALLOW_DOWNLOAD=1 to fetch)", flush=True)
+            results.append({"rel": rel, "path": str(dest), "status": "missing_offline"})
+            continue
         is_fastq = bool(downsample_reads) and rel.lower().endswith((".fastq.gz", ".fq.gz"))
         print(f"[{n}/{len(inputs)}] fetch   {rel} …", flush=True)
         try:
